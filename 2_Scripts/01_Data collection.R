@@ -29,18 +29,9 @@ liss.pe <- import(here::here("1_Data","1_Panel Datasets","cp08a_1p_EN.dta"))
 liss.po <- import(here::here("1_Data","1_Panel Datasets","cv09b_2.1p_EN.dta")) 
 liss.s <- import(here::here("1_Data","1_Panel Datasets","cs08a_2p_EN.dta"))
 
-#merge ????????????
+#Merging the LISS datasets of different variables
 liss <- merge(liss.b, liss.pe, by="nomem_encr")
+liss <- select(liss, -nohouse_encr.y, -nohouse_encr.x)
 liss <- merge(liss, liss.po, by="nomem_encr")
-liss %>% 
-  select(!nohouse_encr.x, !nohouse_encr.y)
-
-liss <- select(liss, -nohouse_encr.y)
-liss <- select(liss, -nohouse_encr.x)
 liss <- merge(liss, liss.s, by="nomem_encr")
-
-
-
-
-
-
+liss <- select(liss, -nohouse_encr.y, -nohouse_encr.x)
