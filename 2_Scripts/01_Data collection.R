@@ -2,29 +2,28 @@
 library(tidyverse)
 library(rio)
 library(foreign)
-<<<<<<< HEAD
 
 
 #################
 ## DATA IMPORT ##
 #################
 
-# American National Election Study 2010 - 2012 #
+## IMPORT 1/10: American National Election Study 2010 - 2012 #----
 anes1012 <- import(here::here("1_Data","1_Panel Datasets","anes_specialstudies_2012egss4.dta"))
 
-# American National Election Study 2012 #
+## IMPORT 2/10: American National Election Study 2012 #----
 anes12 <- import(here::here("1_Data","1_Panel Datasets","anes_timeseries_2012.dta"))
 
-# American National Election Study 2016 #
+## IMPORT 3/10: American National Election Study 2016 #----
 anes16 <- import(here::here("1_Data","1_Panel Datasets","anes_timeseries_2016.dta"))
 
-# British Election Study #
+## IMPORT 4/10: British Election Study #----
 bes <- read.spss("1_Data/1_Panel Datasets/BES2017_W13_v1.6.sav", to.data.frame = TRUE, use.value.labels = FALSE)
 
-# Swiss Household Panel #
+## IMPORT 5/10: Swiss Household Panel #----
 shp <- import(here::here("1_Data","1_Panel Datasets","shp09_p_user.dta"))
 
-# Longitudinal Internet Studies in the Social Sciences #
+## IMPORT 6/10: Longitudinal Internet Studies in the Social Sciences #----
 #variables: liss.b=background, liss.pe=personality, liss.po=political, liss.s=social#
 liss.b <- import(here::here("1_Data","1_Panel Datasets","avars_200805_EN_2.0p.dta"))
 liss.pe <- import(here::here("1_Data","1_Panel Datasets","cp08a_1p_EN.dta"))
@@ -63,7 +62,48 @@ data_US <- import(here::here("1_Data","1_Panel Datasets","1954363083US_LAPOP_Ame
 data_Mexico <- import(here::here("1_Data","1_Panel Datasets","2054050000Mexico_LAPOP_AmericasBarometer 2010 data set  approved V5.dta"))
 data_Guyana <- import(here::here("1_Data","1_Panel Datasets","2094321522Guyana_LAPOP_AmericasBarometer 2010 data set  approved_V3.dta"))
 data_Brazil <- import(here::here("1_Data","1_Panel Datasets","7948266051039660950Brazil_LAPOP_AmericasBarometer 2010 data set  approved v4.dta"))
-
 # Additional Datasets (Haiti & Honduras) that have not been imported in original analysis (Total 26) #
 data_Haiti <- import(here::here("1_Data","1_Panel Datasets","1934955590Haiti_LAPOP_AmericasBarometer 2010 data set  original v1 English.dta"))
 data_Honduras <- import(here::here("1_Data","1_Panel Datasets","1418722138Honduras_LAPOP_AmericasBarometer 2010 data set  approved v3.dta"))
+
+#!#!# !!ISSUE!! Preparation for Merge LAPOP (original Code from author)#
+data_Paraguay$fecha <- as.numeric(data_Paraguay$fecha)
+#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_Canada$gi1 <- as.numeric(data_Canada$gi1)#
+#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_US$gi1 <- as.numeric(data_US$gi1)#
+#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_Brazil$ti <- as.numeric(data_Brazil$ti)#
+#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_Brazil$intid <- as.numeric(data_Brazil$intid)#
+lapop <- bind_rows(list(data_Suriname, 
+                        data_Ecuador,
+                        data_Guatemala,
+                        data_ElSalvador,
+                        data_DominicanRep,
+                        data_Trinidad,
+                        data_Peru,
+                        data_Argentina,
+                        data_Paraguay,
+                        data_Nicaragua,
+                        data_CostaRica,
+                        data_Uruguay,
+                        data_Canada,
+                        data_Chile,
+                        data_Belice,
+                        data_Panama,
+                        data_Venezuela,
+                        data_Bolivia,
+                        data_Jamaica,
+                        data_Colombia,
+                        data_US,
+                        data_Mexico,
+                        data_Guyana,
+                        data_Brazil,
+                        data_Haiti,
+                        data_Honduras))
+#!#!# Fehler: Column `gi1` can't be converted from numeric to character #!#!#
+
+## IMPORT 8/10: Swiss Election Study ##----
+sels <- import(here::here("1_Data","1_Panel Datasets", "828_Selects2015_PanelRCS_Data_v1.1.dta"))
+
+## IMPORT 9/10: New Zealand Election Study ##----
+nzes <- import(here::here("1_Data","1_Panel Datasets","NZES2014GeneralReleaseApril16.sav"))
+
+## IMPORT 10/10: Canadian Election Study ##----
