@@ -37,7 +37,7 @@ liss <- merge(liss, liss.po, by="nomem_encr")
 liss <- merge(liss, liss.s, by="nomem_encr")
 liss <- select(liss, -nohouse_encr.y, -nohouse_encr.x)
 
-# Latin American Public Opinion Project #
+## IMPORT 7/10: Latin American Public Opinion Project #----
 data_Suriname <- import(here::here("1_Data","1_Panel Datasets","132981347Suriname_LAPOP_AmericasBarometer 2010 data set  original v1.dta"))
 data_Ecuador <- import(here::here("1_Data","1_Panel Datasets","152597287Ecuador_LAPOP_AmericasBarometer 2010 data set  approved v3.dta"))
 data_Guatemala <- import(here::here("1_Data","1_Panel Datasets","305797627Guatemala_LAPOP_AmericasBarometer 2010 data set  approved V3.dta"))
@@ -107,3 +107,4 @@ sels <- import(here::here("1_Data","1_Panel Datasets", "828_Selects2015_PanelRCS
 nzes <- import(here::here("1_Data","1_Panel Datasets","NZES2014GeneralReleaseApril16.sav"))
 
 ## IMPORT 10/10: Canadian Election Study ##----
+ces <- import(here::here("1_Data","1_Panel Datasets","CES2015_Combined_Stata14.dta"))
