@@ -2,7 +2,9 @@
 library(tidyverse)
 library(rio)
 library(foreign)
-
+library(sjmisc)
+library(sjlabelled)
+library(stringr)
 
 #################
 ## DATA IMPORT ##
@@ -66,12 +68,28 @@ data_Brazil <- import(here::here("1_Data","1_Panel Datasets","794826605103966095
 data_Haiti <- import(here::here("1_Data","1_Panel Datasets","1934955590Haiti_LAPOP_AmericasBarometer 2010 data set  original v1 English.dta"))
 data_Honduras <- import(here::here("1_Data","1_Panel Datasets","1418722138Honduras_LAPOP_AmericasBarometer 2010 data set  approved v3.dta"))
 
-#!#!# !!ISSUE!! Preparation for Merge LAPOP (original Code from author)#
+# Preparation for Merge LAPOP (original Code from author)#
 data_Paraguay$fecha <- as.numeric(data_Paraguay$fecha)
-#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_Canada$gi1 <- as.numeric(data_Canada$gi1)#
-#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_US$gi1 <- as.numeric(data_US$gi1)#
-#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_Brazil$ti <- as.numeric(data_Brazil$ti)#
-#THIS IS A CHARACTER VARIABLE!!! NA RESULT OF AS.NUMERIC!!! data_Brazil$intid <- as.numeric(data_Brazil$intid)#
+
+#PATH 1 - AUTHORS PATH - tbc#
+#Since Answers are not coded, a lot of NAs are generated#
+#data_Canada$gi1 <- as.numeric(data_Canada$gi1)
+#data_US$gi1 <- as.numeric(data_US$gi1)
+
+#PATH 2 - WITH CODING#
+#Coding raw data with answers in charakter (dataset CANADA and US)#
+data_Canada$gi1 <- stringr::str_to_lower(data_Canada$gi1)
+data_Canada$gi1 <- ifelse(str_detect(data_Canada$gi1,pattern = "obama"),1,2)
+data_Canada$gi1 <- add_labels(data_Canada$gi1, labels = c("Correct" = 1, "Incorrect" = 2))
+
+data_US$gi1 <- stringr::str_to_lower(data_US$gi1)
+data_US$gi1 <- ifelse(str_detect(data_US$gi1,pattern = "biden"),1,2)
+data_US$gi1 <- add_labels(data_US$gi1, labels = c("Correct" = 1, "Incorrect" = 2))
+#ATTENTION: gi1 Canada: President of USA, gi1 US: Vice President of USA -> CAN WE MERGE THIS?#
+
+data_Brazil$ti <- as.numeric(data_Brazil$ti)
+data_Brazil$intid <- as.numeric(data_Brazil$intid)
+
 lapop <- bind_rows(list(data_Suriname, 
                         data_Ecuador,
                         data_Guatemala,
@@ -98,7 +116,6 @@ lapop <- bind_rows(list(data_Suriname,
                         data_Brazil,
                         data_Haiti,
                         data_Honduras))
-#!#!# Fehler: Column `gi1` can't be converted from numeric to character #!#!#
 
 ## IMPORT 8/10: Swiss Election Study ##----
 sels <- import(here::here("1_Data","1_Panel Datasets", "828_Selects2015_PanelRCS_Data_v1.1.dta"))
@@ -108,3 +125,5 @@ nzes <- import(here::here("1_Data","1_Panel Datasets","NZES2014GeneralReleaseApr
 
 ## IMPORT 10/10: Canadian Election Study ##----
 ces <- import(here::here("1_Data","1_Panel Datasets","CES2015_Combined_Stata14.dta"))
+
+
