@@ -127,3 +127,24 @@ nzes <- import(here::here("1_Data","1_Panel Datasets","NZES2014GeneralReleaseApr
 ces <- import(here::here("1_Data","1_Panel Datasets","CES2015_Combined_Stata14.dta"))
 
 
+
+#####################
+## DATA PROCESSING ##
+#####################
+
+## CREATING FUNCTION TO STANDARDISE VARIABLES ##
+ztrans <- function(x) {
+  return(
+    (x - mean(x, na.rm = T)) / sd(x, na.rm = T)
+  )
+}
+
+vector <- c(1,10,4,6,3,7,4,6,6,7,4)
+mean(vector)
+ztrans(vector)
+two_sd(vector)
+
+# Create function to standardize variables 2*SD??
+two_sd <- function(x) {
+  return((x - mean(x, na.rm = TRUE))/(2*sd(x, na.rm = TRUE)))
+}
