@@ -1,0 +1,81 @@
+---
+title: 'Data Processing: Variable guide'
+author: "Greta Kurpicz"
+date: "25 4 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## American National Election Study 2010–2012
+
+<br> **c4_p1**: When it comes to politics, would you describe yourself, and these groups, as liberal, conservative, or neither liberal nor conservative?</br>
+**c4_pppa0035**: In general, how interested are you in politics and public affairs?
+<br> **c4_f1**: How much do government officials care what people like you think? </br>
+**c4_f2**: How much can people like you affect what the government does?
+<br> **c4_pppa0206**: Do you actively participate in any of the following political movements? [Tea Party Movement]</br>
+**c4_pppa0207**: Do you actively participate in any of the following political movements? [Environmental Rights Movement]
+<br> **c4_pppa0208**: Do you actively participate in any of the following political movements? [Women's Rights Movement]</br>
+**c4_pppa0209**: Do you actively participate in any of the following political movements? [Racial Equality Movement]
+<br> **c4_pppa0210**: Do you actively participate in any of the following political movements? [Right to Life Movement]</br>
+**c4_pppa0211**: Do you actively participate in any of the following political movements? [Peace/Anti-War Movement]
+<br> **c4_pppa0212**: Do you actively participate in any of the following political movements? [LGBT Rights Movement]</br>
+**c4_pppa0213**: Do you actively participate in any of the following political movements? [None of these]
+<br> **c4_pppa0005**: Did you happen to vote in the 2008 presidential election?</br>
+**c4_pppa0220**: Did you happen to vote in the 2010 Congressional election?
+<br> **c4_be1**: During a typical week, how many days do you watch local news on TV, not including sports?</br>
+**c4_be2**: During a typical week, how many days do you watch national news on TV, not including sports?
+<br> **c4_be3**: During a typical week, how many days do you watch, read, or listen to news on the Internet, not including sports?</br>
+**c4_be4**: During a typical week, how many days do you read news in a printed newspaper, not including sports?
+<br> **c4_be5**: During a typical week, how many days do you listen to news on the radio, not including sports?</br>
+
+**c4_zh1**: Who is the Chief Justice of the U.S. Supreme Court? [Scale: John Roberts [1], David Cole [2], Anthony Kennedy [3], Larry Thompson [4]] 
+<br> **c4_zh2**: Who is the Prime Minister of the United Kingdom? David Cameron [1], Nick Clegg [2], Tony Hayward [3], Richard Branson [4]</br>
+**c4_zh3**: Who is the Speaker of the House of Representatives? John Boehner [1],Harry Reid [2],Eric Holder [3],Mitt Romney [4]
+<br> **c4_zh4**: On which of the following does the U.S. federal government spend the least money? Foreign aid [1],Medicare [2],National defense [3],Social Security [4]</br>
+
+**c4_zf1**: [Extraverted, enthusiastic.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br> **c4_zf2**: [Critical, quarrelsome.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+**c4_zf3**: [Dependable, self-disciplined.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br> **c4_zf4**: [Anxious, easily upset.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+**c4_zf5**: [Open to new experiences, complex.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br> **c4_zf6**: [Reserved, quiet.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+**c4_zf7**: [Sympathetic, warm.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br> **c4_zf8**: [Disorganized, careless.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+**c4_zf9**: [Calm, emotionally stable.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br> **c4_zf10**: [Conventional, uncreative.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+**c4_zg1**: [extraverted, enthusiastic] Please mark how well the following pair of words describes you.
+<br> **c4_zg2**: [critical, quarrelsome] Please mark how well the following pair of words describes you.</br>
+**c4_zg3**: [dependable, self-disciplined] Please mark how well the following pair of words describes you.
+<br> **c4_zg4**: [anxious, easily upset] Please mark how well the following pair of words describes you.</br>
+**c4_zg5**: [open to new experiences, complex] Please mark how well the following pair of words describes you.
+<br> **c4_zg6**: [reserved, quiet] Please mark how well the following pair of words describes you.</br>
+**c4_zg7**: [sympathetic, warm] Please mark how well the following pair of words describes you.
+<br> **c4_zg8**: [disorganized, careless] Please mark how well the following pair of words describes you.</br>
+**c4_zg9**: [calm, emotionally stable] Please mark how well the following pair of words describes you.
+<br> **c4_zg10**: [conventional, uncreative] Please mark how well the following pair of words describes you.</br>
+**c4_pppa0079**: How about any of these types of organizations or groups? [Issue-oriented political organization]
+<br> **c4_pppa0092**: In the past 12 months, have you... [Attended a political protest or rally]</br>
+**c4_pppa0093**: In the past 12 months, have you... [Contacted a government official]
+<br> **c4_pppa0101**: In the past 12 months, have you... [Commented about politics on a message board or Internet site]</br>
+**c4_pppa0095**: In the past 12 months, have you... [Volunteered or worked for another political candidate, issue, or cause]
+<br> **c4_pppa0096**: In the past 12 months, have you... [Given money to a Presidential campaign]</br>
+**c4_pppa0097**: In the past 12 months, have you... [Given money to another political candidate, issue, or cause]
+<br> **c4_bc1**: Have you worn a campaign button, put a campaign sticker on your car, or placed a sign in your window/front of your house?</br>
+**c4_bc2**: Have you given money to any candidate running for office, any political party, or any other group that supported/opposed candidates?
+<br> **c4_a1**: How often of the time would you say you follow what’s going on in government and public affairs?</br>
+<br></br>
+**c4_ppnet**: Internet Access
+The Variables have either negativ values, which are different catergories of not valid answers and positiv values which shows a scale of perception. In the Code the *negativ numbers gets replaced with NAs*, so the regression will not be effektet by those negativ categories.
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

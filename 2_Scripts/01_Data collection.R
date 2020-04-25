@@ -132,19 +132,68 @@ ces <- import(here::here("1_Data","1_Panel Datasets","CES2015_Combined_Stata14.d
 ## DATA PROCESSING ##
 #####################
 
-## CREATING FUNCTION TO STANDARDISE VARIABLES ##
-ztrans <- function(x) {
-  return(
-    (x - mean(x, na.rm = T)) / sd(x, na.rm = T)
-  )
-}
-
-vector <- c(1,10,4,6,3,7,4,6,6,7,4)
-mean(vector)
-ztrans(vector)
-two_sd(vector)
-
-# Create function to standardize variables 2*SD??
+## CREATING FUNCTION TO STANDARDISE VARIABLES divided by 2 SD##
 two_sd <- function(x) {
   return((x - mean(x, na.rm = TRUE))/(2*sd(x, na.rm = TRUE)))
 }
+
+### Recode: ANES 2010-2012 ###
+anes1012 <- anes1012 %>%
+  # Creating NAs for missing values
+  mutate_at(vars(c4_p1, c4_pppa0035, c4_f1, c4_f2, c4_pppa0206, c4_pppa0207, c4_pppa0208, c4_pppa0209, 
+                 c4_pppa0210, c4_pppa0211, c4_pppa0212, c4_pppa0213, c4_pppa0005, c4_pppa0220,
+                 c4_be1, c4_be2, c4_be3, c4_be4, c4_be5, c4_zh1, c4_zh2, c4_zh3, c4_zh4,
+                 c4_zf1, c4_zf2, c4_zf3, c4_zf4, c4_zf5, c4_zf6, c4_zf7, c4_zf8, c4_zf9, c4_zf10, 
+                 c4_zg1, c4_zg2, c4_zg3, c4_zg4, c4_zg5, c4_zg6, c4_zg7, c4_zg8, c4_zg9, c4_zg10,
+                 c4_pppa0079, c4_pppa0092, c4_pppa0093, c4_pppa0101, c4_pppa0095, c4_pppa0096, c4_pppa0097,
+                 c4_bc1, c4_bc2, c4_a1), 
+            function(x) case_when(x < 0 ~ NA_real_, TRUE ~ as.numeric(x))) %>% 
+  # Political knowledge questions, multiple choice: Creating binary Correct 1 / False 0 variable 
+  mutate_at(vars(c4_zh1, c4_zh2, c4_zh3, c4_zh4), 
+            function(x) case_when(x == 1 ~ 1, x == 2 | x == 3 | x == 4 ~ 0, TRUE ~ NA_real_)) %>%
+  mutate(
+    # Creating Variables which will identify survey + country after merge #
+    dataset = "anes1012",
+    cntry = "United States",
+    
+    # Information if student and if internet access #
+    student = NA,
+    internet = c4_ppnet,
+
+    # OUTCOMES #
+    ## Ideology - liberal to conservativ
+    ideology = two_sd(c4_p1),
+    
+    ## Involvement
+    c4_bc1_rc = 2 - c4_bc1,
+    c4_bc2_rc = 2 - c4_bc2,
+    involvement = two_sd( c4_pppa0079 + c4_pppa0206 + c4_pppa0207 + c4_pppa0208 + c4_pppa0209 + c4_pppa0210 + c4_pppa0211 + c4_pppa0212 + c4_pppa0213 + c4_pppa0092 + c4_pppa0093 + c4_pppa0101 + c4_pppa0095 + c4_pppa0096 + c4_pppa0097 + c4_bc1_rc + c4_bc2_rc),
+    
+    ## Knowledge
+    knowledge = two_sd( c4_zh1 + c4_zh2 + c4_zh3 + c4_zh4 ),
+    
+    ## Efficacy
+    poleff = two_sd( ((c4_f1-5)*-1) + ((c4_f2-5)*-1) ),
+    
+    ## Interest
+    polintr = two_sd( 5 - c4_pppa0035 + 5 - c4_a1 ),
+    
+    ## Participation
+    polpar = two_sd( 2 - c4_pppa0005 + 2 - c4_pppa0220 ),
+    
+    ## Satisfaction democracy
+    stfdem = NA,
+    
+    ## Media use
+    media = two_sd( c4_be1 + c4_be2 + c4_be3 + c4_be4 + c4_be5 ),
+    
+    ## Political trust
+    poltr = NA,
+    
+    # Big Five traits
+    agreeableness = two_sd( ifelse(is.na(c4_zf2), ((c4_zg2-8)*-1) + c4_zg7, ((c4_zf2-8)*-1) + c4_zf7) ),
+    extraversion = two_sd( ifelse(is.na(c4_zf1), ((c4_zg6-8)*-1) + c4_zg1, ((c4_zf6-8)*-1) + c4_zf1) ),
+    conscientiousness = two_sd( ifelse(is.na(c4_zf3), ((c4_zg8-8)*-1) + c4_zg3, ((c4_zf8-8)*-1) + c4_zf3) ),
+    neuroticism = two_sd( ifelse(is.na(c4_zf4), ((c4_zg9-8)*-1) + c4_zg4, ((c4_zf9-8)*-1) + c4_zf4) ),
+    openness = two_sd( ifelse(is.na(c4_zf5), ((c4_zg10-8)*-1) + c4_zg5, ((c4_zf10-8)*-1) + c4_zf5) )
+  )
