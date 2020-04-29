@@ -11,66 +11,240 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## American National Election Study 2010–2012
 
-<br> **c4_p1**: When it comes to politics, would you describe yourself, and these groups, as liberal, conservative, or neither liberal nor conservative?</br>
-**c4_pppa0035**: In general, how interested are you in politics and public affairs?
-<br> **c4_f1**: How much do government officials care what people like you think? </br>
-**c4_f2**: How much can people like you affect what the government does?
-<br> **c4_pppa0206**: Do you actively participate in any of the following political movements? [Tea Party Movement]</br>
-**c4_pppa0207**: Do you actively participate in any of the following political movements? [Environmental Rights Movement]
-<br> **c4_pppa0208**: Do you actively participate in any of the following political movements? [Women's Rights Movement]</br>
-**c4_pppa0209**: Do you actively participate in any of the following political movements? [Racial Equality Movement]
-<br> **c4_pppa0210**: Do you actively participate in any of the following political movements? [Right to Life Movement]</br>
-**c4_pppa0211**: Do you actively participate in any of the following political movements? [Peace/Anti-War Movement]
-<br> **c4_pppa0212**: Do you actively participate in any of the following political movements? [LGBT Rights Movement]</br>
-**c4_pppa0213**: Do you actively participate in any of the following political movements? [None of these]
-<br> **c4_pppa0005**: Did you happen to vote in the 2008 presidential election?</br>
-**c4_pppa0220**: Did you happen to vote in the 2010 Congressional election?
-<br> **c4_be1**: During a typical week, how many days do you watch local news on TV, not including sports?</br>
-**c4_be2**: During a typical week, how many days do you watch national news on TV, not including sports?
-<br> **c4_be3**: During a typical week, how many days do you watch, read, or listen to news on the Internet, not including sports?</br>
-**c4_be4**: During a typical week, how many days do you read news in a printed newspaper, not including sports?
-<br> **c4_be5**: During a typical week, how many days do you listen to news on the radio, not including sports?</br>
+<br>*Ideology* **c4_p1**: When it comes to politics, would you describe yourself, and these groups, as liberal, conservative, or neither liberal nor conservative? </br>
+*Interest* **c4_pppa0035**: In general, how interested are you in politics and public affairs?[1:most of time, 4:Hardly]
+<br>*Efficacy* **c4_f1**: How much do government officials care what people like you think? [Scale 1 great deal-5 Not at all] </br>
+*Efficacy* **c4_f2**: How much can people like you affect what the government does? [Scale 1 great deal-5 Not at all]
+<br>*Involvement* **c4_pppa0206**: Do you actively participate in any of the following political movements? [Tea Party Movement]</br>
+*Involvement* **c4_pppa0207**: Do you actively participate in any of the following political movements? [Environmental Rights Movement]
+<br>*Involvement* **c4_pppa0208**: Do you actively participate in any of the following political movements? [Women's Rights Movement]</br>
+*Involvement* **c4_pppa0209**: Do you actively participate in any of the following political movements? [Racial Equality Movement]
+<br>*Involvement* **c4_pppa0210**: Do you actively participate in any of the following political movements? [Right to Life Movement]</br>
+*Involvement* **c4_pppa0211**: Do you actively participate in any of the following political movements? [Peace/Anti-War Movement]
+<br>*Involvement* **c4_pppa0212**: Do you actively participate in any of the following political movements? [LGBT Rights Movement]</br>
+*Involvement* **c4_pppa0213**: Do you actively participate in any of the following political movements? [None of these]
+<br>*Participation* **c4_pppa0005**: Did you happen to vote in the 2008 presidential election?</br>
+*Participation* **c4_pppa0220**: Did you happen to vote in the 2010 Congressional election?
+<br>*Media use* **c4_be1**: During a typical week, how many days do you watch local news on TV, not including sports?</br>
+*Media use* **c4_be2**: During a typical week, how many days do you watch national news on TV, not including sports?
+<br>*Media use* **c4_be3**: During a typical week, how many days do you watch, read, or listen to news on the Internet, not including sports?</br>
+*Media use* **c4_be4**: During a typical week, how many days do you read news in a printed newspaper, not including sports?
+<br>*Media use* **c4_be5**: During a typical week, how many days do you listen to news on the radio, not including sports?</br>
 
-**c4_zh1**: Who is the Chief Justice of the U.S. Supreme Court? [Scale: John Roberts [1], David Cole [2], Anthony Kennedy [3], Larry Thompson [4]] 
-<br> **c4_zh2**: Who is the Prime Minister of the United Kingdom? David Cameron [1], Nick Clegg [2], Tony Hayward [3], Richard Branson [4]</br>
-**c4_zh3**: Who is the Speaker of the House of Representatives? John Boehner [1],Harry Reid [2],Eric Holder [3],Mitt Romney [4]
-<br> **c4_zh4**: On which of the following does the U.S. federal government spend the least money? Foreign aid [1],Medicare [2],National defense [3],Social Security [4]</br>
+*Knowledge* **c4_zh1**: Who is the Chief Justice of the U.S. Supreme Court? [Scale: John Roberts [1], David Cole [2], Anthony Kennedy [3], Larry Thompson [4]] 
+<br>*Knowledge* **c4_zh2**: Who is the Prime Minister of the United Kingdom? David Cameron [1], Nick Clegg [2], Tony Hayward [3], Richard Branson [4]</br>
+*Knowledge* **c4_zh3**: Who is the Speaker of the House of Representatives? John Boehner [1],Harry Reid [2],Eric Holder [3],Mitt Romney [4]
+<br>*Knowledge* **c4_zh4**: On which of the following does the U.S. federal government spend the least money? Foreign aid [1],Medicare [2],National defense [3],Social Security [4]</br>
 
-**c4_zf1**: [Extraverted, enthusiastic.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
-<br> **c4_zf2**: [Critical, quarrelsome.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
-**c4_zf3**: [Dependable, self-disciplined.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
-<br> **c4_zf4**: [Anxious, easily upset.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
-**c4_zf5**: [Open to new experiences, complex.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
-<br> **c4_zf6**: [Reserved, quiet.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
-**c4_zf7**: [Sympathetic, warm.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
-<br> **c4_zf8**: [Disorganized, careless.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
-**c4_zf9**: [Calm, emotionally stable.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
-<br> **c4_zf10**: [Conventional, uncreative.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
-**c4_zg1**: [extraverted, enthusiastic] Please mark how well the following pair of words describes you.
-<br> **c4_zg2**: [critical, quarrelsome] Please mark how well the following pair of words describes you.</br>
-**c4_zg3**: [dependable, self-disciplined] Please mark how well the following pair of words describes you.
-<br> **c4_zg4**: [anxious, easily upset] Please mark how well the following pair of words describes you.</br>
-**c4_zg5**: [open to new experiences, complex] Please mark how well the following pair of words describes you.
-<br> **c4_zg6**: [reserved, quiet] Please mark how well the following pair of words describes you.</br>
-**c4_zg7**: [sympathetic, warm] Please mark how well the following pair of words describes you.
-<br> **c4_zg8**: [disorganized, careless] Please mark how well the following pair of words describes you.</br>
-**c4_zg9**: [calm, emotionally stable] Please mark how well the following pair of words describes you.
-<br> **c4_zg10**: [conventional, uncreative] Please mark how well the following pair of words describes you.</br>
-**c4_pppa0079**: How about any of these types of organizations or groups? [Issue-oriented political organization]
-<br> **c4_pppa0092**: In the past 12 months, have you... [Attended a political protest or rally]</br>
-**c4_pppa0093**: In the past 12 months, have you... [Contacted a government official]
-<br> **c4_pppa0101**: In the past 12 months, have you... [Commented about politics on a message board or Internet site]</br>
-**c4_pppa0095**: In the past 12 months, have you... [Volunteered or worked for another political candidate, issue, or cause]
-<br> **c4_pppa0096**: In the past 12 months, have you... [Given money to a Presidential campaign]</br>
-**c4_pppa0097**: In the past 12 months, have you... [Given money to another political candidate, issue, or cause]
-<br> **c4_bc1**: Have you worn a campaign button, put a campaign sticker on your car, or placed a sign in your window/front of your house?</br>
-**c4_bc2**: Have you given money to any candidate running for office, any political party, or any other group that supported/opposed candidates?
-<br> **c4_a1**: How often of the time would you say you follow what’s going on in government and public affairs?</br>
+*Extraversion* **c4_zf1**: [Extraverted, enthusiastic.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br>*Agreeableness* **c4_zf2**: [Critical, quarrelsome.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+*Conscientiousness* **c4_zf3**: [Dependable, self-disciplined.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br>*Neuroticism* **c4_zf4**: [Anxious, easily upset.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+*Openness* **c4_zf5**: [Open to new experiences, complex.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br>*Extravesion* **c4_zf6**: [Reserved, quiet.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+*Agreeableness* **c4_zf7**: [Sympathetic, warm.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br>*Conscientiousness* **c4_zf8**: [Disorganized, careless.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+*Neuroticism* **c4_zf9**: [Calm, emotionally stable.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.
+<br>*Openness* **c4_zf10**: [Conventional, uncreative.] Please type a number next to each statement to indicate the extent to which you agree or disagree with that statement.</br>
+*Extraversion* **c4_zg1**: [extraverted, enthusiastic] Please mark how well the following pair of words describes you.
+<br>*Agreeableness* **c4_zg2**: [critical, quarrelsome] Please mark how well the following pair of words describes you.</br>
+*Conscientiousness* **c4_zg3**: [dependable, self-disciplined] Please mark how well the following pair of words describes you.
+<br>*Neuroticism* **c4_zg4**: [anxious, easily upset] Please mark how well the following pair of words describes you.</br>
+*Openness* **c4_zg5**: [open to new experiences, complex] Please mark how well the following pair of words describes you.
+<br>*Extraversion* **c4_zg6**: [reserved, quiet] Please mark how well the following pair of words describes you.</br>
+*Agreeableness* **c4_zg7**: [sympathetic, warm] Please mark how well the following pair of words describes you.
+<br>*Conscientiousness* **c4_zg8**: [disorganized, careless] Please mark how well the following pair of words describes you.</br>
+*Neuroticism* **c4_zg9**: [calm, emotionally stable] Please mark how well the following pair of words describes you.
+<br>*Openness* **c4_zg10**: [conventional, uncreative] Please mark how well the following pair of words describes you.</br>
+*Involvement* **c4_pppa0079**: How about any of these types of organizations or groups? [Issue-oriented political organization]
+<br>*Involvement* **c4_pppa0092**: In the past 12 months, have you... [Attended a political protest or rally]</br>
+*Involvement* **c4_pppa0093**: In the past 12 months, have you... [Contacted a government official]
+<br>*Involvement* **c4_pppa0101**: In the past 12 months, have you... [Commented about politics on a message board or Internet site]</br>
+*Involvement* **c4_pppa0095**: In the past 12 months, have you... [Volunteered or worked for another political candidate, issue, or cause]
+<br>*Involvement* **c4_pppa0096**: In the past 12 months, have you... [Given money to a Presidential campaign]</br>
+*Involvement* **c4_pppa0097**: In the past 12 months, have you... [Given money to another political candidate, issue, or cause]
+<br>*Involvement* **c4_bc1**: Have you worn a campaign button, put a campaign sticker on your car, or placed a sign in your window/front of your house?</br>
+*Involvement* **c4_bc2**: Have you given money to any candidate running for office, any political party, or any other group that supported/opposed candidates?
+<br>*Interest* **c4_a1**: How often of the time would you say you follow what’s going on in government and public affairs?[1:most of time, 4:Hardly]</br>
 <br></br>
 **c4_ppnet**: Internet Access
 The Variables have either negativ values, which are different catergories of not valid answers and positiv values which shows a scale of perception. In the Code the *negativ numbers gets replaced with NAs*, so the regression will not be effektet by those negativ categories.
 
-## Including Plots
+## American National Election Study 2012
+
+<br>*Extraversion* **tipi_extra**: CASI TIPI extraverted, enthusiastic</br>
+*Extraversion* **tipi_resv**: POST: CASI/WEB: TIPI reserved, quiet (-1)
+<br>*Agreeableness* **tipi_crit**: POST: CASI/WEB: TIPI critical, quarrelsome (-1)</br>
+*Agreeableness* **tipi_warm**: POST: CASI/WEB: TIPI sympathetic, warm
+<br>*Conscientiousness* **tipi_dep**: POST: CASI/WEB: TIPI dependable, self-disciplined </br>
+*Conscientiousness* **tipi_disorg**: POST: CASI/WEB: TIPI disorganized, careless (-1)
+<br>*Neuroticism* **tipi_anx**: POST: CASI/WEB: TIPI anxious, easily upset </br>
+*Neuroticism* **tipi_calm**: POST: CASI/WEB: TIPI calm, emotionally stable (-1)
+<br>*Openness* **tipi_open**: POST: CASI/WEB: TIPI open to new experiences </br>
+*Openness* **tipi_conv**: POST: CASI/WEB: TIPI conventional, uncreative (-1)
+<br>*Ideology* **libcpo_self**: POST: 7pt scale liberal-Conservate: self placement </br>
+*Media use* **prmedia_wktvnws**: PRE: Days in typical week watch news on TV
+<br>*Political trust* **trustgov_trustgrev**: PRE: [REV] How often trust govt in Wash to do what is right </br>
+*Satisfaction democracy* **cses_satisdem**: POST: CSES: Satisfied with way democracy works in the U.S
+<br>*Interest* **interest_attention**: PRE: How often does R pay attn to politics and elections </br>
+*Efficacy* **effic_complicstd**: PRE: [STD] Politics/govt too complicated to understand
+<br>*Efficacy* **effic_undstd**: PRE: [STD] Good understanding of political issues </br>
+*Efficacy* **effic_carestd**: PRE: [STD] Publ officials don’t care what people think
+<br>*Efficacy* **effic_saystd**: PRE: [STD] Have no say about what govt does </br>
+*Efficacy* **effic_complicrev**: PRE: [REV] Politics/govt too complicated to understand
+<br>*Efficacy* **effic_undrev**: PRE: [REV] Good understanding of political issues </br>
+*Efficacy* **effic_carerev**: PRE: [REV] Publ officials don’t care what people think
+<br>*Efficacy* **effic_sayrev**: PRE: [REV] Have no say about what govt does </br>
+*Participation* **postvote_presvt**: POST: Did R vote for President
+<br>*Participation* **postvote_votehs**:  POST: Did R vote for U.S. House of Representatives </br>
+*Participation* **postvote_votesen**: POST: Did R vote for U.S. Senate
+<br>*!SELECTED BUT NOT FURTHER USED!* **postvote_votegov**: POST: Did R vote for gubernatorial candidate </br>
+*Involvement* **dhsinvolv_board**: POST: DHS: Has R in past 4 years: attended city/school brd
+<br>*Involvement* **dhsinvolv_call**:  POST: DHS: Has R in past 4 yrs: called radio/TV about polit iss </br>
+*Involvement* **dhsinvolv_letter**: POST: DHS: written a letter to newspaper/mag about polit iss
+<br>*Involvement* **dhsinvolv_march**: POST: DHS: Has R in past 4 years: joined a protest march </br>
+*Involvement* **dhsinvolv_message**: POST: DHS: sent a message on Facebook/Twitter about polit iss
+<br>*Involvement* **dhsinvolv_netpetition**: POST: DHS: Has R in past 4 years: sign internet petition</br>
+*Involvement* **dhsinvolv_org**: POST: DHS: Has R in past 4 years: gave money to soc/pol org
+<br>*Involvement* **dhsinvolv_petition**:  POST: DHS: Has Rin past 4 years: signed paper petition </br>
+*Involvement* **dhsinvolv_relig**: POST: DHS: Has R in past 4 years: given money to relig. org
+<br>*Knowledge* **ofcrec_cj_correct**: POST: Office recognition: Correct for US Supreme Ct Chief Justice Roberts </br>
+*Knowledge* **ofcrec_pmuk_correct**:  POST: Office recognition: Correct for Prime Minister of UK Cameron
+<br>*Knowledge* **ofcrec_speaker_correct**: POST: Office recognition: Correct for Speaker of the House Boehner </br>
+*Knowledge* **ofcrec_vp_correct**: POST: Office recognition: Correct for Vice-President Biden 
+
+dem_emptype_student: Student
+dem2_inethome: Internet
+
+## American National Election Study 2016
+*Extraversion* V162333: POST: FTF CASI/WEB: TIPI extraverted, enthusiastic
+*Extraversion* V162338: POST: FTF CASI/WEB: TIPI reserved, quiet
+*Agreeableness* V162334: POST: FTF CASI/WEB: TIPI critical, quarrelsome
+*Agreeableness* V162339: POST: FTF CASI/WEB: TIPI sympathetic, warm
+*Conscientiousness* V162340: POST: FTF CASI/WEB: TIPI disorganized, careless
+*Conscientiousness* V162335: POST: FTF CASI/WEB: TIPI dependable, self-disciplined
+*Neuroticism* V162341: POST: FTF CASI/WEB: TIPI calm, emotionally stable
+*Neuroticism* V162336: POST: FTF CASI/WEB: TIPI anxious, easily upset
+*Openness* V162342: POST: FTF CASI/WEB: TIPI conventional, uncreative
+*Openness* V162337:  POST: FTF CASI/WEB: TIPI open to new experiences
+*Involvement* V162198: POST: Has R contacted elected federal official in past 12 months
+*Involvement* V162200: POST: Has R contacted non-elected federal official in past 12 months
+*Involvement* V162202: POST: Has R contacted elected local official in past 12 months 
+*Involvement* V162204: POST: Has R contacted non-elected local official in past 12 months
+*Involvement* V162018a: POST: DHS: Has R in past 12 months: joined a protest march 
+*Involvement* V162018b: POST: DHS: Has R in past 12 months: signed petition
+*Involvement* V162018e: POST: DHS: sent a message on Facebook/Twitter about polit iss
+*Ideology* V161126: PRE: 7pt scale Liberal conservative self-placement
+*Political trust* V162261: POST: Most politicians are trustworty
+*Interest* V161004: PRE: How interested in following campaigns 
+*Media use* V161008: PRE: Days in week watch/listen/read news on any media
+*Efficacy* V162260: POST: Most politicians do not care about the people 
+*Efficacy* V162215: POST: [STD] Publ officials don't care what people think
+*Satisfaction Democracy* V162290: POST: CSES: Satisfied with way democracy works in the U.S 
+*Knowledge* V162072: POST: Office recall: Vice-President Biden
+*Knowledge* V162073a: POST: Office recall: Speaker of the House Ryan 
+*Knowledge* V162073b: POST: Office recall: Speaker of the House Ryan [Scheme 2] 
+*Knowledge* V162074a: POST: Office recall: Chancellor of Germany Merkel
+*Knowledge* V162074b: POST: Office recall: Chancellor of Germany Merkel [Scheme 2] 
+*Knowledge* V162075a: POST: Office recall: President of Russia Putin 
+*Knowledge* V162075b: POST: Office recall: President of Russia Putin [Scheme 2]
+*Knowledge* V162076a: POST: Office recall: US Supreme Ct Chief Justice Roberts
+*Knowledge* V162076b: POST: Office recall: US Supreme Ct Chief Justice Roberts [Scheme 2] 
+
+V161326: Internet
+
+*Participation* V162039: POST: Did R vote for U.S. House of Representatives
+*Participation* V162034: POST: Did R vote for President 
+
+## Longitudinal Internet Studies in the Social Sciences 
+
+*Ideology* cv09b101: In politics, a distinction is often made between "the left" and "the right". Where would you place yourself on the scale below, where 0 means left and 10 means right? 
+*Involvement* cv09b065: making use of radio, television or newspaper
+*Involvement* cv09b066: making use of a political party or organization
+*Involvement* cv09b067: participated in a government-organized public hearing, discussion or citizens' participation meeting 
+*Involvement* cv09b068: contacted a politician or civil servant 
+*Involvement* cv09b069: participated in an action group 
+*Involvement* cv09b070: participated in a protest action, protest march or demonstration 
+*Involvement* cv09b071: participated in a political discussion or campaign by Internet, e-mail or SMS
+*Efficacy* cv09b047: Parliamentarians do not care about the opinions of people like me.
+*Efficacy* cv09b048: Political parties are only interested in my vote and not in my opinion.
+*Efficacy* cv09b049: People like me have no influence at all on government policy.
+*Efficacy* cv09b050: I am well capable of playing an active role in politics. 
+*Efficacy* cv09b051: I have a clear picture of the most important political issues in our country.
+*Efficacy* cv09b052: Politics sometimes seems so complicated that people like me can hardly understand what is going on.
+*Interest* cv09b012: Are you very interested in political topics, fairly interested or not interested? 
+*Participation* cv09b053: Did you vote in the most recent parliamentary elections, held on 22 November 2006?
+*Satisfaction Democracy* cv09b044: How satisfied are you with the way in which the following institutions operate in the Netherlands?  - democracy
+*Media use* cv09b002: Do you follow the news on television and/or radio 
+*Media use* cv09b003: Do you follow the news on Internet 
+*Media use* cv09b004: Do you follow the news in a free daily newspaper such as Metro or Spits 
+*Media use* cv09b005: Do you follow the news in a bought newspaper or one that you have a subscription to 
+*Political trust* cv09b013: how much confidence you personally have in each of the following institutions? - Dutch Government
+
+
+*Openness*cp08a029: Have difficulty understanding abstract ideas. -1
+*Openness*cp08a039: Am not interested in abstract ideas. -1
+*Openness*cp08a049: Do not have a good imagination. -1
+*Openness*cp08a024: Have a rich vocabulary.
+*Openness*cp08a034: Have a vivid imagination
+*Openness*cp08a044: Have excellent ideas. 
+*Openness*cp08a054: Am quick to understand things. 
+*Openness*cp08a059: Use difficult words. 
+*Openness*cp08a064: Spend time reflecting on things. 
+*Openness*cp08a069: Am full of ideas. 
+*Conscientiousness*cp08a022: Am always prepared. 
+*Conscientiousness*cp08a032: Pay attention to details.
+*Conscientiousness*cp08a042: Get chores done right away. 
+*Conscientiousness*cp08a052: Like order.
+*Conscientiousness*cp08a062: Follow a schedule. 
+*Conscientiousness*cp08a067: Am exacting in my work. 
+*Conscientiousness*cp08a027: Leave my belongings around. 
+*Conscientiousness*cp08a037: Make a mess of things. 
+*Conscientiousness*cp08a047: Often forget to put things back in their proper place. 
+*Conscientiousness*cp08a057: Shirk my duties. 
+*Extraversion*cp08a040: Start conversations. 
+*Extraversion*cp08a060: Don’t mind being the center of attention.
+*Extraversion*cp08a050: Talk to a lot of different people at parties. 
+*Extraversion*cp08a030: Feel comfortable around people.
+*Extraversion*cp08a020: Am the life of the party.
+*Extraversion*cp08a025: Don’t talk a lot.-1
+*Extraversion*cp08a035: Keep in the background.-1
+*Extraversion*cp08a055: Don’t like to draw attention to myself.-1 
+*Extraversion*cp08a065: Am quiet around strangers. -1
+*Extraversion*cp08a045: Have little to say -1
+*Agreeableness*cp08a026: Am interested in people.
+*Agreeableness*cp08a066: Make people feel at ease.
+*Agreeableness*cp08a036: Sympathize with others’ feelings.
+*Agreeableness*cp08a061: Feel others’ emotions. 
+*Agreeableness*cp08a046: Have a soft heart. 
+*Agreeableness*cp08a056: Take time out for others.
+*Agreeableness*cp08a021: Feel little concern for others.-1
+*Agreeableness*cp08a031: Insult people.-1
+*Agreeableness*cp08a051: Am not really interested in others.-1 
+*Agreeableness*cp08a041: Am not interested in other people’s problems.-1 
+*Neuroticism*cp08a038: Seldom feel blue.-1
+*Neuroticism*cp08a028: Am relaxed most of the time.-1
+*Neuroticism*cp08a063: Get irritated easily.
+*Neuroticism*cp08a043: Am easily disturbed. 
+*Neuroticism*cp08a048: Get upset easily.
+*Neuroticism*cp08a023: Get stressed out easily.
+*Neuroticism*cp08a068: Often feel blue. 
+*Neuroticism*cp08a033: Worry about things. 
+*Neuroticism*cp08a053: Change my mood a lot. 
+*Neuroticism*cp08a058: Have frequent mood swings.
+
+belbezig: Student (7)
+cs08a241: Internet access
+
+
+## British Election Study
+**workingStatusW1W2W3W4W5**: Which of these best describes what you were doing last week? 5=Full time university student , 6=Other full time student
+
+*Ideology* **leftRightW13**:In politics people sometimes talk of left and right. Where would you place yourself on the following scale?  
+
+**participatePersuadeVote**:Tried to persuade somebody which party they should vote for 
+
+#Including Plots
 
 You can also embed plots, for example:
 
