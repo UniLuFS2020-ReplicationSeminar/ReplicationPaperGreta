@@ -20,8 +20,8 @@ anes12 <- import(here::here("1_Data","1_Panel Datasets","anes_timeseries_2012.dt
 anes16 <- import(here::here("1_Data","1_Panel Datasets","anes_timeseries_2016.dta"))
 
 ## IMPORT 4/10: British Election Study #----
-bes <- read.spss("1_Data/1_Panel Datasets/BES2017_W13_v1.6.sav", to.data.frame = TRUE, use.value.labels = FALSE)
-besw12 <- read.spss("1_Data/1_Panel Datasets/BES2015_W12_v1.6.sav", to.data.frame = TRUE, use.value.labels = FALSE)
+besLegacy <- import(here::here("1_Data","1_Panel Datasets","BES2019_W19_LegacyVars_v0.1.dta"))
+bes_W1_W19 <- import(here::here("1_Data","1_Panel Datasets","BES2019_W19_Panel_v0.1.dta"))
 
 ## IMPORT 5/10: Swiss Household Panel #----
 shp <- import(here::here("1_Data","1_Panel Datasets","shp09_p_user.dta"))
@@ -268,7 +268,7 @@ anes16 <- anes16 %>%
     cntry = "United States",
     
     student = NA,
-    internet = ifelse(V161326 == 1, 1, 0),
+      internet = ifelse(V161326 == 1, 1, 0),
     
     
     # Outcomes
@@ -348,7 +348,7 @@ liss <- liss %>%
     cntry = "Netherlands",
     
     student = ifelse(belbezig == 7, 1, 0),
-    internet = ifelse(cs08a241 == 2, 0, 1),
+    internet = ifelse(cs08a241 == 2, 0, 1), #Do you sometimes use a computer, besides when completing the questionnaires of this panel?  1 = Yes, 2 = NO
     
     # Outcomes
     ## Ideology
@@ -438,16 +438,64 @@ liss <- liss %>%
 # NOT SURE IF THIS PART OF THE CODE IS NEEDED #
 
 
-table(besw12$parti)
 
 # Recode: British Election Study ----
+## Selecting necessary variables to lower size of objects
+bes_W1_W19 <- bes_W1_W19 %>% select(
+  id,
+  workingStatusW1W2W3W4W5,
+  workingStatusW6_W12,
+  leftRightW13,
+  participateWorkForPtyW12,
+  participateGiveMoneyW13,
+  participatePosterW13,
+  participatePtyBroadcastW13,
+  participateCampMaterialW13,
+  participatePersuadeVoteW13,
+  knowMPW3,
+  polKnowMilibandW1W2W3,
+  polKnowCleggW1W2W3,
+  polKnowAssadW2W3W4,
+  polKnowBercowW1W2W3,
+  polKnowHollandeW2W3W4W7W9,
+  polKnowKerryW2W3W4W7W9,
+  polKnowOsborneW1W2W3,
+  polKnowMayW1W2W3,
+  polKnowMerkelW2W3W4,
+  polKnowNetanyahuW2W3W4W7W9,
+  polKnowPutinW2W3W4,
+  efficacyUnderstandW11,
+  efficacyPolCareW11,
+  efficacyTooMuchEffortW11,
+  electionInterestW13,
+  turnoutUKGeneralW12,
+  satDemUKW13,
+  infoSourceTVW13,
+  trustMPsW12
+)
+
+besLegacy <- besLegacy %>% select(
+  id,
+  personality_openness,
+  personality_conscientiousness,
+  personality_extraversion,
+  personality_agreeableness,
+  personality_neuroticism
+)
+
+## MERGING Panel Dataset wave 1 to wave 19 with excluded personality traits by id
+bes <- merge(bes_W1_W19,besLegacy,by = c("id"), all = T)
+
+
+# Recoding variables needed
 bes <- bes %>%
   mutate(
     dataset = "bes",
     cntry = "United Kingdom",
     
     internet = NA,
-    student = ifelse(workingStatusW1W2W3W4W5 ==  5 | workingStatusW1W2W3W4W5 == 6, 1, 0),
+    student = ifelse(
+      workingStatusW1W2W3W4W5 ==  5 | workingStatusW1W2W3W4W5 == 6 | workingStatusW6_W12 == 5 | workingStatusW6_W12 == 6, 1, 0),
     
     # Outcomes
     ## Ideology
@@ -455,12 +503,12 @@ bes <- bes %>%
     ideology = two_sd(ideology),
     
     ## Involvement
-    involvement.1 = ifelse(participation_1W13 == 9999, NA, participation_1W13),
-    involvement.2 = ifelse(participateGiveMoney == 9999, NA, participateGiveMoney),
-    involvement.3 = ifelse(participatePoster == 9999, NA, participatePoster),
-    involvement.4 = ifelse(participatePtyBroadcast == 9999, NA, participatePtyBroadcast),
-    involvement.5 = ifelse(participateCampMaterial == 9999, NA, participateCampMaterial),
-    involvement.6 = ifelse(participatePersuadeVote == 9999, NA, participatePersuadeVote),
+    involvement.1 = ifelse(participateWorkForPtyW12 == 9999, NA, participateWorkForPtyW12),
+    involvement.2 = ifelse(participateGiveMoneyW13 == 9999, NA, participateGiveMoneyW13),
+    involvement.3 = ifelse(participatePosterW13 == 9999, NA, participatePosterW13),
+    involvement.4 = ifelse(participatePtyBroadcastW13 == 9999, NA, participatePtyBroadcastW13),
+    involvement.5 = ifelse(participateCampMaterialW13 == 9999, NA, participateCampMaterialW13),
+    involvement.6 = ifelse(participatePersuadeVoteW13 == 9999, NA, participatePersuadeVoteW13),
     involvement = two_sd(involvement.1 + involvement.2 + involvement.3 + involvement.4 + involvement.5 + involvement.6),
     
     ## Knowledge
@@ -515,3 +563,382 @@ bes <- bes %>%
   )
 
 
+## Recode: Swiss Household Panel ----
+shp <- shp %>%
+  # Recode missing
+  mutate_at(vars(p09c60:p09c69), 
+            function(x) case_when(x %in% c(-3,-2,-1) ~ NA_real_, TRUE ~ as.numeric(x))) %>%
+  
+  mutate(
+    dataset = "shp",
+    cntry = "Switzerland",
+    
+    internet = NA,
+    student = ifelse(occupa09 == 4, 1, 0),
+    
+    # Outcomes
+    ## Ideology
+    ideology = two_sd(ifelse(p09p10 < 0, NA, p09p10)),
+    
+    ## Involvement
+    involvement = NA,
+    
+    ## Knowledge
+    knowledge = NA,
+    
+    ## Efficacy
+    poleff = NA,
+    
+    ## Interest
+    polintr = two_sd(ifelse(p09p01 %in% c(-3,-2,-1), NA, p09p01)),
+    
+    ## Participation
+    polpar = two_sd(ifelse(p09p06 %in% c(-3,-2,-1), NA, p09p06)),
+    
+    ## Satisfaction democracy
+    stfdem = two_sd(ifelse(p09p02 %in% c(-3,-2,-1), NA, p09p02)),
+    
+    ## Media use
+    media = NA,
+    
+    ## Political trust
+    poltr = two_sd(ifelse(p09p04 %in% c(-3,-2,-1), NA, p09p04)),
+    
+    openness = two_sd((p09c64 + p09c69) / 20),
+    
+    p09c67rc = (p09c67 - 10)*-1,
+    conscientiousness = two_sd((p09c62 + p09c67rc - 1)/19),
+    
+    p09c60rc = (p09c60 - 10)*-1,
+    extraversion = two_sd((p09c60rc + p09c65 ) / 20),
+    
+    p09c66rc = (p09c66 - 10)*-1,
+    agreeableness = two_sd((p09c61 + p09c66rc) / 20),
+    
+    p09c63rc = (p09c63 - 10)*-1,
+    neuroticism = two_sd((p09c68 + p09c63rc) / 20)
+  )
+
+
+## Recode: Latin American Public Opinion Project ----
+lapop <- lapop %>%
+  # Recode missing
+  mutate_at(vars(cp2, cp4), 
+            function(x) case_when(x == 88 ~ NA_real_, TRUE ~ as.numeric(x))) %>%
+  mutate(
+    dataset = "lapop",
+    
+    extra2 = (per6 - 8) * -1,
+    extra1 = per1,
+    consci1 = per3,
+    consci2 = (per8 - 8) * -1,
+    agree1 = per7,
+    agree2 = (per2 - 8) * -1,
+    neuro1 = per4,
+    neuro2 = (per9 - 8) * -1,
+    open1 = per5,
+    open2 = (per10 - 8) * -1,
+    
+    openness = two_sd(open1 + open2),
+    conscientiousness = two_sd(consci1 + consci2),
+    extraversion = two_sd(extra1 + extra2),
+    agreeableness = two_sd(agree1 + agree2),
+    neuroticism = two_sd(neuro1 + neuro2),
+    
+    ##How often do you use the internet? (1) Daily (2) A few times a week (3) A few times a month  (4) Rarely (5) Never
+    internet = case_when(www1 == 5 ~ 0,
+                         www1 >= 1 & www1 <= 4 ~ 1,
+                         TRUE ~ NA_real_),
+    
+    student = case_when(ocup4a == 4 ~ 1,
+                        ocup4a >= 1 & ocup4a < 4 ~ 0,
+                        ocup4a > 4 & ocup4a <= 7 ~ 0,
+                        TRUE ~ NA_real_),
+    
+    # Outcomes
+    ## Ideology
+    ideology = two_sd(l1),
+    
+    ## Involvement
+    cp2rc = ifelse(cp2 == 1, 1, 0),
+    cp4arc = ifelse(cp4a == 1, 1, 0),
+    cp4rc = ifelse(cp4 == 1, 1, 0),
+    np1rc = ifelse(np1 == 1, 1, 0),
+    np2rc = ifelse(np2 == 1, 1, 0),
+    
+    involvement = two_sd(cp2rc + cp4arc + cp4rc + np1rc + np2rc),
+    
+    ## Knowledge
+    knowledge = two_sd(ifelse(gi1 == 1, 1, 0)),
+    
+    ## Efficacy
+    poleff = two_sd(eff1 + eff2),
+    ## Interest
+    polintr = two_sd((pol1 - 5) * -1),
+    
+    ## Participation
+    polpar = two_sd(ifelse(vb2 == 1, 1, 0)),
+    
+    ## Satisfaction democracy
+    stfdem = two_sd(ing4),
+    
+    ## Media use
+    media = two_sd(6 - gi0),
+    
+    ## Political trust
+    poltr = two_sd(b14)
+    
+  )
+
+lapop$cntry <- recode(lapop$pais, 
+                      `27` = "Suriname", 
+                      `9` = "Ecuador",
+                      `2` = "Guatemala",
+                      `3` = "El Salvador",
+                      `21` = "Dominican Rep",
+                      `25` = "Trinidad",
+                      `11` = "Peru",
+                      `17` = "Argentina",
+                      `12` = "Paraguay",
+                      `5` = "Nicaragua",
+                      `6` = "Costa Rica",
+                      `14` = "Uruguay",
+                      `13` = "Chile",
+                      `7` = "Panama",
+                      `16` = "Venezuela",
+                      `10` = "Bolivia",
+                      `23` = "Jamaica",
+                      `8` = "Colombia",
+                      `1` = "Mexico",
+                      `24` = "Guyana",
+                      `15` = "Brazil",
+                      `4` = "Honduras",
+                      `22` = "Haiti",
+)
+
+
+## Recode: Swiss Electoral Study (SELECTS) ----
+sels <- sels %>%
+  # Recode missing
+  mutate_at(vars(W3_f15770a:W3_f15771g), 
+            function(x) case_when(x == 99 ~ NA_real_, TRUE ~ as.numeric(x))) %>%
+  mutate(
+    dataset = "sels",
+    cntry = "Switzerland",
+    
+    student = case_when(f21400 == 3 ~ 1, 
+                        f21400 >= 0 & f21400 < 3 ~ 0,
+                        f21400 > 3 & f21400 < 10 ~ 0,
+                        TRUE ~ NA_real_),
+    internet = NA,
+    
+    agreeableness = two_sd( (10-W3_f15770c) + W3_f15770f + W3_f15771e ),
+    extraversion = two_sd( W3_f15770b + W3_f15770h + (10-W3_f15771d) ),
+    conscientiousness = two_sd( W3_f15770a + (10-W3_f15770g) + W3_f15771c ),
+    neuroticism = two_sd( W3_f15770e + W3_f15771b + (10-W3_f15771g) ),
+    openness = two_sd( W3_f15770d + W3_f15771a + W3_f15771f ),
+    
+    # Outcomes
+    ## Ideology
+    ideology = two_sd(ifelse(f15201 < 11, f15201, NA)),
+    
+    ## Involvement
+    W3_f12600arc = ifelse(W3_f12600a == 1, 1, 0),
+    W3_f12600brc = ifelse(W3_f12600b == 1, 1, 0),
+    W3_f12600crc = ifelse(W3_f12600c == 1, 1, 0),
+    W3_f12600drc = ifelse(W3_f12600d == 1, 1, 0),
+    W3_f12600erc = ifelse(W3_f12600e == 1, 1, 0),
+    W3_f12600frc = ifelse(W3_f12600f == 1, 1, 0),
+    W3_f12600grc = ifelse(W3_f12600g == 1, 1, 0),
+    
+    involvement = two_sd(W3_f12600arc + W3_f12600brc + W3_f12600crc + W3_f12600drc + W3_f12600erc + W3_f12600frc + W3_f12600grc),
+    
+    ## Knowledge
+    know1 = ifelse(W2_f16309r == 1, 1, 0),
+    know2 = ifelse(W2_f16100r == 1, 1, 0),
+    know3 = ifelse(W2_f16310r == 1, 1, 0),
+    know4 = ifelse(W2_f16305r == 1, 1, 0),
+    know5 = ifelse(W2_f16311r == 1, 1, 0),
+    
+    knowledge = two_sd(know1 + know2 + know3 + know4 + know5),
+    
+    ## Efficacy
+    eff1 = ifelse(W2_f15350c < 6, 6 - W2_f15350c, NA),
+    eff2 = ifelse(W2_f15350d < 6, 6 - W2_f15350d, NA),
+    poleff = two_sd(eff1 + eff2),
+    
+    ## Interest
+    polintr = two_sd(ifelse(f10100 < 5, 5 - f10100, NA)),
+    
+    ## Participation
+    polpar = two_sd(ifelse(f10200r == 1, 1, 0)),
+    
+    ## Satisfaction democracy
+    stfdem = two_sd(ifelse(f13700 < 5, 5 - f13700, NA)),
+    
+    ## Media use
+    media = two_sd(ifelse(f13400a < 5, f13400a, NA)),
+    
+    ## Political trust
+    poltr = two_sd(ifelse(W3_f12800_1 < 11, W3_f12800_1, NA))
+    
+  )
+
+
+## Recode: New Zealand Election Study NZES ----
+nzes <- nzes %>%
+  mutate(
+    dataset = "nzes",
+    cntry = "New Zealand",
+    
+    internet = ifelse(!is.na(dintnt_none), 0, 1),
+    student = ifelse(!is.na(dwksch), 1, 0),
+    
+    agreeableness = two_sd( dperscritical + (8-dperswarm) ),
+    extraversion = two_sd( (8-dpersextra) + dpersreserved ),
+    conscientiousness = two_sd( (8-dpersdepend) + dperscareless),
+    neuroticism = two_sd( (8-dpersanxious) + dperscalm),
+    openness = two_sd( (8-dperscomplex) + dpersconvent),
+    
+    # Outcomes
+    ## Ideology
+    ideology = two_sd(ifelse(dslflr < 99, dslflr, NA)),
+    
+    ## Involvement
+    dpcnews_rc = ifelse(dpcnews == 1, 1, 0),
+    dpcmoney_rc = ifelse(dpcmoney == 1, 1, 0),
+    dpcposter_rc = ifelse(dpcposter == 1, 1, 0),
+    
+    involvement = two_sd(dpcnews_rc + dpcmoney_rc + dpcposter_rc),
+    
+    ## Knowledge
+    knowledge = two_sd(dknow), 
+    
+    ## Efficacy
+    dtouch_rc = ifelse(dtouch < 6, dtouch, NA),
+    dsay_rc = ifelse(dsay < 6, dsay, NA),
+    drun_rc = ifelse(drun < 6, drun, NA),
+    dcounts_rc = ifelse(dcounts < 6, 6 - dcounts, NA),
+    dcare_rc = ifelse(dcare < 6, dcare, NA),
+    
+    poleff = two_sd(dtouch_rc + dsay_rc + drun_rc + dcounts_rc + dcare_rc),
+    
+    ## Interest
+    polintr = two_sd(5 - dinterest),
+    
+    ## Participation
+    polpar = two_sd(ifelse(ddidvote == 1, 1, 0)),
+    
+    ## Satisfaction democracy
+    stfdem = two_sd(ifelse(ddemo < 9, 5 - ddemo, NA)),
+    
+    ## Media use
+    dtvone_rc = 5 - dtvone,
+    dtvthree_rc = 5 - dtvthree, 
+    dnewspaper_rc = 5 - dnewspaper,
+    dnatradio_rc = 5 - dnatradio,
+    dtalkback_rc = 5 - dtalkback,
+    dmaoritv_rc = 5 - dmaoritv,
+    dskyprime_rc = 5 - dskyprime,
+    
+    media = two_sd(dtvone_rc + dtvthree_rc + dnewspaper_rc + dnatradio_rc + dtalkback_rc + dmaoritv_rc + dskyprime_rc),
+    
+    ## Political trust
+    poltr = NA
+    
+  )
+
+
+## Recode: Canadian Election Study 2015 ----
+ces <- ces %>%
+  # Recode missing
+  mutate_at(vars(p_psych1:p_psych10), 
+            function(x) case_when(x == 1000 ~ NA_real_, TRUE ~ as.numeric(x))) %>%
+  mutate(
+    dataset = "ces",
+    cntry = "Canada",
+    
+    student = case_when(emp_status == 5 | emp_status == 9  ~ 1, 
+                        emp_status >= 0 & emp_status < 5 ~ 0,
+                        emp_status > 5 & emp_status < 9 ~ 0,
+                        emp_status > 9 & emp_status <= 1000 ~ 0,
+                        TRUE ~ NA_real_),
+    internet = NA,
+    
+    agreeableness = two_sd( (8-p_psych2) + p_psych7 ),
+    extraversion = two_sd( p_psych1 + (8-p_psych6) ),
+    conscientiousness = two_sd( p_psych3 + (8-p_psych8) ),
+    neuroticism = two_sd( p_psych4 + (8-p_psych9) ),
+    openness = two_sd( p_psych5 + (8-p_psych10) ),
+    
+    # Outcomes
+    ## Ideology
+    ideology = two_sd(ifelse(p_selfplace < 1000, p_selfplace, NA)),
+    
+    ## Involvement
+    p_pt_meet_rc = ifelse(p_pt_meet == 1, 1, 0),
+    p_pt_spokemeet_rc = ifelse(p_pt_spokemeet == 1, 1, 0),
+    p_pt_online_rc = ifelse(p_pt_online == 1, 1, 0),
+    p_pt_socmedia_rc = ifelse(p_pt_socmedia == 1, 1, 0),
+    p_pt_spoke_rc = ifelse(p_pt_spoke == 1, 1, 0),
+    p_pt_petition_rc = ifelse(p_pt_petition == 1, 1, 0),
+    p_pt_buycott_rc = ifelse(p_pt_buycott == 1, 1, 0),
+    p_pt_march_rc = ifelse(p_pt_march == 1, 1, 0),
+    p_pt_internet_rc = ifelse(p_pt_internet == 1, 1, 0),
+    p_pt_volunt_rc = ifelse(p_pt_volunt == 1, 1, 0),
+    
+    involvement = two_sd(p_pt_meet_rc + p_pt_spokemeet_rc + p_pt_online_rc + p_pt_socmedia_rc + p_pt_spoke_rc + p_pt_petition_rc + p_pt_buycott_rc + p_pt_march_rc  + p_pt_internet_rc + p_pt_volunt_rc),
+    
+    ## Knowledge
+    know_provpm_rc = ifelse(know_provpm == 1, 1, 0),
+    know_finmin_rc = ifelse(know_finmin == 1 | know_finmin == 3, 1, 0),
+    know_gg_rc = ifelse(know_gg == 1 | know_gg == 3, 1, 0),
+    know_putin_rc = ifelse(know_putin == 1 | know_putin == 3, 1, 0),
+    
+    knowledge = two_sd(know_provpm_rc + know_finmin_rc + know_gg_rc + know_putin_rc),
+    
+    ## Efficacy
+    poleff = two_sd(ifelse(p_iss_care < 8, p_iss_care, NA)),
+    
+    ## Interest
+    polintr = two_sd(ifelse(p_intpol < 98, p_intpol, NA)),
+    
+    ## Participation
+    polpar = two_sd(ifelse(p_voted == 1, 1, 0)),
+    
+    ## Satisfaction democracy
+    stfdem = two_sd(ifelse(demsat < 8, 8 - demsat, NA)),
+    
+    ## Media use
+    p_med_tv_rc = case_when(p_med_tv > 0 & p_med_tv < 8 ~ p_med_tv, p_med_tv == 8 ~ 0, TRUE ~ NA_real_),
+    p_med_paper_rc = case_when(p_med_paper > 0 & p_med_paper < 8 ~ p_med_paper, p_med_paper == 8 ~ 0, TRUE ~ NA_real_),
+    p_med_radio_rc = case_when(p_med_radio > 0 & p_med_radio < 8 ~ p_med_radio, p_med_radio == 8 ~ 0, TRUE ~ NA_real_),
+    p_med_internet_rc = case_when(p_med_internet > 0 & p_med_internet < 8 ~ p_med_internet, p_med_internet == 8 ~ 0, TRUE ~ NA_real_),
+    
+    media = two_sd(p_med_tv_rc + p_med_paper_rc + p_med_radio_rc + p_med_internet_rc),
+    
+    ## Political trust
+    poltr = NA
+    
+  )
+
+
+## MERGING all DATASETS ----
+
+variables_list <- c("dataset", "cntry", "student", "internet", "openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism", "ideology", "involvement", "knowledge", "poleff", "polintr", "polpar", "stfdem", "media", "poltr")
+
+fulldata <- rbind(
+  select(bes, variables_list),
+  select(shp, variables_list),
+  select(liss, variables_list),
+  select(lapop, variables_list),
+  select(sels, variables_list),
+  select(nzes, variables_list),
+  select(ces, variables_list),
+  select(anes12, variables_list),
+  select(anes1012, variables_list),
+  select(anes16, variables_list)) %>%
+  drop_na(openness, conscientiousness, extraversion, agreeableness, neuroticism) %>%
+  filter(!is.na(ideology) | !is.na(involvement) | !is.na(knowledge) | !is.na(poleff) | !is.na(polintr) | !is.na(polpar) | !is.na(stfdem) | !is.na(media) | !is.na(poltr))
+
+write_csv(fulldata, here::here("1_Data","personalitypolitics.csv"))

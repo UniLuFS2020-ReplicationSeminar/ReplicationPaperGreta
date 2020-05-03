@@ -238,11 +238,17 @@ cs08a241: Internet access
 
 
 ## British Election Study
-**workingStatusW1W2W3W4W5**: Which of these best describes what you were doing last week? 5=Full time university student , 6=Other full time student
+**profile_work_stat**: Which of these best describes what you were doing last week? 5=Full time university student , 6=Other full time student
 
-*Ideology* **leftRightW13**:In politics people sometimes talk of left and right. Where would you place yourself on the following scale?  
+*Ideology* **leftRightW**:In politics people sometimes talk of left and right. Where would you place yourself on the following scale?  
 
-**participatePersuadeVote**:Tried to persuade somebody which party they should vote for 
+Involvement:
+During the last 7 days, have you done any of the following? (Choose all that apply) ROWS -Done any work on behalf of a political party or action group 
+-Given any money to a political party, organization or cause 
+-Displayed an election poster 
+-Listened to or watched a party election broadcast 
+-Read a campaign leaflet/letter, text message or email from a political party 
+participation_6 Tried to persuade somebody which party they should vote for 
 
 #Including Plots
 
