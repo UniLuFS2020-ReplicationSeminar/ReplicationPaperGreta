@@ -4,14 +4,6 @@ library(ggplot2)
 library(tidyverse)
 library(sjmisc)
 
-# Longitudinal Internet Studies in the Social Sciences - Background Variables 2008 #
-avars2008 <- import(here::here("1_Data","1_Panel Datasets", "avars_200805_EN_2.0p.dta"))
-
-# Creating new file without personalised Data
-avars_background_var <- avars2008 %>% 
-  select(geslacht,gebjaar,aantalhh,burgstat,nettoink,oplcat)
-write_csv(avars_background_var, here::here("1_Data","Income_Standardizing.csv"))
-
 ## Import File for Testing ##
 avars <- import(here::here("1_Data","Income_Standardizing.csv"))
                  

@@ -1,0 +1,17 @@
+library(psy)
+library(stargazer)
+library(grid)
+library(gridExtra)
+library(scales)
+library(psych)
+library(xtable)
+library(magrittr)
+library(tidyverse)
+library(rio)
+library(foreign)
+library(sjmisc)
+library(sjlabelled)
+library(stringr)
+
+maindata <- import(here::here("1_Data","personalitypolitics.csv"))
+
