@@ -19,17 +19,37 @@ avars <- avars %>%
 #Dependend Variable
 summary(avars$nettink)
 
+require(ggpubr)
+p1 <- ggplot(data = avars, aes(x = nettink)) + 
+  geom_histogram(binwidth = 5) + theme_bw()
+p2 <- ggplot(data = avars, aes(x = nettink)) + 
+  geom_histogram(binwidth = 1) + 
+  coord_cartesian(xlim = c(0, 20)) + theme_bw()
+ggpubr::ggarrange(p1, p2, labels = list("Net income", "Net income: zoom x < 20"))
+
+
 #Independend Variables
 frq(avars$male)
 frq(avars$high_edu) #Level of highest education: 1=Primary School, 2=Jr.High School, 3=Senor High School, 4=Junior College, 5=College, 6=Uni
 summary(avars$age)
-                    
+
 # Plotting all independend variables on nett income unstanderdized
-ggplot(avars)+
-  geom_point(mapping=aes(x=male,y=nettink), color = "darkblue",alpha = 0.5)+
-  geom_point(mapping=aes(x=high_edu,y=nettink), color = "yellow2",alpha = 0.5)+
-  geom_point(mapping=aes(x=age,y=nettink), color = "darkseagreen",alpha = 0.5)+
+p1 <- ggplot(avars) +
+  geom_boxplot(aes(x = factor(male), y = nettink)) + 
+  labs(title = "Gender", x = "", y = "Net income") + 
+  scale_x_discrete(labels = c("Female", "Male")) + 
   theme_minimal()
+p2 <- ggplot(avars) +
+  geom_point(aes(x = high_edu, y = nettink), color = "yellow2", alpha = 0.5) +
+  labs(title = "Education", x = "", y = "Net income") + 
+  theme_minimal()
+p3 <- ggplot(avars) + 
+  geom_point(aes(x = age, y = nettink), color = "darkseagreen",alpha = 0.5) +
+  labs(title = "Age", x = "", y = "Net income") + 
+  theme_minimal()
+p <- ggpubr::ggarrange(p1, p2, p3, ncol = 3)
+# Link: https://rpkgs.datanovia.com/ggpubr/reference/annotate_figure.html
+ggpubr::annotate_figure(p, top = text_grob("Comparing three predictors with different measurement scales", face = "bold", size = 18))
 
                    
 ##Standardize Functions##
