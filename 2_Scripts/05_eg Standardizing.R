@@ -3,6 +3,7 @@ library(rio)
 library(ggplot2)
 library(tidyverse)
 library(sjmisc)
+library(ggpubr)
 
 ## Import File for Testing ##
 avars <- import(here::here("1_Data","Income_Standardizing.csv"))
@@ -75,18 +76,40 @@ avars <- avars %>%
 
 
 # PLOT DIV BY 1 SD - NORMAL STANDARDIZE#
-ggplot(avars)+
-  geom_point(mapping=aes(x=male,y=nettink), color = "darkblue",alpha = 0.5)+
-  geom_point(mapping=aes(x=high_edu1,y=nettink), color = "yellow2",alpha = 0.5)+
-  geom_point(mapping=aes(x=age1,y=nettink), color = "darkseagreen",alpha = 0.5)+
+p1 <- ggplot(avars) +
+  geom_boxplot(aes(x = factor(male), y = nettink)) + 
+  labs(title = "Gender", x = "", y = "Net income") + 
+  scale_x_discrete(labels = c("Female", "Male")) + 
   theme_minimal()
+p2 <- ggplot(avars) +
+  geom_point(aes(x = high_edu1, y = nettink), color = "yellow2", alpha = 0.5) +
+  labs(title = "Highest Education", x = "", y = "Net income") + 
+  theme_minimal()
+p3 <- ggplot(avars) + 
+  geom_point(aes(x = age1, y = nettink), color = "darkseagreen",alpha = 0.5) +
+  labs(title = "Age", x = "", y = "Net income") + 
+  theme_minimal()
+p <- ggpubr::ggarrange(p1, p2, p3, ncol = 3)
+ggpubr::annotate_figure(p, top = text_grob("Comparing three predictors with different measurement scales - Standardize by 1 SD", face = "bold", size = 16))
+
 
 # PLOT DIV BY 2 SD #
-ggplot(avars)+
-  geom_point(mapping=aes(x=male,y=nettink), color = "darkblue",alpha = 0.5)+
-  geom_point(mapping=aes(x=high_edu2,y=nettink), color = "yellow2",alpha = 0.5)+
-  geom_point(mapping=aes(x=age2,y=nettink), color = "darkseagreen",alpha = 0.5)+
+p1 <- ggplot(avars) +
+  geom_boxplot(aes(x = factor(male), y = nettink)) + 
+  labs(title = "Gender", x = "", y = "Net income") + 
+  scale_x_discrete(labels = c("Female", "Male")) + 
   theme_minimal()
+p2 <- ggplot(avars) +
+  geom_point(aes(x = high_edu2, y = nettink), color = "yellow2", alpha = 0.5) +
+  labs(title = "Highest Education", x = "", y = "Net income") + 
+  theme_minimal()
+p3 <- ggplot(avars) + 
+  geom_point(aes(x = age2, y = nettink), color = "darkseagreen",alpha = 0.5) +
+  labs(title = "Age", x = "", y = "Net income") + 
+  theme_minimal()
+p <- ggpubr::ggarrange(p1, p2, p3, ncol = 3)
+ggpubr::annotate_figure(p, top = text_grob("Comparing three predictors with different measurement scales - Standardize by 2 SD", face = "bold", size = 16))
+
 
 #mod0: Linear Model Without Standerdizing #
 mod0 <- lm(formula = avars$nettink ~ 
