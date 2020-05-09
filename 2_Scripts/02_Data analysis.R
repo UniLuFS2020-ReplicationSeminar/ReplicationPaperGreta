@@ -70,6 +70,33 @@ df_direct <- data.frame(
   se = NA
 )
 
+### DESCRIPTIVES ### ----
+# Checking N of each panel dataset
+frq(maindata$dataset) # N accurate or slightly different then stated in original paper
+
+# Student ratio
+frq(anes1012$student) # NA as expected
+frq(anes12$student) # Ratio exact like in orig Study
+frq(anes16$student) # NA as expected
+frq(bes$student) # same ratio
+frq(ces$student) # same ratio
+frq(lapop$student) # same ratio
+frq(liss$student) # same ratio
+frq(nzes$student) # 5%, in paper NA
+frq(sels$student) # same ratio
+frq(shp$student) # same ratio
+
+# Internet ratio
+frq(anes1012$internet) # same ratio
+frq(anes12$internet) # same ratio
+frq(anes16$internet) # same ratio
+frq(bes$internet) # NA as expected
+frq(ces$internet) # NA as expected
+frq(lapop$internet) # same ratio
+frq(liss$internet) # 48% users, was wrongly coded therefore a difference here (orig paper = 52%)
+frq(nzes$internet) # same ratio
+
+
 ## Calculation Estimated Regressioncoefficient "est" and Standarddeviation "se" ## ----
 ## Model: Personality traits impact on Political variables ## 
 #Anes 2010 2012
@@ -86,10 +113,11 @@ for (i in c("ideology", "polintr", "poleff", "involvement", "polpar", "media", "
   df_direct$se[df_direct$outcome == i & df_direct$dataset == "anes1012" & df_direct$trait == "Neuroticism"] <- coef(summary(lm(as.formula(paste(i,"~ neuroticism")), data = anes1012)))["neuroticism","Std. Error"]
 }
 
-
+df_direct
 ## Checking Calculated Coefficients ##
 model_OpenIdeology <- lm(formula = ideology ~ openness, data = anes1012)
 summary(model_OpenIdeology)
+df_direct
 
 # Anes 2012
 for (i in c("ideology", "media", "poltr", "poleff", "polpar", "involvement", "knowledge", "stfdem", "polintr")) {
@@ -217,5 +245,34 @@ for (i in c("ideology", "media", "poleff", "polpar", "involvement", "knowledge",
   df_direct$se[df_direct$outcome == i & df_direct$dataset == "ces" & df_direct$trait == "Neuroticism"] <- coef(summary(lm(as.formula(paste(i,"~ neuroticism")), data = ces)))["neuroticism","Std. Error"]
 }
 
+## Renaming Variables for clarity ## ----
+df_direct <- df_direct %>%
+  mutate(
+    Data = case_when(
+      dataset == "anes1012" ~ "ANES 2010-12",
+      dataset == "anes12" ~ "ANES 2012",
+      dataset == "anes16" ~ "ANES 2016",
+      dataset == "liss" ~ "LISS",
+      dataset == "bes" ~ "BES",
+      dataset == "shp" ~ "SHP",
+      dataset == "lapop" ~ "LAPOP",
+      dataset == "sels" ~ "SELECTS",
+      dataset == "nzes" ~ "NZES",
+      dataset == "ces" ~ "CES",
+      TRUE  ~  NA_character_),
+    name = case_when(
+      outcome == "ideology" ~ "Left-right ideology",
+      outcome == "stfdem" ~ "Sat. democracy",
+      outcome == "polintr" ~ "Interest",
+      outcome == "poleff" ~ "Efficacy",
+      outcome == "involvement" ~ "Involvement",
+      outcome == "polpar" ~ "Participation",
+      outcome == "media" ~ "Media use",
+      outcome == "poltr" ~ "Political trust",
+      outcome == "knowledge" ~ "Knowledge",
+      TRUE  ~  NA_character_)
+  )
 
+# Adding p value
+df_direct$pval <- 2 * pt(-abs(df_direct$est / df_direct$se), df = Inf)
 
