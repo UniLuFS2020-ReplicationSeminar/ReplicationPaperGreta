@@ -276,3 +276,17 @@ df_direct <- df_direct %>%
 # Adding p value
 df_direct$pval <- 2 * pt(-abs(df_direct$est / df_direct$se), df = Inf)
 
+# Checking p value
+summary(model_OpenIdeology)
+head(df_direct)
+
+model_InteresExtra <- lm(formula = polintr ~ extraversion, data = anes1012)
+summary(model_InteresExtra)
+head(df_direct)
+
+# Rounding P Value and Testing for 1% Sign Level
+df_direct <- df_direct %>%
+  mutate(
+    pval_text = case_when(
+      pval < 0.01 ~ "p < 0.01",
+      TRUE  ~  paste("p = ", as.character(round(pval, 2)))))
