@@ -1,0 +1,901 @@
+outcome,trait,dataset,est,se,mod,Data,name,est_abs
+ideology,Openness,anes1012,NA,NA,student,ANES 2010-12,Left-right ideology,NA
+stfdem,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Sat. democracy,NA
+polintr,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Interest,NA
+poleff,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Efficacy,NA
+involvement,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Involvement,NA
+polpar,Openness,anes1012,NA,NA,student,ANES 2010-12,Participation,NA
+media,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Media use,NA
+poltr,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Political trust,NA
+knowledge,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Knowledge,NA
+ideology,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Left-right ideology,NA
+stfdem,Openness,anes1012,NA,NA,student,ANES 2010-12,Sat. democracy,NA
+polintr,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Interest,NA
+poleff,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Efficacy,NA
+involvement,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Involvement,NA
+polpar,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Participation,NA
+media,Openness,anes1012,NA,NA,student,ANES 2010-12,Media use,NA
+poltr,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Political trust,NA
+knowledge,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Knowledge,NA
+ideology,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Left-right ideology,NA
+stfdem,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Sat. democracy,NA
+polintr,Openness,anes1012,NA,NA,student,ANES 2010-12,Interest,NA
+poleff,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Efficacy,NA
+involvement,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Involvement,NA
+polpar,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Participation,NA
+media,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Media use,NA
+poltr,Openness,anes1012,NA,NA,student,ANES 2010-12,Political trust,NA
+knowledge,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Knowledge,NA
+ideology,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Left-right ideology,NA
+stfdem,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Sat. democracy,NA
+polintr,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Interest,NA
+poleff,Openness,anes1012,NA,NA,student,ANES 2010-12,Efficacy,NA
+involvement,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Involvement,NA
+polpar,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Participation,NA
+media,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Media use,NA
+poltr,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Political trust,NA
+knowledge,Openness,anes1012,NA,NA,student,ANES 2010-12,Knowledge,NA
+ideology,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Left-right ideology,NA
+stfdem,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Sat. democracy,NA
+polintr,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Interest,NA
+poleff,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Efficacy,NA
+involvement,Openness,anes1012,NA,NA,student,ANES 2010-12,Involvement,NA
+polpar,Conscientiousness,anes1012,NA,NA,student,ANES 2010-12,Participation,NA
+media,Extraversion,anes1012,NA,NA,student,ANES 2010-12,Media use,NA
+poltr,Agreeableness,anes1012,NA,NA,student,ANES 2010-12,Political trust,NA
+knowledge,Neuroticism,anes1012,NA,NA,student,ANES 2010-12,Knowledge,NA
+ideology,Openness,anes12,0.0037805948540833765,0.05237747546895965,student,ANES 2012,Left-right ideology,0.0037805948540833765
+stfdem,Conscientiousness,anes12,-0.017711920944614972,0.05118516174346294,student,ANES 2012,Sat. democracy,0.017711920944614972
+polintr,Extraversion,anes12,0.03641096722008779,0.049440207268628106,student,ANES 2012,Interest,0.03641096722008779
+poleff,Agreeableness,anes12,-0.07119139334425924,0.050413019872567355,student,ANES 2012,Efficacy,0.07119139334425924
+involvement,Neuroticism,anes12,0.01096871054289652,0.0506423534080905,student,ANES 2012,Involvement,0.01096871054289652
+polpar,Openness,anes12,0.0737163426273489,0.07377517438860194,student,ANES 2012,Participation,0.0737163426273489
+media,Conscientiousness,anes12,0.026884113919923975,0.0499514482221786,student,ANES 2012,Media use,0.026884113919923975
+poltr,Extraversion,anes12,0.075456914693453,0.07803325355753779,student,ANES 2012,Political trust,0.075456914693453
+knowledge,Agreeableness,anes12,-0.05168794499757928,0.04982004080736818,student,ANES 2012,Knowledge,0.05168794499757928
+ideology,Neuroticism,anes12,-0.09634988214646112,0.05376550908269248,student,ANES 2012,Left-right ideology,0.09634988214646112
+stfdem,Openness,anes12,-0.06312820882952203,0.05020333189465066,student,ANES 2012,Sat. democracy,0.06312820882952203
+polintr,Conscientiousness,anes12,-0.056996476827650126,0.05000229311733531,student,ANES 2012,Interest,0.056996476827650126
+poleff,Extraversion,anes12,0.06077278493566525,0.04986585234606694,student,ANES 2012,Efficacy,0.06077278493566525
+involvement,Agreeableness,anes12,-0.00900783948055291,0.049925049123925834,student,ANES 2012,Involvement,0.00900783948055291
+polpar,Neuroticism,anes12,0.0819462082012202,0.07406320861659593,student,ANES 2012,Participation,0.0819462082012202
+media,Openness,anes12,0.04424479146949127,0.04936202623969364,student,ANES 2012,Media use,0.04424479146949127
+poltr,Conscientiousness,anes12,0.1575691023318419,0.07731952465219064,student,ANES 2012,Political trust,0.1575691023318419
+knowledge,Extraversion,anes12,-0.08301742608972267,0.049716283418177076,student,ANES 2012,Knowledge,0.08301742608972267
+ideology,Agreeableness,anes12,-0.02224795848613894,0.05321780370875392,student,ANES 2012,Left-right ideology,0.02224795848613894
+stfdem,Neuroticism,anes12,0.032678043326474865,0.05107138682625621,student,ANES 2012,Sat. democracy,0.032678043326474865
+polintr,Openness,anes12,-0.032684338752412605,0.04905971034876012,student,ANES 2012,Interest,0.032684338752412605
+poleff,Conscientiousness,anes12,0.033946311522866444,0.05080608078510244,student,ANES 2012,Efficacy,0.033946311522866444
+involvement,Extraversion,anes12,-0.020956277344008546,0.04961800280732985,student,ANES 2012,Involvement,0.020956277344008546
+polpar,Agreeableness,anes12,0.1070794943714997,0.07358120822763727,student,ANES 2012,Participation,0.1070794943714997
+media,Neuroticism,anes12,0.051769472201285915,0.050206792691234355,student,ANES 2012,Media use,0.051769472201285915
+poltr,Openness,anes12,-0.0824578045760022,0.07241955006952028,student,ANES 2012,Political trust,0.0824578045760022
+knowledge,Conscientiousness,anes12,-0.14760407646040752,0.04991054766471364,student,ANES 2012,Knowledge,0.14760407646040752
+ideology,Extraversion,anes12,0.024281246407849615,0.05225127397202356,student,ANES 2012,Left-right ideology,0.024281246407849615
+stfdem,Agreeableness,anes12,-0.027703790586951053,0.05033629859811453,student,ANES 2012,Sat. democracy,0.027703790586951053
+polintr,Neuroticism,anes12,0.08745066855876454,0.049986554642067985,student,ANES 2012,Interest,0.08745066855876454
+poleff,Openness,anes12,0.051160408276997034,0.049989349286690035,student,ANES 2012,Efficacy,0.051160408276997034
+involvement,Conscientiousness,anes12,0.02375640260645572,0.050538861213342626,student,ANES 2012,Involvement,0.02375640260645572
+polpar,Extraversion,anes12,-0.026447383425731892,0.07519475122738585,student,ANES 2012,Participation,0.026447383425731892
+media,Agreeableness,anes12,-0.0818491992654838,0.04948734132969393,student,ANES 2012,Media use,0.0818491992654838
+poltr,Neuroticism,anes12,-0.15576049503269954,0.07547870329888727,student,ANES 2012,Political trust,0.15576049503269954
+knowledge,Openness,anes12,-0.1504172305643474,0.049528707152989966,student,ANES 2012,Knowledge,0.1504172305643474
+ideology,Conscientiousness,anes12,0.06691316912244835,0.053292725441253616,student,ANES 2012,Left-right ideology,0.06691316912244835
+stfdem,Extraversion,anes12,0.03622819238455415,0.0498941844508322,student,ANES 2012,Sat. democracy,0.03622819238455415
+polintr,Agreeableness,anes12,-0.09924574443667522,0.049722956961420706,student,ANES 2012,Interest,0.09924574443667522
+poleff,Neuroticism,anes12,0.07829951613877974,0.051027249329818745,student,ANES 2012,Efficacy,0.07829951613877974
+involvement,Openness,anes12,0.001729919297318977,0.049203929989732886,student,ANES 2012,Involvement,0.001729919297318977
+polpar,Conscientiousness,anes12,0.13755468315097807,0.0749481792290865,student,ANES 2012,Participation,0.13755468315097807
+media,Extraversion,anes12,0.056868173867361614,0.049284593862329966,student,ANES 2012,Media use,0.056868173867361614
+poltr,Agreeableness,anes12,0.01401471544814444,0.07252795150794156,student,ANES 2012,Political trust,0.01401471544814444
+knowledge,Neuroticism,anes12,0.08090077653631396,0.05011633215818947,student,ANES 2012,Knowledge,0.08090077653631396
+ideology,Openness,anes16,NA,NA,student,ANES 2016,Left-right ideology,NA
+stfdem,Conscientiousness,anes16,NA,NA,student,ANES 2016,Sat. democracy,NA
+polintr,Extraversion,anes16,NA,NA,student,ANES 2016,Interest,NA
+poleff,Agreeableness,anes16,NA,NA,student,ANES 2016,Efficacy,NA
+involvement,Neuroticism,anes16,NA,NA,student,ANES 2016,Involvement,NA
+polpar,Openness,anes16,NA,NA,student,ANES 2016,Participation,NA
+media,Conscientiousness,anes16,NA,NA,student,ANES 2016,Media use,NA
+poltr,Extraversion,anes16,NA,NA,student,ANES 2016,Political trust,NA
+knowledge,Agreeableness,anes16,NA,NA,student,ANES 2016,Knowledge,NA
+ideology,Neuroticism,anes16,NA,NA,student,ANES 2016,Left-right ideology,NA
+stfdem,Openness,anes16,NA,NA,student,ANES 2016,Sat. democracy,NA
+polintr,Conscientiousness,anes16,NA,NA,student,ANES 2016,Interest,NA
+poleff,Extraversion,anes16,NA,NA,student,ANES 2016,Efficacy,NA
+involvement,Agreeableness,anes16,NA,NA,student,ANES 2016,Involvement,NA
+polpar,Neuroticism,anes16,NA,NA,student,ANES 2016,Participation,NA
+media,Openness,anes16,NA,NA,student,ANES 2016,Media use,NA
+poltr,Conscientiousness,anes16,NA,NA,student,ANES 2016,Political trust,NA
+knowledge,Extraversion,anes16,NA,NA,student,ANES 2016,Knowledge,NA
+ideology,Agreeableness,anes16,NA,NA,student,ANES 2016,Left-right ideology,NA
+stfdem,Neuroticism,anes16,NA,NA,student,ANES 2016,Sat. democracy,NA
+polintr,Openness,anes16,NA,NA,student,ANES 2016,Interest,NA
+poleff,Conscientiousness,anes16,NA,NA,student,ANES 2016,Efficacy,NA
+involvement,Extraversion,anes16,NA,NA,student,ANES 2016,Involvement,NA
+polpar,Agreeableness,anes16,NA,NA,student,ANES 2016,Participation,NA
+media,Neuroticism,anes16,NA,NA,student,ANES 2016,Media use,NA
+poltr,Openness,anes16,NA,NA,student,ANES 2016,Political trust,NA
+knowledge,Conscientiousness,anes16,NA,NA,student,ANES 2016,Knowledge,NA
+ideology,Extraversion,anes16,NA,NA,student,ANES 2016,Left-right ideology,NA
+stfdem,Agreeableness,anes16,NA,NA,student,ANES 2016,Sat. democracy,NA
+polintr,Neuroticism,anes16,NA,NA,student,ANES 2016,Interest,NA
+poleff,Openness,anes16,NA,NA,student,ANES 2016,Efficacy,NA
+involvement,Conscientiousness,anes16,NA,NA,student,ANES 2016,Involvement,NA
+polpar,Extraversion,anes16,NA,NA,student,ANES 2016,Participation,NA
+media,Agreeableness,anes16,NA,NA,student,ANES 2016,Media use,NA
+poltr,Neuroticism,anes16,NA,NA,student,ANES 2016,Political trust,NA
+knowledge,Openness,anes16,NA,NA,student,ANES 2016,Knowledge,NA
+ideology,Conscientiousness,anes16,NA,NA,student,ANES 2016,Left-right ideology,NA
+stfdem,Extraversion,anes16,NA,NA,student,ANES 2016,Sat. democracy,NA
+polintr,Agreeableness,anes16,NA,NA,student,ANES 2016,Interest,NA
+poleff,Neuroticism,anes16,NA,NA,student,ANES 2016,Efficacy,NA
+involvement,Openness,anes16,NA,NA,student,ANES 2016,Involvement,NA
+polpar,Conscientiousness,anes16,NA,NA,student,ANES 2016,Participation,NA
+media,Extraversion,anes16,NA,NA,student,ANES 2016,Media use,NA
+poltr,Agreeableness,anes16,NA,NA,student,ANES 2016,Political trust,NA
+knowledge,Neuroticism,anes16,NA,NA,student,ANES 2016,Knowledge,NA
+ideology,Openness,bes,0.08150912022737718,0.043163418969268993,student,BES,Left-right ideology,0.08150912022737718
+stfdem,Conscientiousness,bes,0.049857391584005845,0.03642061979587305,student,BES,Sat. democracy,0.049857391584005845
+polintr,Extraversion,bes,-0.0085041248972981,0.03452204801712384,student,BES,Interest,0.0085041248972981
+poleff,Agreeableness,bes,-0.047977099702000106,0.036921245063137965,student,BES,Efficacy,0.047977099702000106
+involvement,Neuroticism,bes,0.09528819014430426,0.04337909996177989,student,BES,Involvement,0.09528819014430426
+polpar,Openness,bes,-0.008518918161167158,0.03445735839513669,student,BES,Participation,0.008518918161167158
+media,Conscientiousness,bes,0.042067180229998766,0.03551080300777805,student,BES,Media use,0.042067180229998766
+poltr,Extraversion,bes,-0.011854167838096313,0.0740583003319327,student,BES,Political trust,0.011854167838096313
+knowledge,Agreeableness,bes,-0.007845623447079475,0.0325962910546193,student,BES,Knowledge,0.007845623447079475
+ideology,Neuroticism,bes,-0.061027465992310015,0.0401338968125211,student,BES,Left-right ideology,0.061027465992310015
+stfdem,Openness,bes,0.04100505993136775,0.04184331321106693,student,BES,Sat. democracy,0.04100505993136775
+polintr,Conscientiousness,bes,-0.004651463451024357,0.033242243774456545,student,BES,Interest,0.004651463451024357
+poleff,Extraversion,bes,-0.008251489323682951,0.03497731613590887,student,BES,Efficacy,0.008251489323682951
+involvement,Agreeableness,bes,-0.1489805932996835,0.045587163145878594,student,BES,Involvement,0.1489805932996835
+polpar,Neuroticism,bes,0.05063497757068572,0.03179274590869486,student,BES,Participation,0.05063497757068572
+media,Openness,bes,-0.05615406491129474,0.04085165024202045,student,BES,Media use,0.05615406491129474
+poltr,Conscientiousness,bes,0.07563940896585443,0.0653630625220124,student,BES,Political trust,0.07563940896585443
+knowledge,Extraversion,bes,-0.016229683143132025,0.03432837456274746,student,BES,Knowledge,0.016229683143132025
+ideology,Agreeableness,bes,0.05039412059950135,0.04151096531651351,student,BES,Left-right ideology,0.05039412059950135
+stfdem,Neuroticism,bes,3.3230379780250455e-4,0.039321705365849696,student,BES,Sat. democracy,3.3230379780250455e-4
+polintr,Openness,bes,-0.014855214353372026,0.03823468639883726,student,BES,Interest,0.014855214353372026
+poleff,Conscientiousness,bes,0.03910777109247151,0.03388527931998227,student,BES,Efficacy,0.03910777109247151
+involvement,Extraversion,bes,-0.08234787777099628,0.04330689383176331,student,BES,Involvement,0.08234787777099628
+polpar,Agreeableness,bes,-0.012598733106882304,0.03363816219806571,student,BES,Participation,0.012598733106882304
+media,Neuroticism,bes,-0.00910139037222493,0.03870047628455503,student,BES,Media use,0.00910139037222493
+poltr,Openness,bes,-0.10572793194193143,0.08058953599227939,student,BES,Political trust,0.10572793194193143
+knowledge,Conscientiousness,bes,-0.08706657211327934,0.03185941655462156,student,BES,Knowledge,0.08706657211327934
+ideology,Extraversion,bes,0.08195047931000302,0.03829274725273821,student,BES,Left-right ideology,0.08195047931000302
+stfdem,Agreeableness,bes,-0.02488500326757274,0.040928980374376644,student,BES,Sat. democracy,0.02488500326757274
+polintr,Neuroticism,bes,0.03138138907729779,0.03557623428628983,student,BES,Interest,0.03138138907729779
+poleff,Openness,bes,-0.0846969323557441,0.03862371546823726,student,BES,Efficacy,0.0846969323557441
+involvement,Conscientiousness,bes,-0.06656409949936933,0.0410093440409478,student,BES,Involvement,0.06656409949936933
+polpar,Extraversion,bes,-0.004263184330987209,0.03184091729233331,student,BES,Participation,0.004263184330987209
+media,Agreeableness,bes,-0.06679921053325565,0.0404829161176233,student,BES,Media use,0.06679921053325565
+poltr,Neuroticism,bes,-0.06870061524050348,0.07379881958567294,student,BES,Political trust,0.06870061524050348
+knowledge,Openness,bes,-0.025798023987924763,0.035454514993588586,student,BES,Knowledge,0.025798023987924763
+ideology,Conscientiousness,bes,-0.07079520631993198,0.03695067094104187,student,BES,Left-right ideology,0.07079520631993198
+stfdem,Extraversion,bes,-0.0026553651066489933,0.037785697151505496,student,BES,Sat. democracy,0.0026553651066489933
+polintr,Agreeableness,bes,-0.04754348260672759,0.03740353422973266,student,BES,Interest,0.04754348260672759
+poleff,Neuroticism,bes,-0.0691895867951655,0.034957878865358005,student,BES,Efficacy,0.0691895867951655
+involvement,Openness,bes,-0.10398840927005866,0.04614815675728321,student,BES,Involvement,0.10398840927005866
+polpar,Conscientiousness,bes,0.02111841805827811,0.030128757920973578,student,BES,Participation,0.02111841805827811
+media,Extraversion,bes,-0.05307127799152853,0.03719220537108813,student,BES,Media use,0.05307127799152853
+poltr,Agreeableness,bes,-0.05236853052965518,0.07150409545647703,student,BES,Political trust,0.05236853052965518
+knowledge,Neuroticism,bes,0.023614879727215134,0.03424825010560575,student,BES,Knowledge,0.023614879727215134
+ideology,Openness,liss,-0.009751358857175128,0.05494654652233986,student,LISS,Left-right ideology,0.009751358857175128
+stfdem,Conscientiousness,liss,0.012566204843438438,0.045730140542449435,student,LISS,Sat. democracy,0.012566204843438438
+polintr,Extraversion,liss,-0.04422267782242151,0.043869941778817374,student,LISS,Interest,0.04422267782242151
+poleff,Agreeableness,liss,0.01955832643773412,0.04727303556197323,student,LISS,Efficacy,0.01955832643773412
+involvement,Neuroticism,liss,0.014965129098021593,0.046210659541740876,student,LISS,Involvement,0.014965129098021593
+polpar,Openness,liss,0.19676260097783393,0.06840462564040997,student,LISS,Participation,0.19676260097783393
+media,Conscientiousness,liss,0.0486404384041581,0.04406430812938769,student,LISS,Media use,0.0486404384041581
+poltr,Extraversion,liss,-0.10946664450481938,0.04561636766464993,student,LISS,Political trust,0.10946664450481938
+knowledge,Agreeableness,liss,NA,NA,student,LISS,Knowledge,NA
+ideology,Neuroticism,liss,-0.04976748670430733,0.051637553942223136,student,LISS,Left-right ideology,0.04976748670430733
+stfdem,Openness,liss,0.04192505231185741,0.04997723548175804,student,LISS,Sat. democracy,0.04192505231185741
+polintr,Conscientiousness,liss,-0.002979125428758542,0.043830949883627825,student,LISS,Interest,0.002979125428758542
+poleff,Extraversion,liss,-0.1022301818854444,0.0438618238574018,student,LISS,Efficacy,0.1022301818854444
+involvement,Agreeableness,liss,-0.025560889444833902,0.047332210273529164,student,LISS,Involvement,0.025560889444833902
+polpar,Neuroticism,liss,-0.04626715150123674,0.06671310274726766,student,LISS,Participation,0.04626715150123674
+media,Openness,liss,0.07454206450380409,0.047643359140207835,student,LISS,Media use,0.07454206450380409
+poltr,Conscientiousness,liss,-0.02213171276614278,0.0452994214015951,student,LISS,Political trust,0.02213171276614278
+knowledge,Extraversion,liss,NA,NA,student,LISS,Knowledge,NA
+ideology,Agreeableness,liss,-0.10829715990431592,0.05274779814686379,student,LISS,Left-right ideology,0.10829715990431592
+stfdem,Neuroticism,liss,0.03915946326418101,0.04788721967441118,student,LISS,Sat. democracy,0.03915946326418101
+polintr,Openness,liss,0.10377928567106239,0.04606378910186917,student,LISS,Interest,0.10377928567106239
+poleff,Conscientiousness,liss,-0.005090722992820971,0.04400370333170444,student,LISS,Efficacy,0.005090722992820971
+involvement,Extraversion,liss,-0.021170445865459016,0.04404254409908941,student,LISS,Involvement,0.021170445865459016
+polpar,Agreeableness,liss,0.0425211005946405,0.0709926233743657,student,LISS,Participation,0.0425211005946405
+media,Neuroticism,liss,-0.08791476393539643,0.04597881268545927,student,LISS,Media use,0.08791476393539643
+poltr,Openness,liss,0.053947482078621385,0.050096211231111895,student,LISS,Political trust,0.053947482078621385
+knowledge,Conscientiousness,liss,NA,NA,student,LISS,Knowledge,NA
+ideology,Extraversion,liss,7.642273914296858e-4,0.04858784795392564,student,LISS,Left-right ideology,7.642273914296858e-4
+stfdem,Agreeableness,liss,-0.014615611484977675,0.049129667658928504,student,LISS,Sat. democracy,0.014615611484977675
+polintr,Neuroticism,liss,0.01599347417202421,0.04582711054611235,student,LISS,Interest,0.01599347417202421
+poleff,Openness,liss,-0.045837564189358714,0.045211200129979534,student,LISS,Efficacy,0.045837564189358714
+involvement,Conscientiousness,liss,-0.015005432848040916,0.04407760818698264,student,LISS,Involvement,0.015005432848040916
+polpar,Extraversion,liss,-0.053997452320517975,0.06438147409475714,student,LISS,Participation,0.053997452320517975
+media,Agreeableness,liss,0.11129072900426033,0.04736591997623615,student,LISS,Media use,0.11129072900426033
+poltr,Neuroticism,liss,0.10259788862362224,0.04712217668821036,student,LISS,Political trust,0.10259788862362224
+knowledge,Openness,liss,NA,NA,student,LISS,Knowledge,NA
+ideology,Conscientiousness,liss,-0.10023505514540328,0.04822139674421624,student,LISS,Left-right ideology,0.10023505514540328
+stfdem,Extraversion,liss,-0.029734566089506517,0.045591165203146634,student,LISS,Sat. democracy,0.029734566089506517
+polintr,Agreeableness,liss,0.0679938557645944,0.047125938447842776,student,LISS,Interest,0.0679938557645944
+poleff,Neuroticism,liss,0.06670518635408738,0.04568903748150495,student,LISS,Efficacy,0.06670518635408738
+involvement,Openness,liss,-0.12801228831675043,0.04726157325874753,student,LISS,Involvement,0.12801228831675043
+polpar,Conscientiousness,liss,0.05038827531061484,0.0587709057455672,student,LISS,Participation,0.05038827531061484
+media,Extraversion,liss,0.061484006108754534,0.04426461882258809,student,LISS,Media use,0.061484006108754534
+poltr,Agreeableness,liss,-0.037837894110139714,0.04873317192731603,student,LISS,Political trust,0.037837894110139714
+knowledge,Neuroticism,liss,NA,NA,student,LISS,Knowledge,NA
+ideology,Openness,shp,-0.017784401853559652,0.038914757351007356,student,SHP,Left-right ideology,0.017784401853559652
+stfdem,Conscientiousness,shp,0.02043319768657165,0.03928927453971057,student,SHP,Sat. democracy,0.02043319768657165
+polintr,Extraversion,shp,-0.005908464456450942,0.041737265351479653,student,SHP,Interest,0.005908464456450942
+poleff,Agreeableness,shp,NA,NA,student,SHP,Efficacy,NA
+involvement,Neuroticism,shp,NA,NA,student,SHP,Involvement,NA
+polpar,Openness,shp,-0.036763225095835295,0.04751211516432193,student,SHP,Participation,0.036763225095835295
+media,Conscientiousness,shp,NA,NA,student,SHP,Media use,NA
+poltr,Extraversion,shp,0.04645410917730465,0.04238198414872116,student,SHP,Political trust,0.04645410917730465
+knowledge,Agreeableness,shp,NA,NA,student,SHP,Knowledge,NA
+ideology,Neuroticism,shp,-0.03425518628025661,0.043181737737395365,student,SHP,Left-right ideology,0.03425518628025661
+stfdem,Openness,shp,-0.04434614930791647,0.03800573382683418,student,SHP,Sat. democracy,0.04434614930791647
+polintr,Conscientiousness,shp,0.012198616764561583,0.03864368900061276,student,SHP,Interest,0.012198616764561583
+poleff,Extraversion,shp,NA,NA,student,SHP,Efficacy,NA
+involvement,Agreeableness,shp,NA,NA,student,SHP,Involvement,NA
+polpar,Neuroticism,shp,-0.007882326627162286,0.05174860652259715,student,SHP,Participation,0.007882326627162286
+media,Openness,shp,NA,NA,student,SHP,Media use,NA
+poltr,Conscientiousness,shp,0.07122067797131301,0.03923647682058635,student,SHP,Political trust,0.07122067797131301
+knowledge,Extraversion,shp,NA,NA,student,SHP,Knowledge,NA
+ideology,Agreeableness,shp,0.004454491184058707,0.04399124338798163,student,SHP,Left-right ideology,0.004454491184058707
+stfdem,Neuroticism,shp,-0.0014214246487135075,0.04201165180349029,student,SHP,Sat. democracy,0.0014214246487135075
+polintr,Openness,shp,-0.14243875006707524,0.03709804636816691,student,SHP,Interest,0.14243875006707524
+poleff,Conscientiousness,shp,NA,NA,student,SHP,Efficacy,NA
+involvement,Extraversion,shp,NA,NA,student,SHP,Involvement,NA
+polpar,Agreeableness,shp,-0.02435758334254509,0.05237955221612698,student,SHP,Participation,0.02435758334254509
+media,Neuroticism,shp,NA,NA,student,SHP,Media use,NA
+poltr,Openness,shp,0.001309550582642229,0.03821952620781883,student,SHP,Political trust,0.001309550582642229
+knowledge,Conscientiousness,shp,NA,NA,student,SHP,Knowledge,NA
+ideology,Extraversion,shp,-0.021027433996890842,0.04402798451259988,student,SHP,Left-right ideology,0.021027433996890842
+stfdem,Agreeableness,shp,0.015228848505608477,0.04197032396924705,student,SHP,Sat. democracy,0.015228848505608477
+polintr,Neuroticism,shp,0.016392407074838543,0.04151485737401637,student,SHP,Interest,0.016392407074838543
+poleff,Openness,shp,NA,NA,student,SHP,Efficacy,NA
+involvement,Conscientiousness,shp,NA,NA,student,SHP,Involvement,NA
+polpar,Extraversion,shp,0.007026824991426509,0.050711806859747306,student,SHP,Participation,0.007026824991426509
+media,Agreeableness,shp,NA,NA,student,SHP,Media use,NA
+poltr,Neuroticism,shp,0.002013435618958162,0.042116063880986154,student,SHP,Political trust,0.002013435618958162
+knowledge,Openness,shp,NA,NA,student,SHP,Knowledge,NA
+ideology,Conscientiousness,shp,-0.004511697644265353,0.04075188720100041,student,SHP,Left-right ideology,0.004511697644265353
+stfdem,Extraversion,shp,0.04377480706409028,0.04222098270056045,student,SHP,Sat. democracy,0.04377480706409028
+polintr,Agreeableness,shp,-0.06348641681050878,0.041319972296614736,student,SHP,Interest,0.06348641681050878
+poleff,Neuroticism,shp,NA,NA,student,SHP,Efficacy,NA
+involvement,Openness,shp,NA,NA,student,SHP,Involvement,NA
+polpar,Conscientiousness,shp,0.04270192741023574,0.047361491275008445,student,SHP,Participation,0.04270192741023574
+media,Extraversion,shp,NA,NA,student,SHP,Media use,NA
+poltr,Agreeableness,shp,0.06364658014545663,0.041858335697833704,student,SHP,Political trust,0.06364658014545663
+knowledge,Neuroticism,shp,NA,NA,student,SHP,Knowledge,NA
+ideology,Openness,lapop,0.014901782425511316,0.023561315017403033,student,LAPOP,Left-right ideology,0.014901782425511316
+stfdem,Conscientiousness,lapop,-0.048429871300099826,0.019072414155675572,student,LAPOP,Sat. democracy,0.048429871300099826
+polintr,Extraversion,lapop,-0.05323703885260044,0.019529201591246423,student,LAPOP,Interest,0.05323703885260044
+poleff,Agreeableness,lapop,0.043004975737315175,0.019954827300538828,student,LAPOP,Efficacy,0.043004975737315175
+involvement,Neuroticism,lapop,-0.027381472906148813,0.02061147950067793,student,LAPOP,Involvement,0.027381472906148813
+polpar,Openness,lapop,-0.027101369575620444,0.020273177327759902,student,LAPOP,Participation,0.027101369575620444
+media,Conscientiousness,lapop,-0.02634657875290781,0.018902984233195655,student,LAPOP,Media use,0.02634657875290781
+poltr,Extraversion,lapop,0.02442100921735081,0.019324661039663193,student,LAPOP,Political trust,0.02442100921735081
+knowledge,Agreeableness,lapop,-0.01164989003078257,0.01997583847975596,student,LAPOP,Knowledge,0.01164989003078257
+ideology,Neuroticism,lapop,0.014215885085288451,0.02256595991033172,student,LAPOP,Left-right ideology,0.014215885085288451
+stfdem,Openness,lapop,-0.023813394683451936,0.02047667184647617,student,LAPOP,Sat. democracy,0.023813394683451936
+polintr,Conscientiousness,lapop,-0.026300353089654255,0.0188407050487539,student,LAPOP,Interest,0.026300353089654255
+poleff,Extraversion,lapop,-0.03389963923846779,0.020226546788639995,student,LAPOP,Efficacy,0.03389963923846779
+involvement,Agreeableness,lapop,0.02741448566261142,0.020633966775392535,student,LAPOP,Involvement,0.02741448566261142
+polpar,Neuroticism,lapop,0.07276727434917545,0.01922380291211299,student,LAPOP,Participation,0.07276727434917545
+media,Openness,lapop,-0.005126200083477463,0.02030134767815167,student,LAPOP,Media use,0.005126200083477463
+poltr,Conscientiousness,lapop,0.018141488881134312,0.01861548976613709,student,LAPOP,Political trust,0.018141488881134312
+knowledge,Extraversion,lapop,-0.0375334073982395,0.020055578847501723,student,LAPOP,Knowledge,0.0375334073982395
+ideology,Agreeableness,lapop,-0.027048865978182693,0.02258721552005908,student,LAPOP,Left-right ideology,0.027048865978182693
+stfdem,Neuroticism,lapop,0.008816714159118468,0.019582522221312237,student,LAPOP,Sat. democracy,0.008816714159118468
+polintr,Openness,lapop,-0.05030919676271976,0.02023137237166034,student,LAPOP,Interest,0.05030919676271976
+poleff,Conscientiousness,lapop,0.043085633052679206,0.019383589225875155,student,LAPOP,Efficacy,0.043085633052679206
+involvement,Extraversion,lapop,-0.024385684930019125,0.020712551760762327,student,LAPOP,Involvement,0.024385684930019125
+polpar,Agreeableness,lapop,-0.04663705823916375,0.0191608035742021,student,LAPOP,Participation,0.04663705823916375
+media,Neuroticism,lapop,0.027481407185815484,0.019532485780386747,student,LAPOP,Media use,0.027481407185815484
+poltr,Openness,lapop,-0.01777610273096776,0.020047391919375632,student,LAPOP,Political trust,0.01777610273096776
+knowledge,Conscientiousness,lapop,-0.040606048317938896,0.019514234453409048,student,LAPOP,Knowledge,0.040606048317938896
+ideology,Extraversion,lapop,9.614492391251825e-4,0.0227440075224331,student,LAPOP,Left-right ideology,9.614492391251825e-4
+stfdem,Agreeableness,lapop,0.013753497005318091,0.019643419144053233,student,LAPOP,Sat. democracy,0.013753497005318091
+polintr,Neuroticism,lapop,-7.973898534986304e-4,0.019387956061388278,student,LAPOP,Interest,7.973898534986304e-4
+poleff,Openness,lapop,-0.059935443417300255,0.020988938369843627,student,LAPOP,Efficacy,0.059935443417300255
+involvement,Conscientiousness,lapop,-0.00548860813950278,0.02001766781169396,student,LAPOP,Involvement,0.00548860813950278
+polpar,Extraversion,lapop,0.020621322669792115,0.019372059694806914,student,LAPOP,Participation,0.020621322669792115
+media,Agreeableness,lapop,-0.008704906508242745,0.019454224093789493,student,LAPOP,Media use,0.008704906508242745
+poltr,Neuroticism,lapop,-0.007192789365166247,0.01910073375844682,student,LAPOP,Political trust,0.007192789365166247
+knowledge,Openness,lapop,-0.04390456239818167,0.02114532165629743,student,LAPOP,Knowledge,0.04390456239818167
+ideology,Conscientiousness,lapop,0.006075649504984262,0.02195008846026208,student,LAPOP,Left-right ideology,0.006075649504984262
+stfdem,Extraversion,lapop,0.0024349998530570345,0.019886503678429767,student,LAPOP,Sat. democracy,0.0024349998530570345
+polintr,Agreeableness,lapop,-0.04004003990294438,0.019359989329833793,student,LAPOP,Interest,0.04004003990294438
+poleff,Neuroticism,lapop,-0.04912007107034507,0.019933258945428814,student,LAPOP,Efficacy,0.04912007107034507
+involvement,Openness,lapop,0.002344341395219597,0.021844546253669387,student,LAPOP,Involvement,0.002344341395219597
+polpar,Conscientiousness,lapop,-0.05892843477058887,0.018570298130860374,student,LAPOP,Participation,0.05892843477058887
+media,Extraversion,lapop,-0.027559494788518112,0.019459774585740323,student,LAPOP,Media use,0.027559494788518112
+poltr,Agreeableness,lapop,0.005350079891127903,0.019108719603834597,student,LAPOP,Political trust,0.005350079891127903
+knowledge,Neuroticism,lapop,0.03235886598596782,0.019883771741161117,student,LAPOP,Knowledge,0.03235886598596782
+ideology,Openness,sels,-0.0992641728647198,0.048934151050382145,student,SELECTS,Left-right ideology,0.0992641728647198
+stfdem,Conscientiousness,sels,-9.002887505795696e-5,0.04229931211017843,student,SELECTS,Sat. democracy,9.002887505795696e-5
+polintr,Extraversion,sels,-0.0021918502297041714,0.04076465366295478,student,SELECTS,Interest,0.0021918502297041714
+poleff,Agreeableness,sels,-0.06747578296752965,0.05354186531024345,student,SELECTS,Efficacy,0.06747578296752965
+involvement,Neuroticism,sels,0.02397290153603852,0.044148083860329285,student,SELECTS,Involvement,0.02397290153603852
+polpar,Openness,sels,-0.019897916368407445,0.043558979076756765,student,SELECTS,Participation,0.019897916368407445
+media,Conscientiousness,sels,0.10678920656850965,0.04169505598894706,student,SELECTS,Media use,0.10678920656850965
+poltr,Extraversion,sels,-0.01152229529708506,0.04199877393215526,student,SELECTS,Political trust,0.01152229529708506
+knowledge,Agreeableness,sels,0.0591597837601641,0.052852304991776934,student,SELECTS,Knowledge,0.0591597837601641
+ideology,Neuroticism,sels,0.036157623874774746,0.04617890618725125,student,SELECTS,Left-right ideology,0.036157623874774746
+stfdem,Openness,sels,-0.07673508286002736,0.04715834736047647,student,SELECTS,Sat. democracy,0.07673508286002736
+polintr,Conscientiousness,sels,0.045773623327610556,0.04176165197036121,student,SELECTS,Interest,0.045773623327610556
+poleff,Extraversion,sels,0.017959530884035464,0.044912299050965734,student,SELECTS,Efficacy,0.017959530884035464
+involvement,Agreeableness,sels,0.08021799239290804,0.04917817059383594,student,SELECTS,Involvement,0.08021799239290804
+polpar,Neuroticism,sels,-0.05180474474181528,0.03993180728249004,student,SELECTS,Participation,0.05180474474181528
+media,Openness,sels,-0.016798578032907734,0.0468067305710668,student,SELECTS,Media use,0.016798578032907734
+poltr,Conscientiousness,sels,0.08939531343095311,0.042907748875478484,student,SELECTS,Political trust,0.08939531343095311
+knowledge,Extraversion,sels,0.0332712931348033,0.044357249926547694,student,SELECTS,Knowledge,0.0332712931348033
+ideology,Agreeableness,sels,-0.005669481293190704,0.051184056772413146,student,SELECTS,Left-right ideology,0.005669481293190704
+stfdem,Neuroticism,sels,0.06869970479028806,0.043254419311659124,student,SELECTS,Sat. democracy,0.06869970479028806
+polintr,Openness,sels,-0.03564095958575588,0.046329340538707325,student,SELECTS,Interest,0.03564095958575588
+poleff,Conscientiousness,sels,0.07637059728625774,0.047389418781755184,student,SELECTS,Efficacy,0.07637059728625774
+involvement,Extraversion,sels,0.020927115858185616,0.041867587656977366,student,SELECTS,Involvement,0.020927115858185616
+polpar,Agreeableness,sels,0.033064982991164484,0.04476379503520846,student,SELECTS,Participation,0.033064982991164484
+media,Neuroticism,sels,0.018180675022508926,0.042875597302804054,student,SELECTS,Media use,0.018180675022508926
+poltr,Openness,sels,-0.04508651979734243,0.04769012629794124,student,SELECTS,Political trust,0.04508651979734243
+knowledge,Conscientiousness,sels,0.14698783714355612,0.046752457309478114,student,SELECTS,Knowledge,0.14698783714355612
+ideology,Extraversion,sels,-0.0921462189454486,0.04387612204166422,student,SELECTS,Left-right ideology,0.0921462189454486
+stfdem,Agreeableness,sels,-0.06866727420699409,0.0483428909781496,student,SELECTS,Sat. democracy,0.06866727420699409
+polintr,Neuroticism,sels,0.05525453601281884,0.04256396484702237,student,SELECTS,Interest,0.05525453601281884
+poleff,Openness,sels,-0.039533255781350536,0.05162694120498471,student,SELECTS,Efficacy,0.039533255781350536
+involvement,Conscientiousness,sels,-0.004270110838653532,0.042915445976104874,student,SELECTS,Involvement,0.004270110838653532
+polpar,Extraversion,sels,-0.025248687748789196,0.0382667150541911,student,SELECTS,Participation,0.025248687748789196
+media,Agreeableness,sels,0.04128785626344814,0.0480083236787519,student,SELECTS,Media use,0.04128785626344814
+poltr,Neuroticism,sels,0.03528012711148699,0.04406539229885787,student,SELECTS,Political trust,0.03528012711148699
+knowledge,Openness,sels,-0.013388231664348346,0.05097286938212833,student,SELECTS,Knowledge,0.013388231664348346
+ideology,Conscientiousness,sels,-0.03589867912254444,0.044401335465024304,student,SELECTS,Left-right ideology,0.03589867912254444
+stfdem,Extraversion,sels,-0.046887451913888836,0.041417567439375275,student,SELECTS,Sat. democracy,0.046887451913888836
+polintr,Agreeableness,sels,0.013110218118459917,0.047867596601507474,student,SELECTS,Interest,0.013110218118459917
+poleff,Neuroticism,sels,0.04764542032196519,0.04809326417987348,student,SELECTS,Efficacy,0.04764542032196519
+involvement,Openness,sels,0.010380784678540408,0.047340202267885635,student,SELECTS,Involvement,0.010380784678540408
+polpar,Conscientiousness,sels,0.10955839437142431,0.039022214812348424,student,SELECTS,Participation,0.10955839437142431
+media,Extraversion,sels,-0.02446335632978079,0.04094045233911802,student,SELECTS,Media use,0.02446335632978079
+poltr,Agreeableness,sels,-0.1080973314250445,0.04862332051543591,student,SELECTS,Political trust,0.1080973314250445
+knowledge,Neuroticism,sels,0.012967820406333916,0.04715282864359346,student,SELECTS,Knowledge,0.012967820406333916
+ideology,Openness,nzes,NA,NA,student,NZES,Left-right ideology,NA
+stfdem,Conscientiousness,nzes,NA,NA,student,NZES,Sat. democracy,NA
+polintr,Extraversion,nzes,NA,NA,student,NZES,Interest,NA
+poleff,Agreeableness,nzes,NA,NA,student,NZES,Efficacy,NA
+involvement,Neuroticism,nzes,NA,NA,student,NZES,Involvement,NA
+polpar,Openness,nzes,NA,NA,student,NZES,Participation,NA
+media,Conscientiousness,nzes,NA,NA,student,NZES,Media use,NA
+poltr,Extraversion,nzes,NA,NA,student,NZES,Political trust,NA
+knowledge,Agreeableness,nzes,NA,NA,student,NZES,Knowledge,NA
+ideology,Neuroticism,nzes,NA,NA,student,NZES,Left-right ideology,NA
+stfdem,Openness,nzes,NA,NA,student,NZES,Sat. democracy,NA
+polintr,Conscientiousness,nzes,NA,NA,student,NZES,Interest,NA
+poleff,Extraversion,nzes,NA,NA,student,NZES,Efficacy,NA
+involvement,Agreeableness,nzes,NA,NA,student,NZES,Involvement,NA
+polpar,Neuroticism,nzes,NA,NA,student,NZES,Participation,NA
+media,Openness,nzes,NA,NA,student,NZES,Media use,NA
+poltr,Conscientiousness,nzes,NA,NA,student,NZES,Political trust,NA
+knowledge,Extraversion,nzes,NA,NA,student,NZES,Knowledge,NA
+ideology,Agreeableness,nzes,NA,NA,student,NZES,Left-right ideology,NA
+stfdem,Neuroticism,nzes,NA,NA,student,NZES,Sat. democracy,NA
+polintr,Openness,nzes,NA,NA,student,NZES,Interest,NA
+poleff,Conscientiousness,nzes,NA,NA,student,NZES,Efficacy,NA
+involvement,Extraversion,nzes,NA,NA,student,NZES,Involvement,NA
+polpar,Agreeableness,nzes,NA,NA,student,NZES,Participation,NA
+media,Neuroticism,nzes,NA,NA,student,NZES,Media use,NA
+poltr,Openness,nzes,NA,NA,student,NZES,Political trust,NA
+knowledge,Conscientiousness,nzes,NA,NA,student,NZES,Knowledge,NA
+ideology,Extraversion,nzes,NA,NA,student,NZES,Left-right ideology,NA
+stfdem,Agreeableness,nzes,NA,NA,student,NZES,Sat. democracy,NA
+polintr,Neuroticism,nzes,NA,NA,student,NZES,Interest,NA
+poleff,Openness,nzes,NA,NA,student,NZES,Efficacy,NA
+involvement,Conscientiousness,nzes,NA,NA,student,NZES,Involvement,NA
+polpar,Extraversion,nzes,NA,NA,student,NZES,Participation,NA
+media,Agreeableness,nzes,NA,NA,student,NZES,Media use,NA
+poltr,Neuroticism,nzes,NA,NA,student,NZES,Political trust,NA
+knowledge,Openness,nzes,NA,NA,student,NZES,Knowledge,NA
+ideology,Conscientiousness,nzes,NA,NA,student,NZES,Left-right ideology,NA
+stfdem,Extraversion,nzes,NA,NA,student,NZES,Sat. democracy,NA
+polintr,Agreeableness,nzes,NA,NA,student,NZES,Interest,NA
+poleff,Neuroticism,nzes,NA,NA,student,NZES,Efficacy,NA
+involvement,Openness,nzes,NA,NA,student,NZES,Involvement,NA
+polpar,Conscientiousness,nzes,NA,NA,student,NZES,Participation,NA
+media,Extraversion,nzes,NA,NA,student,NZES,Media use,NA
+poltr,Agreeableness,nzes,NA,NA,student,NZES,Political trust,NA
+knowledge,Neuroticism,nzes,NA,NA,student,NZES,Knowledge,NA
+ideology,Openness,ces,-0.05032875623379831,0.08252845633952238,student,CES,Left-right ideology,0.05032875623379831
+stfdem,Conscientiousness,ces,-0.11107592901880439,0.07147415335040763,student,CES,Sat. democracy,0.11107592901880439
+polintr,Extraversion,ces,0.07444951599918735,0.0695670758761965,student,CES,Interest,0.07444951599918735
+poleff,Agreeableness,ces,0.11342708830249129,0.08682228828352805,student,CES,Efficacy,0.11342708830249129
+involvement,Neuroticism,ces,0.07915518101594679,0.07911634026217394,student,CES,Involvement,0.07915518101594679
+polpar,Openness,ces,0.14456072308160406,0.12829327130631932,student,CES,Participation,0.14456072308160406
+media,Conscientiousness,ces,-0.03379550872725379,0.07737491952362929,student,CES,Media use,0.03379550872725379
+poltr,Extraversion,ces,NA,NA,student,CES,Political trust,NA
+knowledge,Agreeableness,ces,-0.057717909088448156,0.09375374911898983,student,CES,Knowledge,0.057717909088448156
+ideology,Neuroticism,ces,-0.08649122896359021,0.08373308941454856,student,CES,Left-right ideology,0.08649122896359021
+stfdem,Openness,ces,-0.09338085455267503,0.07630451774322458,student,CES,Sat. democracy,0.09338085455267503
+polintr,Conscientiousness,ces,-0.06535125658080454,0.07279144444238447,student,CES,Interest,0.06535125658080454
+poleff,Extraversion,ces,-0.037433444077341546,0.06910399246622612,student,CES,Efficacy,0.037433444077341546
+involvement,Agreeableness,ces,0.05087349554402558,0.08727440450819308,student,CES,Involvement,0.05087349554402558
+polpar,Neuroticism,ces,0.13388631536798784,0.1315846059384667,student,CES,Participation,0.13388631536798784
+media,Openness,ces,0.0604164356600398,0.08176327817362553,student,CES,Media use,0.0604164356600398
+poltr,Conscientiousness,ces,NA,NA,student,CES,Political trust,NA
+knowledge,Extraversion,ces,0.008296894210643323,0.07328033227308335,student,CES,Knowledge,0.008296894210643323
+ideology,Agreeableness,ces,0.09745675207340446,0.09515420951957552,student,CES,Left-right ideology,0.09745675207340446
+stfdem,Neuroticism,ces,0.09804527877449361,0.078073677835930555,student,CES,Sat. democracy,0.09804527877449361
+polintr,Openness,ces,-0.10362856730673706,0.07736981618285556,student,CES,Interest,0.10362856730673706
+poleff,Conscientiousness,ces,-0.04684008930488203,0.07269196557897568,student,CES,Efficacy,0.04684008930488203
+involvement,Extraversion,ces,-0.06969726685353929,0.06780327275610123,student,CES,Involvement,0.06969726685353929
+polpar,Agreeableness,ces,0.2238021205469193,0.14647530106511628,student,CES,Participation,0.2238021205469193
+media,Neuroticism,ces,0.10920020021644745,0.08468970578465095,student,CES,Media use,0.10920020021644745
+poltr,Openness,ces,NA,NA,student,CES,Political trust,NA
+knowledge,Conscientiousness,ces,-0.08866227382513486,0.07548934309548837,student,CES,Knowledge,0.08866227382513486
+ideology,Extraversion,ces,-0.09162942077897175,0.07241543423473323,student,CES,Left-right ideology,0.09162942077897175
+stfdem,Agreeableness,ces,-0.054912656711541726,0.08731631316605404,student,CES,Sat. democracy,0.054912656711541726
+polintr,Neuroticism,ces,-0.04916517793845592,0.08104065996780702,student,CES,Interest,0.04916517793845592
+poleff,Openness,ces,-0.034324304414060355,0.07523130712551962,student,CES,Efficacy,0.034324304414060355
+involvement,Conscientiousness,ces,-0.05123732502728931,0.07036911706940532,student,CES,Involvement,0.05123732502728931
+polpar,Extraversion,ces,-0.06771298352393236,0.11544147002312766,student,CES,Participation,0.06771298352393236
+media,Agreeableness,ces,0.027597195956263563,0.09324493505922449,student,CES,Media use,0.027597195956263563
+poltr,Neuroticism,ces,NA,NA,student,CES,Political trust,NA
+knowledge,Openness,ces,0.035451510061940555,0.08090417944147071,student,CES,Knowledge,0.035451510061940555
+ideology,Conscientiousness,ces,-0.0011375819833720374,0.07607958835640295,student,CES,Left-right ideology,0.0011375819833720374
+stfdem,Extraversion,ces,-0.14828994321304825,0.0685664614395176,student,CES,Sat. democracy,0.14828994321304825
+polintr,Agreeableness,ces,0.16208396741816253,0.08986391850525642,student,CES,Interest,0.16208396741816253
+poleff,Neuroticism,ces,0.005123201588023075,0.07827747474440758,student,CES,Efficacy,0.005123201588023075
+involvement,Openness,ces,-0.05845091883290136,0.0751668748464041,student,CES,Involvement,0.05845091883290136
+polpar,Conscientiousness,ces,0.05581841826488175,0.1236546328337076,student,CES,Participation,0.05581841826488175
+media,Extraversion,ces,0.14869012915714946,0.07206503140359188,student,CES,Media use,0.14869012915714946
+poltr,Agreeableness,ces,NA,NA,student,CES,Political trust,NA
+knowledge,Neuroticism,ces,0.18154279793367628,0.08407617114502663,student,CES,Knowledge,0.18154279793367628
+ideology,Openness,anes1012,0.08446681572221947,0.07398879006552343,internet,ANES 2010-12,Left-right ideology,0.08446681572221947
+stfdem,Conscientiousness,anes1012,NA,NA,internet,ANES 2010-12,Sat. democracy,NA
+polintr,Extraversion,anes1012,0.13712326774004166,0.07975852277667383,internet,ANES 2010-12,Interest,0.13712326774004166
+poleff,Agreeableness,anes1012,0.002372582563800282,0.0736675343609815,internet,ANES 2010-12,Efficacy,0.002372582563800282
+involvement,Neuroticism,anes1012,-0.02996569477251794,0.08222831224993199,internet,ANES 2010-12,Involvement,0.02996569477251794
+polpar,Openness,anes1012,0.04911420630713933,0.07737126995029096,internet,ANES 2010-12,Participation,0.04911420630713933
+media,Conscientiousness,anes1012,0.0030547660665866845,0.07289621590652183,internet,ANES 2010-12,Media use,0.0030547660665866845
+poltr,Extraversion,anes1012,NA,NA,internet,ANES 2010-12,Political trust,NA
+knowledge,Agreeableness,anes1012,0.019707235026002846,0.07986366541072727,internet,ANES 2010-12,Knowledge,0.019707235026002846
+ideology,Neuroticism,anes1012,-0.12571567530742142,0.08100909990458868,internet,ANES 2010-12,Left-right ideology,0.12571567530742142
+stfdem,Openness,anes1012,NA,NA,internet,ANES 2010-12,Sat. democracy,NA
+polintr,Conscientiousness,anes1012,-0.07328699316910858,0.0733280903637617,internet,ANES 2010-12,Interest,0.07328699316910858
+poleff,Extraversion,anes1012,0.12870936370314026,0.07901272376025918,internet,ANES 2010-12,Efficacy,0.12870936370314026
+involvement,Agreeableness,anes1012,0.003558205231158189,0.0758076307364603,internet,ANES 2010-12,Involvement,0.003558205231158189
+polpar,Neuroticism,anes1012,0.022819255752190223,0.08606050220632064,internet,ANES 2010-12,Participation,0.022819255752190223
+media,Openness,anes1012,-0.08633198304494413,0.07410175665814404,internet,ANES 2010-12,Media use,0.08633198304494413
+poltr,Conscientiousness,anes1012,NA,NA,internet,ANES 2010-12,Political trust,NA
+knowledge,Extraversion,anes1012,0.12599530954320962,0.08332619770532515,internet,ANES 2010-12,Knowledge,0.12599530954320962
+ideology,Agreeableness,anes1012,-0.0685398976296947,0.07466085005064096,internet,ANES 2010-12,Left-right ideology,0.0685398976296947
+stfdem,Neuroticism,anes1012,NA,NA,internet,ANES 2010-12,Sat. democracy,NA
+polintr,Openness,anes1012,0.027475350167940314,0.0740029802961209,internet,ANES 2010-12,Interest,0.027475350167940314
+poleff,Conscientiousness,anes1012,0.07490700377699752,0.07329009948480353,internet,ANES 2010-12,Efficacy,0.07490700377699752
+involvement,Extraversion,anes1012,-0.047323640555034574,0.08116686436740346,internet,ANES 2010-12,Involvement,0.047323640555034574
+polpar,Agreeableness,anes1012,-0.03311578760690751,0.07808553707593065,internet,ANES 2010-12,Participation,0.03311578760690751
+media,Neuroticism,anes1012,0.09950962513064794,0.07991972596949913,internet,ANES 2010-12,Media use,0.09950962513064794
+poltr,Openness,anes1012,NA,NA,internet,ANES 2010-12,Political trust,NA
+knowledge,Conscientiousness,anes1012,0.02165046349805345,0.07620509747648799,internet,ANES 2010-12,Knowledge,0.02165046349805345
+ideology,Extraversion,anes1012,0.17686309937553682,0.07989488230948788,internet,ANES 2010-12,Left-right ideology,0.17686309937553682
+stfdem,Agreeableness,anes1012,NA,NA,internet,ANES 2010-12,Sat. democracy,NA
+polintr,Neuroticism,anes1012,0.026654359096283952,0.08027339651551342,internet,ANES 2010-12,Interest,0.026654359096283952
+poleff,Openness,anes1012,-0.053204009256009134,0.07360931518720157,internet,ANES 2010-12,Efficacy,0.053204009256009134
+involvement,Conscientiousness,anes1012,0.061271353067447416,0.07620117534333057,internet,ANES 2010-12,Involvement,0.061271353067447416
+polpar,Extraversion,anes1012,0.1020503482838608,0.08189536927334977,internet,ANES 2010-12,Participation,0.1020503482838608
+media,Agreeableness,anes1012,-0.08132824397449008,0.07390098992142867,internet,ANES 2010-12,Media use,0.08132824397449008
+poltr,Neuroticism,anes1012,NA,NA,internet,ANES 2010-12,Political trust,NA
+knowledge,Openness,anes1012,0.15850608439584113,0.07810827854037188,internet,ANES 2010-12,Knowledge,0.15850608439584113
+ideology,Conscientiousness,anes1012,-0.013199552431652764,0.07413223294177396,internet,ANES 2010-12,Left-right ideology,0.013199552431652764
+stfdem,Extraversion,anes1012,NA,NA,internet,ANES 2010-12,Sat. democracy,NA
+polintr,Agreeableness,anes1012,-0.03955789953080521,0.07420998933191314,internet,ANES 2010-12,Interest,0.03955789953080521
+poleff,Neuroticism,anes1012,-0.047106424846467515,0.07985003636870977,internet,ANES 2010-12,Efficacy,0.047106424846467515
+involvement,Openness,anes1012,0.172989954748465,0.07474393006986127,internet,ANES 2010-12,Involvement,0.172989954748465
+polpar,Conscientiousness,anes1012,0.05890187837742078,0.07877897852764443,internet,ANES 2010-12,Participation,0.05890187837742078
+media,Extraversion,anes1012,0.14538516825341088,0.07938293798102274,internet,ANES 2010-12,Media use,0.14538516825341088
+poltr,Agreeableness,anes1012,NA,NA,internet,ANES 2010-12,Political trust,NA
+knowledge,Neuroticism,anes1012,-0.055329833692516026,0.08469321671047775,internet,ANES 2010-12,Knowledge,0.055329833692516026
+ideology,Openness,anes12,-0.06878523094800247,0.04369792652976708,internet,ANES 2012,Left-right ideology,0.06878523094800247
+stfdem,Conscientiousness,anes12,-0.018406055425876998,0.038589659585234866,internet,ANES 2012,Sat. democracy,0.018406055425876998
+polintr,Extraversion,anes12,0.08089626191539102,0.044511260796266085,internet,ANES 2012,Interest,0.08089626191539102
+poleff,Agreeableness,anes12,0.04857758292333299,0.04205181727380612,internet,ANES 2012,Efficacy,0.04857758292333299
+involvement,Neuroticism,anes12,-0.017260771569432867,0.04250802683671275,internet,ANES 2012,Involvement,0.017260771569432867
+polpar,Openness,anes12,0.05113663012317719,0.06451557336054908,internet,ANES 2012,Participation,0.05113663012317719
+media,Conscientiousness,anes12,0.08237196890545576,0.038350690968714476,internet,ANES 2012,Media use,0.08237196890545576
+poltr,Extraversion,anes12,-0.010155485216007749,0.06774879624558887,internet,ANES 2012,Political trust,0.010155485216007749
+knowledge,Agreeableness,anes12,-0.01148457629935642,0.04080521716237815,internet,ANES 2012,Knowledge,0.01148457629935642
+ideology,Neuroticism,anes12,0.0251987404871013,0.048043593470481816,internet,ANES 2012,Left-right ideology,0.0251987404871013
+stfdem,Openness,anes12,-0.030007845425026283,0.04095158208735241,internet,ANES 2012,Sat. democracy,0.030007845425026283
+polintr,Conscientiousness,anes12,0.02282836095837167,0.03801349681072566,internet,ANES 2012,Interest,0.02282836095837167
+poleff,Extraversion,anes12,0.026157486105972867,0.04507735481579537,internet,ANES 2012,Efficacy,0.026157486105972867
+involvement,Agreeableness,anes12,0.001615808777811615,0.0413158208269524,internet,ANES 2012,Involvement,0.001615808777811615
+polpar,Neuroticism,anes12,0.14782093905417598,0.06385722797900763,internet,ANES 2012,Participation,0.14782093905417598
+media,Openness,anes12,-0.03248693419970683,0.040979679060861654,internet,ANES 2012,Media use,0.03248693419970683
+poltr,Conscientiousness,anes12,0.028736819700910056,0.055331650260072765,internet,ANES 2012,Political trust,0.028736819700910056
+knowledge,Extraversion,anes12,0.026473484086813368,0.04393139514059068,internet,ANES 2012,Knowledge,0.026473484086813368
+ideology,Agreeableness,anes12,-0.06933261682512433,0.04583598956805598,internet,ANES 2012,Left-right ideology,0.06933261682512433
+stfdem,Neuroticism,anes12,-0.021023506051401412,0.043296223927725634,internet,ANES 2012,Sat. democracy,0.021023506051401412
+polintr,Openness,anes12,-0.01059692408159486,0.040379580053882196,internet,ANES 2012,Interest,0.01059692408159486
+poleff,Conscientiousness,anes12,-0.017243903208787117,0.038653462027825006,internet,ANES 2012,Efficacy,0.017243903208787117
+involvement,Extraversion,anes12,0.10206494135957753,0.04410041640093803,internet,ANES 2012,Involvement,0.10206494135957753
+polpar,Agreeableness,anes12,-0.20511503713090531,0.06459667540291796,internet,ANES 2012,Participation,0.20511503713090531
+media,Neuroticism,anes12,0.04581448422147178,0.04308834081099649,internet,ANES 2012,Media use,0.04581448422147178
+poltr,Openness,anes12,0.013525664646344264,0.05865265210047558,internet,ANES 2012,Political trust,0.013525664646344264
+knowledge,Conscientiousness,anes12,0.007178633119799919,0.03727074741163688,internet,ANES 2012,Knowledge,0.007178633119799919
+ideology,Extraversion,anes12,-0.028323529662685636,0.04840747505209854,internet,ANES 2012,Left-right ideology,0.028323529662685636
+stfdem,Agreeableness,anes12,-0.012358634964666795,0.04193080423449366,internet,ANES 2012,Sat. democracy,0.012358634964666795
+polintr,Neuroticism,anes12,0.004691295323755941,0.04241666385331787,internet,ANES 2012,Interest,0.004691295323755941
+poleff,Openness,anes12,0.003834150167450961,0.040908773787318234,internet,ANES 2012,Efficacy,0.003834150167450961
+involvement,Conscientiousness,anes12,0.013075994925076273,0.038029154292695794,internet,ANES 2012,Involvement,0.013075994925076273
+polpar,Extraversion,anes12,-0.0034190444253052,0.06981713994276569,internet,ANES 2012,Participation,0.0034190444253052
+media,Agreeableness,anes12,-0.04635682667327726,0.04178612617928005,internet,ANES 2012,Media use,0.04635682667327726
+poltr,Neuroticism,anes12,0.06559906800921832,0.061226723469847796,internet,ANES 2012,Political trust,0.06559906800921832
+knowledge,Openness,anes12,-0.04440104396310451,0.03991469427272569,internet,ANES 2012,Knowledge,0.04440104396310451
+ideology,Conscientiousness,anes12,0.0317892153766546,0.04269133854273279,internet,ANES 2012,Left-right ideology,0.0317892153766546
+stfdem,Extraversion,anes12,-0.028151043071102548,0.045110415560566414,internet,ANES 2012,Sat. democracy,0.028151043071102548
+polintr,Agreeableness,anes12,-0.08608737457806054,0.04148027328111332,internet,ANES 2012,Interest,0.08608737457806054
+poleff,Neuroticism,anes12,-0.007756722941714811,0.043148493503505046,internet,ANES 2012,Efficacy,0.007756722941714811
+involvement,Openness,anes12,0.06579846810649892,0.04002374093857156,internet,ANES 2012,Involvement,0.06579846810649892
+polpar,Conscientiousness,anes12,0.09613026509591678,0.06064383504580164,internet,ANES 2012,Participation,0.09613026509591678
+media,Extraversion,anes12,0.12544669491191807,0.04493885387349972,internet,ANES 2012,Media use,0.12544669491191807
+poltr,Agreeableness,anes12,-0.052745029423820464,0.05954891219810831,internet,ANES 2012,Political trust,0.052745029423820464
+knowledge,Neuroticism,anes12,0.03411364526196741,0.04175733576060939,internet,ANES 2012,Knowledge,0.03411364526196741
+ideology,Openness,anes16,-0.054820105006357055,0.06587652915663036,internet,ANES 2016,Left-right ideology,0.054820105006357055
+stfdem,Conscientiousness,anes16,0.07490688073978422,0.051788437178447555,internet,ANES 2016,Sat. democracy,0.07490688073978422
+polintr,Extraversion,anes16,-0.022450661953278852,0.06263410133312992,internet,ANES 2016,Interest,0.022450661953278852
+poleff,Agreeableness,anes16,0.017101512526706098,0.05654547059884984,internet,ANES 2016,Efficacy,0.017101512526706098
+involvement,Neuroticism,anes16,-0.013583773711638512,0.05673457576655581,internet,ANES 2016,Involvement,0.013583773711638512
+polpar,Openness,anes16,-0.12352739789420694,0.07108701013378425,internet,ANES 2016,Participation,0.12352739789420694
+media,Conscientiousness,anes16,0.07439427786054469,0.050593045668619344,internet,ANES 2016,Media use,0.07439427786054469
+poltr,Extraversion,anes16,0.016762598993844073,0.06362238240977143,internet,ANES 2016,Political trust,0.016762598993844073
+knowledge,Agreeableness,anes16,-0.09332599772758456,0.05475785643868262,internet,ANES 2016,Knowledge,0.09332599772758456
+ideology,Neuroticism,anes16,0.0015905082799597726,0.07133684478617872,internet,ANES 2016,Left-right ideology,0.0015905082799597726
+stfdem,Openness,anes16,-0.004464928415593383,0.052955069279171464,internet,ANES 2016,Sat. democracy,0.004464928415593383
+polintr,Conscientiousness,anes16,0.033473019288676346,0.050395358724049925,internet,ANES 2016,Interest,0.033473019288676346
+poleff,Extraversion,anes16,0.041335951461153785,0.0639304808364636,internet,ANES 2016,Efficacy,0.041335951461153785
+involvement,Agreeableness,anes16,0.09687243501832525,0.05626708486315315,internet,ANES 2016,Involvement,0.09687243501832525
+polpar,Neuroticism,anes16,0.07533722215697466,0.07381088051356405,internet,ANES 2016,Participation,0.07533722215697466
+media,Openness,anes16,0.010248128797198906,0.052143680970505854,internet,ANES 2016,Media use,0.010248128797198906
+poltr,Conscientiousness,anes16,-0.030242338867407494,0.051295408002949766,internet,ANES 2016,Political trust,0.030242338867407494
+knowledge,Extraversion,anes16,-0.01417640248413079,0.06254641101764893,internet,ANES 2016,Knowledge,0.01417640248413079
+ideology,Agreeableness,anes16,-0.1647147909526394,0.06957963324524845,internet,ANES 2016,Left-right ideology,0.1647147909526394
+stfdem,Neuroticism,anes16,-0.03374902847876055,0.056861290510517755,internet,ANES 2016,Sat. democracy,0.03374902847876055
+polintr,Openness,anes16,-0.0016903926862175045,0.051679585775878056,internet,ANES 2016,Interest,0.0016903926862175045
+poleff,Conscientiousness,anes16,0.12844951721657694,0.05179350257433478,internet,ANES 2016,Efficacy,0.12844951721657694
+involvement,Extraversion,anes16,0.03618386466409303,0.06410329743214375,internet,ANES 2016,Involvement,0.03618386466409303
+polpar,Agreeableness,anes16,-0.02311589835231901,0.06946331964576398,internet,ANES 2016,Participation,0.02311589835231901
+media,Neuroticism,anes16,0.10270810215193518,0.05546599908643419,internet,ANES 2016,Media use,0.10270810215193518
+poltr,Openness,anes16,-0.039437409182668,0.05260989579606452,internet,ANES 2016,Political trust,0.039437409182668
+knowledge,Conscientiousness,anes16,0.03688324510682435,0.04983113579115328,internet,ANES 2016,Knowledge,0.03688324510682435
+ideology,Extraversion,anes16,0.1023084721138597,0.07928963052242818,internet,ANES 2016,Left-right ideology,0.1023084721138597
+stfdem,Agreeableness,anes16,-0.10817644113193178,0.0565153399787712,internet,ANES 2016,Sat. democracy,0.10817644113193178
+polintr,Neuroticism,anes16,0.04567859192639714,0.05522728935446994,internet,ANES 2016,Interest,0.04567859192639714
+poleff,Openness,anes16,0.0895715366803284,0.052997887147564315,internet,ANES 2016,Efficacy,0.0895715366803284
+involvement,Conscientiousness,anes16,0.034280277712761126,0.05207031381700172,internet,ANES 2016,Involvement,0.034280277712761126
+polpar,Extraversion,anes16,0.01177744473994682,0.08146459793388768,internet,ANES 2016,Participation,0.01177744473994682
+media,Agreeableness,anes16,-0.07274482955635202,0.05524054445562884,internet,ANES 2016,Media use,0.07274482955635202
+poltr,Neuroticism,anes16,0.07004179192173468,0.05622138490822536,internet,ANES 2016,Political trust,0.07004179192173468
+knowledge,Openness,anes16,-0.052272046822473606,0.05140854530580015,internet,ANES 2016,Knowledge,0.052272046822473606
+ideology,Conscientiousness,anes16,-0.09244799835078794,0.06805046360307111,internet,ANES 2016,Left-right ideology,0.09244799835078794
+stfdem,Extraversion,anes16,0.13653427957580497,0.06472400729896825,internet,ANES 2016,Sat. democracy,0.13653427957580497
+polintr,Agreeableness,anes16,0.016731605828299214,0.05515232982214821,internet,ANES 2016,Interest,0.016731605828299214
+poleff,Neuroticism,anes16,-0.041462859450966824,0.05669031685527678,internet,ANES 2016,Efficacy,0.041462859450966824
+involvement,Openness,anes16,0.08103013896266045,0.05259678738502606,internet,ANES 2016,Involvement,0.08103013896266045
+polpar,Conscientiousness,anes16,0.05200641599404548,0.06866034500002322,internet,ANES 2016,Participation,0.05200641599404548
+media,Extraversion,anes16,-0.08257633526720451,0.06277505793798707,internet,ANES 2016,Media use,0.08257633526720451
+poltr,Agreeableness,anes16,-0.027428535594766466,0.05591959545627541,internet,ANES 2016,Political trust,0.027428535594766466
+knowledge,Neuroticism,anes16,0.055103575272684974,0.05458942090053551,internet,ANES 2016,Knowledge,0.055103575272684974
+ideology,Openness,bes,NA,NA,internet,BES,Left-right ideology,NA
+stfdem,Conscientiousness,bes,NA,NA,internet,BES,Sat. democracy,NA
+polintr,Extraversion,bes,NA,NA,internet,BES,Interest,NA
+poleff,Agreeableness,bes,NA,NA,internet,BES,Efficacy,NA
+involvement,Neuroticism,bes,NA,NA,internet,BES,Involvement,NA
+polpar,Openness,bes,NA,NA,internet,BES,Participation,NA
+media,Conscientiousness,bes,NA,NA,internet,BES,Media use,NA
+poltr,Extraversion,bes,NA,NA,internet,BES,Political trust,NA
+knowledge,Agreeableness,bes,NA,NA,internet,BES,Knowledge,NA
+ideology,Neuroticism,bes,NA,NA,internet,BES,Left-right ideology,NA
+stfdem,Openness,bes,NA,NA,internet,BES,Sat. democracy,NA
+polintr,Conscientiousness,bes,NA,NA,internet,BES,Interest,NA
+poleff,Extraversion,bes,NA,NA,internet,BES,Efficacy,NA
+involvement,Agreeableness,bes,NA,NA,internet,BES,Involvement,NA
+polpar,Neuroticism,bes,NA,NA,internet,BES,Participation,NA
+media,Openness,bes,NA,NA,internet,BES,Media use,NA
+poltr,Conscientiousness,bes,NA,NA,internet,BES,Political trust,NA
+knowledge,Extraversion,bes,NA,NA,internet,BES,Knowledge,NA
+ideology,Agreeableness,bes,NA,NA,internet,BES,Left-right ideology,NA
+stfdem,Neuroticism,bes,NA,NA,internet,BES,Sat. democracy,NA
+polintr,Openness,bes,NA,NA,internet,BES,Interest,NA
+poleff,Conscientiousness,bes,NA,NA,internet,BES,Efficacy,NA
+involvement,Extraversion,bes,NA,NA,internet,BES,Involvement,NA
+polpar,Agreeableness,bes,NA,NA,internet,BES,Participation,NA
+media,Neuroticism,bes,NA,NA,internet,BES,Media use,NA
+poltr,Openness,bes,NA,NA,internet,BES,Political trust,NA
+knowledge,Conscientiousness,bes,NA,NA,internet,BES,Knowledge,NA
+ideology,Extraversion,bes,NA,NA,internet,BES,Left-right ideology,NA
+stfdem,Agreeableness,bes,NA,NA,internet,BES,Sat. democracy,NA
+polintr,Neuroticism,bes,NA,NA,internet,BES,Interest,NA
+poleff,Openness,bes,NA,NA,internet,BES,Efficacy,NA
+involvement,Conscientiousness,bes,NA,NA,internet,BES,Involvement,NA
+polpar,Extraversion,bes,NA,NA,internet,BES,Participation,NA
+media,Agreeableness,bes,NA,NA,internet,BES,Media use,NA
+poltr,Neuroticism,bes,NA,NA,internet,BES,Political trust,NA
+knowledge,Openness,bes,NA,NA,internet,BES,Knowledge,NA
+ideology,Conscientiousness,bes,NA,NA,internet,BES,Left-right ideology,NA
+stfdem,Extraversion,bes,NA,NA,internet,BES,Sat. democracy,NA
+polintr,Agreeableness,bes,NA,NA,internet,BES,Interest,NA
+poleff,Neuroticism,bes,NA,NA,internet,BES,Efficacy,NA
+involvement,Openness,bes,NA,NA,internet,BES,Involvement,NA
+polpar,Conscientiousness,bes,NA,NA,internet,BES,Participation,NA
+media,Extraversion,bes,NA,NA,internet,BES,Media use,NA
+poltr,Agreeableness,bes,NA,NA,internet,BES,Political trust,NA
+knowledge,Neuroticism,bes,NA,NA,internet,BES,Knowledge,NA
+ideology,Openness,liss,-0.009594140648573111,0.060295590286637446,internet,LISS,Left-right ideology,0.009594140648573111
+stfdem,Conscientiousness,liss,-0.023715064570699676,0.05849297698774136,internet,LISS,Sat. democracy,0.023715064570699676
+polintr,Extraversion,liss,-0.03782420357507495,0.060941491481182955,internet,LISS,Interest,0.03782420357507495
+poleff,Agreeableness,liss,0.03316751365597606,0.055801566412489984,internet,LISS,Efficacy,0.03316751365597606
+involvement,Neuroticism,liss,-0.0593289732003803,0.05582382286105182,internet,LISS,Involvement,0.0593289732003803
+polpar,Openness,liss,0.03912548992697031,0.06040543518109091,internet,LISS,Participation,0.03912548992697031
+media,Conscientiousness,liss,-0.11853224829413721,0.05680714591214506,internet,LISS,Media use,0.11853224829413721
+poltr,Extraversion,liss,-0.012149464514004995,0.06252278895132739,internet,LISS,Political trust,0.012149464514004995
+knowledge,Agreeableness,liss,NA,NA,internet,LISS,Knowledge,NA
+ideology,Neuroticism,liss,-0.053772918316385025,0.062154210340547536,internet,LISS,Left-right ideology,0.053772918316385025
+stfdem,Openness,liss,0.03196781215306041,0.05862707187126127,internet,LISS,Sat. democracy,0.03196781215306041
+polintr,Conscientiousness,liss,0.029445276296699182,0.05677757173085764,internet,LISS,Interest,0.029445276296699182
+poleff,Extraversion,liss,0.003975730486391533,0.06055217406016484,internet,LISS,Efficacy,0.003975730486391533
+involvement,Agreeableness,liss,0.09902020323402035,0.05596965297547939,internet,LISS,Involvement,0.09902020323402035
+polpar,Neuroticism,liss,0.0985745869987051,0.05892522913494018,internet,LISS,Participation,0.0985745869987051
+media,Openness,liss,0.0338391334492626,0.05584222467413158,internet,LISS,Media use,0.0338391334492626
+poltr,Conscientiousness,liss,0.06093831427213232,0.05739204245523019,internet,LISS,Political trust,0.06093831427213232
+knowledge,Extraversion,liss,NA,NA,internet,LISS,Knowledge,NA
+ideology,Agreeableness,liss,-0.1439522094701575,0.06002061513060839,internet,LISS,Left-right ideology,0.1439522094701575
+stfdem,Neuroticism,liss,-0.03994704704454466,0.05730762445456031,internet,LISS,Sat. democracy,0.03994704704454466
+polintr,Openness,liss,0.021683754843330467,0.05436539749467391,internet,LISS,Interest,0.021683754843330467
+poleff,Conscientiousness,liss,-0.0029909826540297207,0.05677804563600369,internet,LISS,Efficacy,0.0029909826540297207
+involvement,Extraversion,liss,0.0221744764214224,0.060977316848754064,internet,LISS,Involvement,0.0221744764214224
+polpar,Agreeableness,liss,-0.029190683205859512,0.06115982644538716,internet,LISS,Participation,0.029190683205859512
+media,Neuroticism,liss,-0.07636886098173795,0.055346034101354614,internet,LISS,Media use,0.07636886098173795
+poltr,Openness,liss,-0.018588544790112946,0.05779631167718065,internet,LISS,Political trust,0.018588544790112946
+knowledge,Conscientiousness,liss,NA,NA,internet,LISS,Knowledge,NA
+ideology,Extraversion,liss,-0.03504100588315044,0.06538187325149754,internet,LISS,Left-right ideology,0.03504100588315044
+stfdem,Agreeableness,liss,-0.027628856102411944,0.05754842835753836,internet,LISS,Sat. democracy,0.027628856102411944
+polintr,Neuroticism,liss,-0.04130082765814994,0.05543887419457916,internet,LISS,Interest,0.04130082765814994
+poleff,Openness,liss,0.16432900154804386,0.05299519913716305,internet,LISS,Efficacy,0.16432900154804386
+involvement,Conscientiousness,liss,0.05790256072373713,0.05695294273425151,internet,LISS,Involvement,0.05790256072373713
+polpar,Extraversion,liss,-0.042487624038739256,0.06593192795158952,internet,LISS,Participation,0.042487624038739256
+media,Agreeableness,liss,-0.06192813052435641,0.05591267294782506,internet,LISS,Media use,0.06192813052435641
+poltr,Neuroticism,liss,-0.01845285778816731,0.056317601216994986,internet,LISS,Political trust,0.01845285778816731
+knowledge,Openness,liss,NA,NA,internet,LISS,Knowledge,NA
+ideology,Conscientiousness,liss,-0.050636579976006485,0.06166086318337011,internet,LISS,Left-right ideology,0.050636579976006485
+stfdem,Extraversion,liss,-0.0657243035565088,0.06275164822190996,internet,LISS,Sat. democracy,0.0657243035565088
+polintr,Agreeableness,liss,-0.005793527043982332,0.05593979215876378,internet,LISS,Interest,0.005793527043982332
+poleff,Neuroticism,liss,-0.07193506087400822,0.055019069097735004,internet,LISS,Efficacy,0.07193506087400822
+involvement,Openness,liss,0.14362359404389927,0.05547971420363082,internet,LISS,Involvement,0.14362359404389927
+polpar,Conscientiousness,liss,-0.06016993434939651,0.06278439820412987,internet,LISS,Participation,0.06016993434939651
+media,Extraversion,liss,0.029539445366630647,0.06108533203433117,internet,LISS,Media use,0.029539445366630647
+poltr,Agreeableness,liss,-0.08577249276084244,0.056194095099183335,internet,LISS,Political trust,0.08577249276084244
+knowledge,Neuroticism,liss,NA,NA,internet,LISS,Knowledge,NA
+ideology,Openness,shp,NA,NA,internet,SHP,Left-right ideology,NA
+stfdem,Conscientiousness,shp,NA,NA,internet,SHP,Sat. democracy,NA
+polintr,Extraversion,shp,NA,NA,internet,SHP,Interest,NA
+poleff,Agreeableness,shp,NA,NA,internet,SHP,Efficacy,NA
+involvement,Neuroticism,shp,NA,NA,internet,SHP,Involvement,NA
+polpar,Openness,shp,NA,NA,internet,SHP,Participation,NA
+media,Conscientiousness,shp,NA,NA,internet,SHP,Media use,NA
+poltr,Extraversion,shp,NA,NA,internet,SHP,Political trust,NA
+knowledge,Agreeableness,shp,NA,NA,internet,SHP,Knowledge,NA
+ideology,Neuroticism,shp,NA,NA,internet,SHP,Left-right ideology,NA
+stfdem,Openness,shp,NA,NA,internet,SHP,Sat. democracy,NA
+polintr,Conscientiousness,shp,NA,NA,internet,SHP,Interest,NA
+poleff,Extraversion,shp,NA,NA,internet,SHP,Efficacy,NA
+involvement,Agreeableness,shp,NA,NA,internet,SHP,Involvement,NA
+polpar,Neuroticism,shp,NA,NA,internet,SHP,Participation,NA
+media,Openness,shp,NA,NA,internet,SHP,Media use,NA
+poltr,Conscientiousness,shp,NA,NA,internet,SHP,Political trust,NA
+knowledge,Extraversion,shp,NA,NA,internet,SHP,Knowledge,NA
+ideology,Agreeableness,shp,NA,NA,internet,SHP,Left-right ideology,NA
+stfdem,Neuroticism,shp,NA,NA,internet,SHP,Sat. democracy,NA
+polintr,Openness,shp,NA,NA,internet,SHP,Interest,NA
+poleff,Conscientiousness,shp,NA,NA,internet,SHP,Efficacy,NA
+involvement,Extraversion,shp,NA,NA,internet,SHP,Involvement,NA
+polpar,Agreeableness,shp,NA,NA,internet,SHP,Participation,NA
+media,Neuroticism,shp,NA,NA,internet,SHP,Media use,NA
+poltr,Openness,shp,NA,NA,internet,SHP,Political trust,NA
+knowledge,Conscientiousness,shp,NA,NA,internet,SHP,Knowledge,NA
+ideology,Extraversion,shp,NA,NA,internet,SHP,Left-right ideology,NA
+stfdem,Agreeableness,shp,NA,NA,internet,SHP,Sat. democracy,NA
+polintr,Neuroticism,shp,NA,NA,internet,SHP,Interest,NA
+poleff,Openness,shp,NA,NA,internet,SHP,Efficacy,NA
+involvement,Conscientiousness,shp,NA,NA,internet,SHP,Involvement,NA
+polpar,Extraversion,shp,NA,NA,internet,SHP,Participation,NA
+media,Agreeableness,shp,NA,NA,internet,SHP,Media use,NA
+poltr,Neuroticism,shp,NA,NA,internet,SHP,Political trust,NA
+knowledge,Openness,shp,NA,NA,internet,SHP,Knowledge,NA
+ideology,Conscientiousness,shp,NA,NA,internet,SHP,Left-right ideology,NA
+stfdem,Extraversion,shp,NA,NA,internet,SHP,Sat. democracy,NA
+polintr,Agreeableness,shp,NA,NA,internet,SHP,Interest,NA
+poleff,Neuroticism,shp,NA,NA,internet,SHP,Efficacy,NA
+involvement,Openness,shp,NA,NA,internet,SHP,Involvement,NA
+polpar,Conscientiousness,shp,NA,NA,internet,SHP,Participation,NA
+media,Extraversion,shp,NA,NA,internet,SHP,Media use,NA
+poltr,Agreeableness,shp,NA,NA,internet,SHP,Political trust,NA
+knowledge,Neuroticism,shp,NA,NA,internet,SHP,Knowledge,NA
+ideology,Openness,lapop,-0.005319035564335308,0.012949652413044523,internet,LAPOP,Left-right ideology,0.005319035564335308
+stfdem,Conscientiousness,lapop,-0.028176070452403165,0.010664426102721978,internet,LAPOP,Sat. democracy,0.028176070452403165
+polintr,Extraversion,lapop,0.002612344032388361,0.010731513705110017,internet,LAPOP,Interest,0.002612344032388361
+poleff,Agreeableness,lapop,-0.005905098020125111,0.010974998421609447,internet,LAPOP,Efficacy,0.005905098020125111
+involvement,Neuroticism,lapop,-0.008609222098544294,0.010910704437639824,internet,LAPOP,Involvement,0.008609222098544294
+polpar,Openness,lapop,-0.004245305556634079,0.010814425132615699,internet,LAPOP,Participation,0.004245305556634079
+media,Conscientiousness,lapop,-0.0222098971326372,0.010623640883477831,internet,LAPOP,Media use,0.0222098971326372
+poltr,Extraversion,lapop,-0.007115407803203733,0.010696079248503495,internet,LAPOP,Political trust,0.007115407803203733
+knowledge,Agreeableness,lapop,-0.036438712371886645,0.011600234253568478,internet,LAPOP,Knowledge,0.036438712371886645
+ideology,Neuroticism,lapop,0.008189058817176355,0.012790155004268208,internet,LAPOP,Left-right ideology,0.008189058817176355
+stfdem,Openness,lapop,0.018595558121114585,0.010958022075725323,internet,LAPOP,Sat. democracy,0.018595558121114585
+polintr,Conscientiousness,lapop,-0.01979550510360593,0.010421511474665393,internet,LAPOP,Interest,0.01979550510360593
+poleff,Extraversion,lapop,0.012090719259596332,0.011231521236865596,internet,LAPOP,Efficacy,0.012090719259596332
+involvement,Agreeableness,lapop,-0.014893621892123421,0.011020265277212029,internet,LAPOP,Involvement,0.014893621892123421
+polpar,Neuroticism,lapop,-0.02125531567490748,0.0105199120818546,internet,LAPOP,Participation,0.02125531567490748
+media,Openness,lapop,-0.007095966405044409,0.010806511379879851,internet,LAPOP,Media use,0.007095966405044409
+poltr,Conscientiousness,lapop,0.010066213864095513,0.01036114438315666,internet,LAPOP,Political trust,0.010066213864095513
+knowledge,Extraversion,lapop,-0.011418157816911145,0.011819635576687856,internet,LAPOP,Knowledge,0.011418157816911145
+ideology,Agreeableness,lapop,-0.031740036357958544,0.012764700631009889,internet,LAPOP,Left-right ideology,0.031740036357958544
+stfdem,Neuroticism,lapop,0.0022049364419123706,0.010742789979581061,internet,LAPOP,Sat. democracy,0.0022049364419123706
+polintr,Openness,lapop,-0.012403832549856995,0.010654326117206039,internet,LAPOP,Interest,0.012403832549856995
+poleff,Conscientiousness,lapop,0.04304749841408723,0.010854368170709502,internet,LAPOP,Efficacy,0.04304749841408723
+involvement,Extraversion,lapop,6.132740348866299e-4,0.011232192479872762,internet,LAPOP,Involvement,6.132740348866299e-4
+polpar,Agreeableness,lapop,0.007030795522362642,0.01060375993206319,internet,LAPOP,Participation,0.007030795522362642
+media,Neuroticism,lapop,0.007877935389084264,0.01069785976638246,internet,LAPOP,Media use,0.007877935389084264
+poltr,Openness,lapop,-0.0110228387142992,0.010633841109787429,internet,LAPOP,Political trust,0.0110228387142992
+knowledge,Conscientiousness,lapop,-0.0659348420437552,0.011602056725528902,internet,LAPOP,Knowledge,0.0659348420437552
+ideology,Extraversion,lapop,-0.021320146128731707,0.013148143219797561,internet,LAPOP,Left-right ideology,0.021320146128731707
+stfdem,Agreeableness,lapop,-0.02056724468697275,0.01083908444797015,internet,LAPOP,Sat. democracy,0.02056724468697275
+polintr,Neuroticism,lapop,-0.002398183744636548,0.010446300235700845,internet,LAPOP,Interest,0.002398183744636548
+poleff,Openness,lapop,-0.010724319392468111,0.011159797819114789,internet,LAPOP,Efficacy,0.010724319392468111
+involvement,Conscientiousness,lapop,-0.0064148828584343655,0.010933733997318566,internet,LAPOP,Involvement,0.0064148828584343655
+polpar,Extraversion,lapop,0.019910819381158365,0.010842223953048525,internet,LAPOP,Participation,0.019910819381158365
+media,Agreeableness,lapop,-0.015424583687749089,0.010746222670248128,internet,LAPOP,Media use,0.015424583687749089
+poltr,Neuroticism,lapop,0.01709941962473876,0.010399288707752866,internet,LAPOP,Political trust,0.01709941962473876
+knowledge,Openness,lapop,-0.05149689431918533,0.011740387202709977,internet,LAPOP,Knowledge,0.05149689431918533
+ideology,Conscientiousness,lapop,0.005937111851903762,0.012520254175047495,internet,LAPOP,Left-right ideology,0.005937111851903762
+stfdem,Extraversion,lapop,0.02760656101292565,0.011080119298735466,internet,LAPOP,Sat. democracy,0.02760656101292565
+polintr,Agreeableness,lapop,-0.029567698938156868,0.01050722665129115,internet,LAPOP,Interest,0.029567698938156868
+poleff,Neuroticism,lapop,-0.013244037983621776,0.010898230321357977,internet,LAPOP,Efficacy,0.013244037983621776
+involvement,Openness,lapop,0.0031407524897918487,0.01120358842700446,internet,LAPOP,Involvement,0.0031407524897918487
+polpar,Conscientiousness,lapop,2.7654740912683813e-4,0.010482615308474004,internet,LAPOP,Participation,2.7654740912683813e-4
+media,Extraversion,lapop,-0.02123410187778735,0.010885493757127199,internet,LAPOP,Media use,0.02123410187778735
+poltr,Agreeableness,lapop,-0.03527220905300378,0.010448666709545489,internet,LAPOP,Political trust,0.03527220905300378
+knowledge,Neuroticism,lapop,0.04540126457161211,0.011518856771172249,internet,LAPOP,Knowledge,0.04540126457161211
+ideology,Openness,sels,NA,NA,internet,SELECTS,Left-right ideology,NA
+stfdem,Conscientiousness,sels,NA,NA,internet,SELECTS,Sat. democracy,NA
+polintr,Extraversion,sels,NA,NA,internet,SELECTS,Interest,NA
+poleff,Agreeableness,sels,NA,NA,internet,SELECTS,Efficacy,NA
+involvement,Neuroticism,sels,NA,NA,internet,SELECTS,Involvement,NA
+polpar,Openness,sels,NA,NA,internet,SELECTS,Participation,NA
+media,Conscientiousness,sels,NA,NA,internet,SELECTS,Media use,NA
+poltr,Extraversion,sels,NA,NA,internet,SELECTS,Political trust,NA
+knowledge,Agreeableness,sels,NA,NA,internet,SELECTS,Knowledge,NA
+ideology,Neuroticism,sels,NA,NA,internet,SELECTS,Left-right ideology,NA
+stfdem,Openness,sels,NA,NA,internet,SELECTS,Sat. democracy,NA
+polintr,Conscientiousness,sels,NA,NA,internet,SELECTS,Interest,NA
+poleff,Extraversion,sels,NA,NA,internet,SELECTS,Efficacy,NA
+involvement,Agreeableness,sels,NA,NA,internet,SELECTS,Involvement,NA
+polpar,Neuroticism,sels,NA,NA,internet,SELECTS,Participation,NA
+media,Openness,sels,NA,NA,internet,SELECTS,Media use,NA
+poltr,Conscientiousness,sels,NA,NA,internet,SELECTS,Political trust,NA
+knowledge,Extraversion,sels,NA,NA,internet,SELECTS,Knowledge,NA
+ideology,Agreeableness,sels,NA,NA,internet,SELECTS,Left-right ideology,NA
+stfdem,Neuroticism,sels,NA,NA,internet,SELECTS,Sat. democracy,NA
+polintr,Openness,sels,NA,NA,internet,SELECTS,Interest,NA
+poleff,Conscientiousness,sels,NA,NA,internet,SELECTS,Efficacy,NA
+involvement,Extraversion,sels,NA,NA,internet,SELECTS,Involvement,NA
+polpar,Agreeableness,sels,NA,NA,internet,SELECTS,Participation,NA
+media,Neuroticism,sels,NA,NA,internet,SELECTS,Media use,NA
+poltr,Openness,sels,NA,NA,internet,SELECTS,Political trust,NA
+knowledge,Conscientiousness,sels,NA,NA,internet,SELECTS,Knowledge,NA
+ideology,Extraversion,sels,NA,NA,internet,SELECTS,Left-right ideology,NA
+stfdem,Agreeableness,sels,NA,NA,internet,SELECTS,Sat. democracy,NA
+polintr,Neuroticism,sels,NA,NA,internet,SELECTS,Interest,NA
+poleff,Openness,sels,NA,NA,internet,SELECTS,Efficacy,NA
+involvement,Conscientiousness,sels,NA,NA,internet,SELECTS,Involvement,NA
+polpar,Extraversion,sels,NA,NA,internet,SELECTS,Participation,NA
+media,Agreeableness,sels,NA,NA,internet,SELECTS,Media use,NA
+poltr,Neuroticism,sels,NA,NA,internet,SELECTS,Political trust,NA
+knowledge,Openness,sels,NA,NA,internet,SELECTS,Knowledge,NA
+ideology,Conscientiousness,sels,NA,NA,internet,SELECTS,Left-right ideology,NA
+stfdem,Extraversion,sels,NA,NA,internet,SELECTS,Sat. democracy,NA
+polintr,Agreeableness,sels,NA,NA,internet,SELECTS,Interest,NA
+poleff,Neuroticism,sels,NA,NA,internet,SELECTS,Efficacy,NA
+involvement,Openness,sels,NA,NA,internet,SELECTS,Involvement,NA
+polpar,Conscientiousness,sels,NA,NA,internet,SELECTS,Participation,NA
+media,Extraversion,sels,NA,NA,internet,SELECTS,Media use,NA
+poltr,Agreeableness,sels,NA,NA,internet,SELECTS,Political trust,NA
+knowledge,Neuroticism,sels,NA,NA,internet,SELECTS,Knowledge,NA
+ideology,Openness,nzes,0.015067394180523998,0.08373505499516416,internet,NZES,Left-right ideology,0.015067394180523998
+stfdem,Conscientiousness,nzes,-0.03506257148144419,0.07045057473476916,internet,NZES,Sat. democracy,0.03506257148144419
+polintr,Extraversion,nzes,0.00349727420660291,0.08457413394899603,internet,NZES,Interest,0.00349727420660291
+poleff,Agreeableness,nzes,-0.03976093396361886,0.07698569679227099,internet,NZES,Efficacy,0.03976093396361886
+involvement,Neuroticism,nzes,-0.008408605564431697,0.08405656610949626,internet,NZES,Involvement,0.008408605564431697
+polpar,Openness,nzes,-0.04968775670329376,0.06774185049198028,internet,NZES,Participation,0.04968775670329376
+media,Conscientiousness,nzes,-0.050240410738975894,0.0959094638962693,internet,NZES,Media use,0.050240410738975894
+poltr,Extraversion,nzes,NA,NA,internet,NZES,Political trust,NA
+knowledge,Agreeableness,nzes,-0.1228775247820311,0.06691398313086093,internet,NZES,Knowledge,0.1228775247820311
+ideology,Neuroticism,nzes,-0.0017474858038552213,0.08088077028152356,internet,NZES,Left-right ideology,0.0017474858038552213
+stfdem,Openness,nzes,-0.09388343470999191,0.07231335946111321,internet,NZES,Sat. democracy,0.09388343470999191
+polintr,Conscientiousness,nzes,-0.04762900733854866,0.06765353327986318,internet,NZES,Interest,0.04762900733854866
+poleff,Extraversion,nzes,0.11447200252752257,0.09031015036190711,internet,NZES,Efficacy,0.11447200252752257
+involvement,Agreeableness,nzes,-0.03746801985498564,0.08091917496453588,internet,NZES,Involvement,0.03746801985498564
+polpar,Neuroticism,nzes,0.06367798171389982,0.06759587313329414,internet,NZES,Participation,0.06367798171389982
+media,Openness,nzes,-0.2608330830601931,0.09866239065346123,internet,NZES,Media use,0.2608330830601931
+poltr,Conscientiousness,nzes,NA,NA,internet,NZES,Political trust,NA
+knowledge,Extraversion,nzes,0.11656119993766675,0.08121509935723453,internet,NZES,Knowledge,0.11656119993766675
+ideology,Agreeableness,nzes,-0.07296842303674216,0.07989918968375626,internet,NZES,Left-right ideology,0.07296842303674216
+stfdem,Neuroticism,nzes,0.0019379980910605656,0.07282204615180608,internet,NZES,Sat. democracy,0.0019379980910605656
+polintr,Openness,nzes,-0.06002641821897725,0.0711336124035418,internet,NZES,Interest,0.06002641821897725
+poleff,Conscientiousness,nzes,0.014483372875486452,0.07578901073019106,internet,NZES,Efficacy,0.014483372875486452
+involvement,Extraversion,nzes,0.09064888261824547,0.0956435143509219,internet,NZES,Involvement,0.09064888261824547
+polpar,Agreeableness,nzes,-0.028163223418017094,0.06586907707795395,internet,NZES,Participation,0.028163223418017094
+media,Neuroticism,nzes,-0.029249112151856098,0.11177203873696649,internet,NZES,Media use,0.029249112151856098
+poltr,Openness,nzes,NA,NA,internet,NZES,Political trust,NA
+knowledge,Conscientiousness,nzes,-0.09670371885877237,0.06556347059306225,internet,NZES,Knowledge,0.09670371885877237
+ideology,Extraversion,nzes,0.009790352368086532,0.09602102029234492,internet,NZES,Left-right ideology,0.009790352368086532
+stfdem,Agreeableness,nzes,-0.050599324530765724,0.07119746915174918,internet,NZES,Sat. democracy,0.050599324530765724
+polintr,Neuroticism,nzes,-0.04175452622697064,0.07152434478494915,internet,NZES,Interest,0.04175452622697064
+poleff,Openness,nzes,0.02754622507658101,0.08004598182477152,internet,NZES,Efficacy,0.02754622507658101
+involvement,Conscientiousness,nzes,-0.056869233937078295,0.0788470136767534,internet,NZES,Involvement,0.056869233937078295
+polpar,Extraversion,nzes,0.08461529547688952,0.07990313215783636,internet,NZES,Participation,0.08461529547688952
+media,Agreeableness,nzes,-0.03863231812284067,0.09742774738206277,internet,NZES,Media use,0.03863231812284067
+poltr,Neuroticism,nzes,NA,NA,internet,NZES,Political trust,NA
+knowledge,Openness,nzes,1.8260276628777848e-4,0.06887629106110874,internet,NZES,Knowledge,1.8260276628777848e-4
+ideology,Conscientiousness,nzes,0.12111886534274835,0.07546192463059152,internet,NZES,Left-right ideology,0.12111886534274835
+stfdem,Extraversion,nzes,-0.029386492118740386,0.08583492881374247,internet,NZES,Sat. democracy,0.029386492118740386
+polintr,Agreeableness,nzes,-0.055793682391012775,0.06970500512232711,internet,NZES,Interest,0.055793682391012775
+poleff,Neuroticism,nzes,-0.09773428562911951,0.0777412370052792,internet,NZES,Efficacy,0.09773428562911951
+involvement,Openness,nzes,0.08664771410128909,0.08320217993890211,internet,NZES,Involvement,0.08664771410128909
+polpar,Conscientiousness,nzes,0.023144175772684537,0.06451992326950319,internet,NZES,Participation,0.023144175772684537
+media,Extraversion,nzes,0.028315200840891605,0.117822565516172,internet,NZES,Media use,0.028315200840891605
+poltr,Agreeableness,nzes,NA,NA,internet,NZES,Political trust,NA
+knowledge,Neuroticism,nzes,-0.07836461306057625,0.06853855453790729,internet,NZES,Knowledge,0.07836461306057625
+ideology,Openness,ces,NA,NA,internet,CES,Left-right ideology,NA
+stfdem,Conscientiousness,ces,NA,NA,internet,CES,Sat. democracy,NA
+polintr,Extraversion,ces,NA,NA,internet,CES,Interest,NA
+poleff,Agreeableness,ces,NA,NA,internet,CES,Efficacy,NA
+involvement,Neuroticism,ces,NA,NA,internet,CES,Involvement,NA
+polpar,Openness,ces,NA,NA,internet,CES,Participation,NA
+media,Conscientiousness,ces,NA,NA,internet,CES,Media use,NA
+poltr,Extraversion,ces,NA,NA,internet,CES,Political trust,NA
+knowledge,Agreeableness,ces,NA,NA,internet,CES,Knowledge,NA
+ideology,Neuroticism,ces,NA,NA,internet,CES,Left-right ideology,NA
+stfdem,Openness,ces,NA,NA,internet,CES,Sat. democracy,NA
+polintr,Conscientiousness,ces,NA,NA,internet,CES,Interest,NA
+poleff,Extraversion,ces,NA,NA,internet,CES,Efficacy,NA
+involvement,Agreeableness,ces,NA,NA,internet,CES,Involvement,NA
+polpar,Neuroticism,ces,NA,NA,internet,CES,Participation,NA
+media,Openness,ces,NA,NA,internet,CES,Media use,NA
+poltr,Conscientiousness,ces,NA,NA,internet,CES,Political trust,NA
+knowledge,Extraversion,ces,NA,NA,internet,CES,Knowledge,NA
+ideology,Agreeableness,ces,NA,NA,internet,CES,Left-right ideology,NA
+stfdem,Neuroticism,ces,NA,NA,internet,CES,Sat. democracy,NA
+polintr,Openness,ces,NA,NA,internet,CES,Interest,NA
+poleff,Conscientiousness,ces,NA,NA,internet,CES,Efficacy,NA
+involvement,Extraversion,ces,NA,NA,internet,CES,Involvement,NA
+polpar,Agreeableness,ces,NA,NA,internet,CES,Participation,NA
+media,Neuroticism,ces,NA,NA,internet,CES,Media use,NA
+poltr,Openness,ces,NA,NA,internet,CES,Political trust,NA
+knowledge,Conscientiousness,ces,NA,NA,internet,CES,Knowledge,NA
+ideology,Extraversion,ces,NA,NA,internet,CES,Left-right ideology,NA
+stfdem,Agreeableness,ces,NA,NA,internet,CES,Sat. democracy,NA
+polintr,Neuroticism,ces,NA,NA,internet,CES,Interest,NA
+poleff,Openness,ces,NA,NA,internet,CES,Efficacy,NA
+involvement,Conscientiousness,ces,NA,NA,internet,CES,Involvement,NA
+polpar,Extraversion,ces,NA,NA,internet,CES,Participation,NA
+media,Agreeableness,ces,NA,NA,internet,CES,Media use,NA
+poltr,Neuroticism,ces,NA,NA,internet,CES,Political trust,NA
+knowledge,Openness,ces,NA,NA,internet,CES,Knowledge,NA
+ideology,Conscientiousness,ces,NA,NA,internet,CES,Left-right ideology,NA
+stfdem,Extraversion,ces,NA,NA,internet,CES,Sat. democracy,NA
+polintr,Agreeableness,ces,NA,NA,internet,CES,Interest,NA
+poleff,Neuroticism,ces,NA,NA,internet,CES,Efficacy,NA
+involvement,Openness,ces,NA,NA,internet,CES,Involvement,NA
+polpar,Conscientiousness,ces,NA,NA,internet,CES,Participation,NA
+media,Extraversion,ces,NA,NA,internet,CES,Media use,NA
+poltr,Agreeableness,ces,NA,NA,internet,CES,Political trust,NA
+knowledge,Neuroticism,ces,NA,NA,internet,CES,Knowledge,NA
