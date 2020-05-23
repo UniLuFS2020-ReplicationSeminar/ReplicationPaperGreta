@@ -114,9 +114,7 @@ lapop <- bind_rows(list(data_Suriname,
                         data_US,
                         data_Mexico,
                         data_Guyana,
-                        data_Brazil,
-                        data_Haiti,
-                        data_Honduras))
+                        data_Brazil))
 
 ## IMPORT 8/10: Swiss Election Study ##----
 sels <- import(here::here("1_Data","1_Panel Datasets", "828_Selects2015_PanelRCS_Data_v1.1.dta"))
@@ -126,7 +124,6 @@ nzes <- import(here::here("1_Data","1_Panel Datasets","NZES2014GeneralReleaseApr
 
 ## IMPORT 10/10: Canadian Election Study ##----
 ces <- import(here::here("1_Data","1_Panel Datasets","CES2015_Combined_Stata14.dta"))
-
 
 
 #####################
@@ -161,6 +158,10 @@ anes1012 <- anes1012 %>%
     student = NA,
     internet = c4_ppnet,
 
+    # Age and Low Edu ----
+    under30 =  ifelse(c4_ppagect4==1 | c4_ppagect4==99,1,0),
+    lowEdu = ifelse(c4_ppeduc >= 1 & c4_ppeduc <= 6,1,0),
+    
     # OUTCOMES #
     ## Ideology - would you describe yourself, and these groups, as liberal, conservative, or neither?
     ideology = two_sd(c4_p1),
@@ -217,6 +218,10 @@ anes12 <- anes12 %>%
     student = dem_emptype_student,
     internet = ifelse(dem2_inethome == 1, 1, 0),
     
+    # Age and Low Edu ----
+    under30 =  ifelse(dem_age_r_x > 16 | dem_age_r_x < 30,1,0),
+    lowEdu = ifelse(dem_edu >= 1 & dem_edu <= 6,1,0),
+    
     # Outcomes
     ## Ideology
     ideology = two_sd(libcpo_self),
@@ -253,8 +258,7 @@ anes12 <- anes12 %>%
     openness = two_sd( tipi_open + (8-tipi_conv) )
     
   )
-
-
+table(anes16$V161326)
 # Recode: American National Election Study 2016 ----
 anes16 <- anes16 %>%
   # Recode missing
@@ -268,8 +272,11 @@ anes16 <- anes16 %>%
     cntry = "United States",
     
     student = NA,
-      internet = ifelse(V161326 == 1, 1, 0),
+    internet = ifelse(V161326 == 1, 1, 0),
     
+    # Age and Low Edu ----
+    under30 =  ifelse(V161267 > 16 | V161267 < 30,1,0),
+    lowEdu = ifelse(V161270 >= 1 & V161270 <= 6,1,0),
     
     # Outcomes
     ## Ideology
@@ -336,7 +343,6 @@ anes16 <- anes16 %>%
     
   )
 
-
 # Recode: Longitudinal Internet Studies in the Social Sciences ----
 liss <- liss %>%
   # Recode missing
@@ -349,6 +355,10 @@ liss <- liss %>%
     
     student = ifelse(belbezig == 7, 1, 0),
     internet = ifelse(cs08a241 == 2, 0, 1), #Do you sometimes use a computer, besides when completing the questionnaires of this panel?  1 = Yes, 2 = NO
+    
+    # Age and Low Edu ----
+    under30 =  ifelse(leeftijd >= 16 | leeftijd < 30,1,0),
+    lowEdu = ifelse(oplzon == 1,1,0),
     
     # Outcomes
     ## Ideology
@@ -429,20 +439,12 @@ liss <- liss %>%
   mutate(agreeableness = two_sd(agreeableness)) %>% 
   mutate(neuroticism = two_sd(neuroticism))
 
-#### Get Cronbach's reliability coefficient alpha
-#with(liss, cronbach(data.frame(cp08a024, cp08a034, cp08a044, cp08a054, cp08a059, cp08a064, cp08a069, cp08a029rc, cp08a039rc, cp08a049rc)))$alpha
-#with(liss, cronbach(data.frame(cp08a022, cp08a027rc, cp08a032, cp08a037rc, cp08a042, cp08a047rc, cp08a052, cp08a057rc, cp08a062, cp08a067)))$alpha
-#with(liss, cronbach(data.frame(cp08a020, cp08a025rc, cp08a030, cp08a035rc, cp08a050, cp08a055rc, cp08a060, cp08a065rc, cp08a040, cp08a045rc)))$alpha
-#with(liss, cronbach(data.frame(cp08a021rc, cp08a026, cp08a066, cp08a031rc, cp08a036, cp08a061, cp08a046, cp08a051rc, cp08a041rc, cp08a056)))$alpha
-#with(liss, cronbach(data.frame(cp08a063, cp08a038rc, cp08a043, cp08a048, cp08a023, cp08a068, cp08a028rc, cp08a033, cp08a053, cp08a058)))$alpha
-# NOT SURE IF THIS PART OF THE CODE IS NEEDED #
-
-
-
 # Recode: British Election Study ----
 ## Selecting necessary variables to lower size of objects
 bes_W1_W19 <- bes_W1_W19 %>% select(
   id,
+  ageW13,
+  educationW13,
   workingStatusW1W2W3W4W5,
   workingStatusW6_W12,
   leftRightW13,
@@ -496,6 +498,10 @@ bes <- bes %>%
     internet = NA,
     student = ifelse(
       workingStatusW1W2W3W4W5 ==  5 | workingStatusW1W2W3W4W5 == 6 | workingStatusW6_W12 == 5 | workingStatusW6_W12 == 6, 1, 0),
+    
+    # Age and Low Edu ----
+    under30 =  ifelse(ageW13 >= 16 | ageW13 < 30,1,0),
+    lowEdu = ifelse(educationW13 == 1,1,0),
     
     # Outcomes
     ## Ideology
@@ -562,7 +568,6 @@ bes <- bes %>%
     
   )
 
-
 ## Recode: Swiss Household Panel ----
 shp <- shp %>%
   # Recode missing
@@ -575,6 +580,10 @@ shp <- shp %>%
     
     internet = NA,
     student = ifelse(occupa09 == 4, 1, 0),
+    
+    # Age and Low Edu ----
+    under30 =  ifelse(age09 >= 16 | age09 < 30,1,0),
+    lowEdu = ifelse(edcat09 == 0 | edcat09 == 1,1,0),
     
     # Outcomes
     ## Ideology
@@ -619,7 +628,6 @@ shp <- shp %>%
     neuroticism = two_sd((p09c68 + p09c63rc) / 20)
   )
 
-
 ## Recode: Latin American Public Opinion Project ----
 lapop <- lapop %>%
   # Recode missing
@@ -645,7 +653,7 @@ lapop <- lapop %>%
     agreeableness = two_sd(agree1 + agree2),
     neuroticism = two_sd(neuro1 + neuro2),
     
-    ##How often do you use the internet? (1) Daily (2) A few times a week (3) A few times a month  (4) Rarely (5) Never
+    #Corrected Code
     internet = case_when(www1 == 5 ~ 0,
                          www1 >= 1 & www1 <= 4 ~ 1,
                          TRUE ~ NA_real_),
@@ -654,6 +662,9 @@ lapop <- lapop %>%
                         ocup4a >= 1 & ocup4a < 4 ~ 0,
                         ocup4a > 4 & ocup4a <= 7 ~ 0,
                         TRUE ~ NA_real_),
+    # Age and Low Edu ----
+    under30 =  ifelse(q2 >= 16 | q2 < 30,1,0),
+    lowEdu = ifelse(ed <= 8 & ed >= 0,1,0),
     
     # Outcomes
     ## Ideology
@@ -711,11 +722,8 @@ lapop$cntry <- recode(lapop$pais,
                       `8` = "Colombia",
                       `1` = "Mexico",
                       `24` = "Guyana",
-                      `15` = "Brazil",
-                      `4` = "Honduras",
-                      `22` = "Haiti",
+                      `15` = "Brazil"
 )
-
 
 ## Recode: Swiss Electoral Study (SELECTS) ----
 sels <- sels %>%
@@ -731,6 +739,10 @@ sels <- sels %>%
                         f21400 > 3 & f21400 < 10 ~ 0,
                         TRUE ~ NA_real_),
     internet = NA,
+    
+    # Age and Low Edu ----
+    under30 =  ifelse(age >= 16 | age < 30,1,0),
+    lowEdu = ifelse(f21310 == 1 | f21310 == 2 | f21310 == 3,1,0),
     
     agreeableness = two_sd( (10-W3_f15770c) + W3_f15770f + W3_f15771e ),
     extraversion = two_sd( W3_f15770b + W3_f15770h + (10-W3_f15771d) ),
@@ -784,7 +796,6 @@ sels <- sels %>%
     
   )
 
-
 ## Recode: New Zealand Election Study NZES ----
 nzes <- nzes %>%
   mutate(
@@ -793,6 +804,10 @@ nzes <- nzes %>%
     
     internet = ifelse(!is.na(dintnt_none), 0, 1),
     student = ifelse(!is.na(dwksch), 1, 0),
+    
+    # Age and Low Edu ----
+    under30 =  ifelse(dage >= 16 | dage < 30,1,0),
+    lowEdu = ifelse(dhighschool == 0 | dhighschool == 1,1,0),
     
     agreeableness = two_sd( dperscritical + (8-dperswarm) ),
     extraversion = two_sd( (8-dpersextra) + dpersreserved ),
@@ -848,7 +863,6 @@ nzes <- nzes %>%
     
   )
 
-
 ## Recode: Canadian Election Study 2015 ----
 ces <- ces %>%
   # Recode missing
@@ -864,6 +878,10 @@ ces <- ces %>%
                         emp_status > 9 & emp_status <= 1000 ~ 0,
                         TRUE ~ NA_real_),
     internet = NA,
+    
+    # Age and Low Edu ----
+    under30 =  ifelse((2015-age) >= 16 | (2015-age) < 30,1,0),
+    lowEdu = ifelse(education == 1 | education == 2 | education == 3,1,0),
     
     agreeableness = two_sd( (8-p_psych2) + p_psych7 ),
     extraversion = two_sd( p_psych1 + (8-p_psych6) ),
@@ -925,7 +943,7 @@ ces <- ces %>%
 
 ## MERGING all DATASETS ----
 
-variables_list <- c("dataset", "cntry", "student", "internet", "openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism", "ideology", "involvement", "knowledge", "poleff", "polintr", "polpar", "stfdem", "media", "poltr")
+variables_list <- c("dataset", "cntry", "student", "internet", "under30", "lowEdu", "openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism", "ideology", "involvement", "knowledge", "poleff", "polintr", "polpar", "stfdem", "media", "poltr")
 
 fulldata <- rbind(
   select(bes, variables_list),
