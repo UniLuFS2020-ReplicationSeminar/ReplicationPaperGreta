@@ -1,0 +1,155 @@
+---
+title: "Replication Report"
+subtitle: "The Generalizability of Personality Effects in Politics by J. A. Vitriol, E. Gahner Larsen and S. G. Ludeke"
+author: "Greta Kurpicz"
+date: "2 6 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(stargazer)
+library(rio)
+library(tidyverse)
+library(ggplot2)
+```
+**Word count: 1936**
+
+*Abstract: A burgeoning line of research examining the relation between personality traits and political variables relies extensively on convenience samples. However, our understanding of the extent to which using convenience samples challenges the generalizability of these ﬁndingstotargetpopulationsremainslimited.Weaddressthisquestionby testing whether associations between personality and political characteristics observed in representative samples diverged from those observed in the sub-populations most commonly studied in convenience samples, namely, students and Internet users. We leverage 10 high-quality representative datasets to compare the representative samples with the two subsamples. We did not ﬁnd any systematic differences in the relationship between personality traits and a broad range of political variables. Instead, results from the subsamples generalized well to those observed in the broader and more diverse representative sample.*
+
+## Introduction
+
+The collection of the datasets for this replication was very clearly instructed in the paper. For each of the 10 Panel Datasets from different countries it was mentioned, which wave (e.g. what date it was gathered) they used. So, I was able to download the required datasets online via the panel webpage. For a few panel data sets I had to apply for access.
+The paper I replicated included all the code that was necessary to reconstruct all the visualizations including graphs and tables, and all results of those. The code itself had a good structure, but was only separated in two scripts, data collection and data analysis. The steps in the code were in most cases clear, however, there were a few things that could have been commented a bit more. For example, at one point the author calculated mean and median of regression coefficients, I assume for testing purposes. There, it would have been useful to know what the author was testing. As well with the standardization, the authors chose a standardization divided by two standard deviation and not as taught in statistics one standard deviation. This choice was not explained in the paper nor in the code. It would have been ideal to have a quick line with the information why this choice is relevant for further analysis. <br>
+In general, there were some comments in the code but very few. It would have been desirable to have more comments along the code, but since the structure made sense, it was easy to work with the code. However, I decided in my replication to structure the code in five scripts: Data collection, Data analysis, Visualizations, Descriptives and my additional analysis.  
+
+
+## Descriptive
+The preprocessing of the datasets is especially important for that study. Since 10 different datasets had to be made to one. But by merging the datasets of the countries from Latin American Opinion Project (LAPOP), there was an issue. Variable gi1, Answers to the question “Who is the president of the United States?” were for Canada raw in strings (Obama, Barack Obama, …) and for the other countries, like Belize, numeric (1: Correct, 2: Incorrect). The authors used as.numeric() function to make the variables the same class before merging them, but since Canadas gi1 was in character, so it created only NAs. Therefore I used `ifelse(str_detect(data_Canada$gi1,pattern = "obama"),1,2) ` to create a numeric variable with the coded answers. The same issue we had with the dataset of the US.
+The authors code included another coding mistake. By creating the variable “Internet use” the goal was to create a binary variable with either 1 for yes or 0 for no. The little mistake happened in the dataset of the LAPOP “How often do you use the internet?”, with answer options: 1) daily, 2) A few times a week, 3) A few times a month, 4) Rarely, 5) Never. The authors coded the answer 5) never, as 1 and otherwise 0. I corrected this mistake by creating the variable internet with 1 for answer options 1-4, saying that they **are** using the internet and 0 for answer option 5, stating that they are not using the internet. For the overall outcome of the results it had almost no impact since the ratio of internet users and non-internet users is almost 50:50. <br>
+Comparing the sample sizes and percentages of students and internet users (see original paper Table 1), the numbers are in most panel datasets identical. The total number of participants in my dataset of the British Election Study (BES) are 26’343 instead of the 29’484, like in the original paper. The percentage of students in my replication is 6% and in the original study it is 4%. These discrepancies are due to the fact, that after each wave of the panel survey, there is a combined version available from the start of the panel until the current wave. This combined version is however only available for the current wave.  So, whenever a new wave gets published, this combined version changes and includes the new wave too. Therefore, it is not reconstructable how the dataset exactly was at the time of the authors download. Beside tiny discrepancies in N of the dataset Swiss Household Panel (SHP) and American Election Study (ANES) 2016 the numbers are identical. All percentages beside those of BES were the same (rounded to integers). </br>
+
+## Analysis
+The main goal of the study is to examine, whether the correlation between personality traits and political variables is affected by convenience samples. 
+
+# Correlations
+*Correlations personality traits and political variables*
+```{r}
+df_meta <- import(here::here("1_Data","df_correlations.csv"))
+stargazer(df_meta, 
+          type = "text", 
+          summary = F,
+          digits = 2,
+          title = "Correlations Personality Traits & Political Variables")
+
+```
+In the above table are the correlations between each personality trait and the political variables presented. These correlations are calculated with the full representative sample. Since I am using the same data, the correlations are as expected almost identical. There are two slight differences in the political variables **Knowledge**. When compared with the authors correlation table, the correlation Knowledge and Conscientiousness decreased in my analysis from 0.08 to 0.07 and with Knowledge and Neuroticism it decreased from 0.10 to 0.09. Other correlations are all the same. These slight differences could have emerged, due to the different coding of the variable about knowing who the president of the USA is, as mentioned above. <br> According to the author these correlations are in line with further studies. </br>
+
+# Interaction effects
+The main part of the analysis was to find out if the correlations are different in convenience samples then in full representative sample. Since there are usually more students in convenience samples, and mostly only internet users, we simulate two convenience samples by controlling the effect of the full representative sample with the variable student and internet. To test this, regression coefficients for each personality trait with each political variable were estimated. For the interaction test student and internet has been separately added to the regression model as a condition. The output shows the estimated interaction between convenience sample and full representative sample, once with controlling for internet and once for student. 
+<br> Because there are a lot of interactions effects calculated, I picked an example to show the linear model that was done for all personality traits with all political variables. For this example, I used the data of the British Election Study. In the regression output below we see that the moderator student has a significant interaction effect on the estimated effect from agreeableness on involvement. By interpreting this output, I must point out that the number of variances explained by this model (R2=0.0035) is very small. </br>
+*Example: Regression output BES*
+```{r}
+maindata <- import(here::here("1_Data","personalitypolitics.csv"))
+bes <- filter(maindata, dataset=="bes")
+test_bes_lm <- lm(formula = involvement ~ agreeableness * student, data = bes)
+summary(test_bes_lm)
+```
+
+<br>The graph below shows the significance of all interaction effects by student and internet of all the available political variables and personality traits. Significance tested on a 5% significance level and on the graph indicated by the p value.  We can see here already that overall, not a lot of interaction effects came out significant. Which is to be interpreted that there is no obvious, significant interaction in the effect when controlled for student or internet use.  Compared with the graph from the authors, this graph looks almost identical. I added some color to enhance the visualization of which bar indicates the significant interactions and added the actual number of interactions for both the significant and non-significant interactions. </br>
+*P-Values of all interactions*
+```{r}
+df <- import(here::here("1_Data","lm_coeffs_moderator.csv"))
+df_sign <- ifelse(df$pval<0.05,1,0)
+fig_all_pvals <- ggplot(df, aes(x=pval, fill=(ifelse(df_sign==1,"74 Interactions","461 Interactions")))) +
+  geom_histogram(aes(y = (..count..)/sum(..count..)), colour="black", bins=20, binwidth=0.05,boundary=-0.5) +
+  scale_y_continuous("", labels=scales::percent) +
+  scale_x_continuous(expression(paste(italic("p"), " value")), 
+                     breaks = c(0, 0.05, 0.1, 0.25, 0.5, 0.75, 1), 
+                     labels = c("0", "0.05", "0.1", "0.25", "0.5", "0.75", "1"))
+
+fig_all_pvals
+```
+
+<br>To see whether the interaction effects are structurally in one direction in the convenience sample when compared with the representative sample, the authors plotted all interaction effects for all panel data sets. Below are all parameters plotted from interactions tests with the moderator student. If the dots are filled, that means they are significant on a 5% significance level. All interaction effect are coming out of a regression model as the example mentioned before. </br>
+*Moderator Student*
+```{r}
+fig2_student <- df %>%
+  filter(mod == "student" & !is.na(est)) %>%
+  ggplot(aes(x = trait, y = est, ymin=est-1.96*se, ymax=est+1.96*se)) +
+  geom_hline(yintercept=0, colour="gray80") +
+  geom_jitter(height=0, width=0.15, size=3, aes(colour = Data, shape = ifelse(pval < 0.05, "Significant", "Insignificant"))) +
+  facet_wrap(~ name) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "bottom") +
+  scale_colour_brewer(palette="Paired") +
+  scale_shape_manual(values = c(1,16)) +
+  labs(x = "",
+       y = "") +
+  coord_flip()
+
+fig2_student
+```
+
+*Moderator Internet*
+```{r}
+fig3_internet <- df %>%
+  filter(mod == "internet" & !is.na(est)) %>%
+  ggplot(aes(x = trait, y = est, ymin=est-1.96*se, ymax=est+1.96*se)) +
+  geom_hline(yintercept=0, colour="gray80") +
+  geom_jitter(height=0, width=0.15, size=3, aes(colour = Data, shape = ifelse(pval < 0.05, "Significant", "Insignificant"))) +
+  facet_wrap(~ name) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "bottom") +
+  scale_colour_brewer(palette="Paired") +
+  scale_shape_manual(values = c(1,16)) +
+  labs(x = "",
+       y = "") +
+  coord_flip()
+
+fig3_internet
+```
+
+Looking at the two graphs we see all interaction effects moderated by student and in the second graph moderated by internet. The x axis shows to what extent the effect from personality to political variable is impacted by student resp. internet usage. At a first glance we can see that all datasets are gathered around 0, what means, that there is no effect there at all. There are significant effects, however, there is not in one graph a clear focus of all datasets in one direction, either positive or negative. Therefore, we can assume that the interactions are not structured. Comparing those two graphs with the original graphs by the author, they are as well almost identical. 
+<br> In conclusion this study shows that the correlation between personality traits on political variables do not structurally differ when measured with a convenience sample than when measured with a full representative sample. These results cannot be transferred to any question in science, but for research about personality traits and political variables. The strength of this paper is as well the global observation of the variables by including lots of different countries.</br>
+
+## Additional Analysis
+For further Analysis I was wondering whether it impacts the correlation of personality traits and political variable when we control for younger people (age under 30). My hypothesis was that young people act politically more according to their personality, because their opinion has not been as formed by society as by the over 30’s. To test this, I ran the same models as before with student and internet, now with a binary variable age under 30. 
+<br>First I was interested about how many significant interactions were produced by the sample with people under 30. As we can see in the graph below, there are more significant results then with the convenience sample in the original study, but yet there are only about 20% of the interactions significant. Which means that only 80 interactions were significant and 325 did not.</br>
+*P-Values of interactions*
+```{r}
+add_df <- import(here::here("1_Data","extra_lm_coeffs_moderator.csv"))
+add_df_u30 <- add_df %>% filter(mod == "under30")
+
+df_sign <- ifelse(add_df_u30$pval<0.05,1,0)
+fig_all_pvals <- ggplot(add_df_u30, aes(x=pval, fill=ifelse(df_sign==1,"80 Interactions","325 Interactions"))) +
+  geom_histogram(aes(y = (..count..)/sum(..count..)), colour="black", bins=20, binwidth=0.05,boundary=-0.5) +
+  scale_y_continuous("", labels=scales::percent) +
+  scale_x_continuous(expression(paste(italic("p"), " value")), 
+                     breaks = c(0, 0.05, 0.1, 0.25, 0.5, 0.75, 1), 
+                     labels = c("0", "0.05", "0.1", "0.25", "0.5", "0.75", "1"))
+fig_all_pvals
+```
+
+Looking at the graph below, as in our tests before, the main gathering of the dots is close to zero and in most of the cases distributed in both positive and negative directions. For example when we look at the estimated impact from conscientiousness on knowledge, there are interaction effect in both directions. But there are also a few interactions in which all datasets pull in the same direction. An example for that would be the estimated impact from agreeableness on interest. We could interpret this effect that younger people who show higher levels of agreeableness tend to have lower interest in politics. Also in the left-right Ideology variable it seems to have an impact if we have a sample of younger people or people with age over 30. 
+```{r}
+fig_under30 <- add_df %>%
+  filter(mod == "under30" & !is.na(est)) %>%
+  ggplot(aes(x = trait, y = est, ymin=est-1.96*se, ymax=est+1.96*se)) +
+  geom_hline(yintercept=0, colour="gray80") +
+  geom_jitter(height=0, width=0.15, size=3, aes(colour = Data, shape = ifelse(pval < 0.05, "Significant", "Insignificant"))) +
+  facet_wrap(~ name) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "bottom") +
+  scale_colour_brewer(palette="Paired") +
+  scale_shape_manual(values = c(1,16)) +
+  labs(x = "",
+       y = "") +
+  coord_flip()
+fig_under30
+```
+
+For a further analysis it would be interesting to have a deep dive in these results and also consider theory and search for reasons why this could be.
+
+I tried as well a sample with people which their highest education is rather low. But these interaction effects where not structured and the majority not significant.
+
