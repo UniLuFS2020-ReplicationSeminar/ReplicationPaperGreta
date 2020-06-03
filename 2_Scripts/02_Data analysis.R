@@ -482,6 +482,15 @@ df <- df %>%
       outcome == "knowledge" ~ "Knowledge",
       TRUE  ~  NA_character_)
   )
+## P-Value for differences in Interaction test
+df$pval <- 2 * pt(-abs(df$est / df$se), df = Inf)
+
+df <- df %>%
+  mutate(
+    pval_text = case_when(
+      pval < 0.01 ~ "p < 0.01",
+      TRUE  ~  paste("p = ", as.character(round(pval, 2))))
+  )
 
 ## Creating Median and Mean Values for Estimates
 df$est_abs <- abs(df$est)
@@ -1972,6 +1981,12 @@ df_meta <- data.frame(
   Political_trust = c(poltr_O, poltr_C, poltr_E, poltr_A, poltr_N),
   Sat_democracy = c(stfdem_O, stfdem_C, stfdem_E, stfdem_A, stfdem_N)
 )
+
+corr_table <- stargazer(df_meta, 
+          out = here::here("3_Figures","correlations.htm"), 
+          summary = F,
+          digits = 2,
+          title = "Correlations Personality Traits & Political Variables")
 
 ## WRITE CSV df ----
 write_csv(df_meta, here::here("1_Data","df_correlations.csv"))
