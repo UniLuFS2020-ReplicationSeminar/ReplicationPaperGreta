@@ -499,7 +499,10 @@ df %>%
   summarise(Median = median(est_abs, na.rm=TRUE), Mean = mean(est_abs, na.rm=TRUE)) %>%
   filter(!is.na(Median))
 
-
+## Visualisation of Regressions coeffs
+bes <- filter(maindata, dataset=="bes")
+test_bes_lm <- lm(formula = involvement ~ agreeableness * student, data = bes)
+summary(test_bes_lm)
 ## WRITE CSV df ----
 write_csv(df, here::here("1_Data","lm_coeffs_moderator.csv"))
 
