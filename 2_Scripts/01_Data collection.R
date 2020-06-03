@@ -72,6 +72,10 @@ data_Honduras <- import(here::here("1_Data","1_Panel Datasets","1418722138Hondur
 # Preparation for Merge LAPOP (original Code from author)#
 data_Paraguay$fecha <- as.numeric(data_Paraguay$fecha)
 
+## Testing Classes of supposingly same Variables
+class(data_Canada$gi1)
+class(data_Belice$gi1)
+
 #PATH 1 - AUTHORS PATH - tbc#
 #Since Answers are not coded, a lot of NAs are generated#
 #data_Canada$gi1 <- as.numeric(data_Canada$gi1)
@@ -219,7 +223,7 @@ anes12 <- anes12 %>%
     internet = ifelse(dem2_inethome == 1, 1, 0),
     
     # Age and Low Edu ----
-    under30 =  ifelse(dem_age_r_x > 16 | dem_age_r_x < 30,1,0),
+    under30 =  ifelse((as.numeric(dem_age_r_x)) >= 16 & (as.numeric(dem_age_r_x)) < 30,1,0),
     lowEdu = ifelse(dem_edu >= 1 & dem_edu <= 6,1,0),
     
     # Outcomes
@@ -258,7 +262,8 @@ anes12 <- anes12 %>%
     openness = two_sd( tipi_open + (8-tipi_conv) )
     
   )
-table(anes16$V161326)
+
+
 # Recode: American National Election Study 2016 ----
 anes16 <- anes16 %>%
   # Recode missing
@@ -275,7 +280,7 @@ anes16 <- anes16 %>%
     internet = ifelse(V161326 == 1, 1, 0),
     
     # Age and Low Edu ----
-    under30 =  ifelse(V161267 > 16 | V161267 < 30,1,0),
+    under30 =  ifelse(V161267 > 16 & V161267 < 30,1,0),
     lowEdu = ifelse(V161270 >= 1 & V161270 <= 6,1,0),
     
     # Outcomes
@@ -357,7 +362,7 @@ liss <- liss %>%
     internet = ifelse(cs08a241 == 2, 0, 1), #Do you sometimes use a computer, besides when completing the questionnaires of this panel?  1 = Yes, 2 = NO
     
     # Age and Low Edu ----
-    under30 =  ifelse(leeftijd >= 16 | leeftijd < 30,1,0),
+    under30 =  ifelse(leeftijd >= 16 & leeftijd < 30,1,0),
     lowEdu = ifelse(oplzon == 1,1,0),
     
     # Outcomes
@@ -500,7 +505,7 @@ bes <- bes %>%
       workingStatusW1W2W3W4W5 ==  5 | workingStatusW1W2W3W4W5 == 6 | workingStatusW6_W12 == 5 | workingStatusW6_W12 == 6, 1, 0),
     
     # Age and Low Edu ----
-    under30 =  ifelse(ageW13 >= 16 | ageW13 < 30,1,0),
+    under30 =  ifelse(ageW13 >= 16 & ageW13 < 30,1,0),
     lowEdu = ifelse(educationW13 == 1,1,0),
     
     # Outcomes
@@ -582,7 +587,7 @@ shp <- shp %>%
     student = ifelse(occupa09 == 4, 1, 0),
     
     # Age and Low Edu ----
-    under30 =  ifelse(age09 >= 16 | age09 < 30,1,0),
+    under30 =  ifelse(age09 >= 16 & age09 < 30,1,0),
     lowEdu = ifelse(edcat09 == 0 | edcat09 == 1,1,0),
     
     # Outcomes
@@ -663,7 +668,7 @@ lapop <- lapop %>%
                         ocup4a > 4 & ocup4a <= 7 ~ 0,
                         TRUE ~ NA_real_),
     # Age and Low Edu ----
-    under30 =  ifelse(q2 >= 16 | q2 < 30,1,0),
+    under30 =  ifelse(q2 >= 16 & q2 < 30,1,0),
     lowEdu = ifelse(ed <= 8 & ed >= 0,1,0),
     
     # Outcomes
@@ -741,7 +746,7 @@ sels <- sels %>%
     internet = NA,
     
     # Age and Low Edu ----
-    under30 =  ifelse(age >= 16 | age < 30,1,0),
+    under30 =  ifelse(age >= 16 & age < 30,1,0),
     lowEdu = ifelse(f21310 == 1 | f21310 == 2 | f21310 == 3,1,0),
     
     agreeableness = two_sd( (10-W3_f15770c) + W3_f15770f + W3_f15771e ),
@@ -806,8 +811,8 @@ nzes <- nzes %>%
     student = ifelse(!is.na(dwksch), 1, 0),
     
     # Age and Low Edu ----
-    under30 =  ifelse(dage >= 16 | dage < 30,1,0),
-    lowEdu = ifelse(dhighschool == 0 | dhighschool == 1,1,0),
+    under30 =  ifelse(dage >= 16 & dage < 30,1,0),
+    lowEdu = ifelse(dedcons == 0 | dedcons == 1,1,0),
     
     agreeableness = two_sd( dperscritical + (8-dperswarm) ),
     extraversion = two_sd( (8-dpersextra) + dpersreserved ),
@@ -880,7 +885,7 @@ ces <- ces %>%
     internet = NA,
     
     # Age and Low Edu ----
-    under30 =  ifelse((2015-age) >= 16 | (2015-age) < 30,1,0),
+    under30 =  ifelse((2015-age) >= 16 & (2015-age) < 30,1,0),
     lowEdu = ifelse(education == 1 | education == 2 | education == 3,1,0),
     
     agreeableness = two_sd( (8-p_psych2) + p_psych7 ),
