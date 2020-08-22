@@ -388,6 +388,11 @@ ipip_openness_MG <- ipip_openness %>%
 
 MG_open <- multipleGroup(ipip_openness_MG, open_model, group = under30, SE = T)
 
+
+
+
+
+##### 5. IRT Curves (test) #####
 ## polytomous IRT testing # unidimensional mandatory# ----
 
 #ipip_O_reflthi, ipip_O_notimag slightly problematic
