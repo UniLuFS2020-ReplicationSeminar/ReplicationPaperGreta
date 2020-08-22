@@ -19,11 +19,11 @@ library(ltm)
 library(semTools)
 library(lavaan)
 
-ipip_openness <- import("ipip_openness.csv")
+ipip_openness <- import(here::here("ipip_openness.csv"))
 
 ```
 
-To analyse measurement invariance I used the 'lavaan' package. But the DIF() function in the mirt() package requires a MGmodel from the multipleGroup() function.
+To analyse measurement invariance I used the 'lavaan' package. But the DIF() function in the mirt package requires a MGmodel from the multipleGroup() function.
 
 ```{r2, include=T}
 open_model = '
