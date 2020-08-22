@@ -15,9 +15,12 @@ two_sd <- function(x) {
 #Import#
 anes1012 <- import(here::here("1_Data","1_Panel Datasets","anes_specialstudies_2012egss4.dta"))
 
-anes1012 <- anes1012 %>% mutate(
-  dataset = "anes1012",
-  age = ifelse(c4_ppage > 1 & c4_ppage < 100, c4_ppage, NA),
+anes1012 <- anes1012 %>% 
+  mutate_at(vars(c4_zf1, c4_zf2, c4_zf3, c4_zf4, c4_zf5, c4_zf6, c4_zf7, c4_zf8, c4_zf9, c4_zf10, 
+                 c4_zg1, c4_zg2, c4_zg3, c4_zg4, c4_zg5, c4_zg6, c4_zg7, c4_zg8, c4_zg9, c4_zg10), 
+            function(x) case_when(x < 0 ~ NA_real_, TRUE ~ as.numeric(x))) %>% 
+  mutate(dataset = "anes1012", 
+         age = ifelse(c4_ppage > 1 & c4_ppage < 100, c4_ppage, NA),
   
   # tipi personality items 2 per dim, scale 1 disagree strongly - 7 agree strongly
   # OPENNESS #
@@ -49,9 +52,13 @@ anes1012_var <- anes1012 %>%
 #Import#
 anes12 <- import(here::here("1_Data","1_Panel Datasets","anes_timeseries_2012.dta"))
 
-anes12 <- anes12 %>% mutate(
-  dataset = "anes12",
-  age = ifelse(dem_age_r_x > 1 & dem_age_r_x < 100, dem_age_r_x, NA),
+anes12 <- anes12 %>% 
+  mutate_at(vars(tipi_open,tipi_conv,tipi_dep,tipi_disorg,tipi_extra,tipi_resv,tipi_warm,tipi_crit, tipi_anx, tipi_calm), 
+            function(x) case_when(x < 0 ~ NA_real_, TRUE ~ as.numeric(x))) %>% 
+  
+  mutate(
+    dataset = "anes12",
+    age = ifelse(dem_age_r_x > 1 & dem_age_r_x < 100, dem_age_r_x, NA),
   
   # tipi personality items 2 per dim, scale 1 disagree strongly - 7 agree strongly
   # OPENNESS #
@@ -83,8 +90,10 @@ anes12_var <- anes12 %>%
 #Import#
 anes16 <- import(here::here("1_Data","1_Panel Datasets","anes_timeseries_2016.dta"))
 
-anes16$V162334
-anes16 <- anes16 %>% mutate(
+anes16 <- anes16 %>% 
+  mutate_at(vars(V162337,V162342,V162335,V162340,V162333,V162338,V162339,V162334,V162336,V162341), 
+            function(x) case_when(x < 0 ~ NA_real_, TRUE ~ as.numeric(x))) %>%
+  mutate(
   dataset = "anes16",
   age = ifelse(V161267 > 1 & V161267 < 100, V161267, NA),
   
@@ -228,7 +237,6 @@ ces_var <- ces %>%
 tipi_items <- rbind(ces_var, nzes_var, lapop_var, anes1012_var, anes12_var, anes16_var)
 
 write_csv(tipi_items, here::here("1_Data","tipi_items.csv"))
-
 
 
 ## BFI-10: Swiss Household Panel #----
@@ -407,3 +415,4 @@ bfiS_items <- sels %>%
           bfis_A_harshwo, bfis_A_ablefor, bfis_A_conside, bfis_N_worries, bfis_N_nervous, bfis_N_relaxed)
 
 write_csv(bfiS_items, here::here("1_Data", "bfiS_items.csv"))
+

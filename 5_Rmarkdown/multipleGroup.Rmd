@@ -1,0 +1,42 @@
+---
+title: "multipleGroup"
+author: "Greta Kurpicz"
+date: "22 8 2020"
+output: html_document
+---
+
+```{r, include=F}
+library(tidyverse)
+library(rio)
+library(tidyverse)
+library(dplyr)
+library(psych)
+library(Hmisc)
+library(corrplot)
+library(sjmisc)
+library(mirt)
+library(ltm)
+library(semTools)
+library(lavaan)
+
+ipip_openness <- import("ipip_openness.csv")
+
+```
+
+To analyse measurement invariance I used the 'lavaan' package. But the DIF() function in the mirt() package requires a MGmodel from the multipleGroup() function.
+
+```{r2, include=T}
+open_model = '
+OPENNESS =~ ipip_O_vivimag + ipip_O_ricvoca + ipip_O_excidea + ipip_O_quiunde + ipip_O_difword + ipip_O_reflthi + ipip_O_fulidea + ipip_O_difunde + ipip_O_intidea + ipip_O_notimag
+'
+
+MG_open <- multipleGroup(ipip_openness, open_model, group = "under30", SE = T)
+
+## I tried to change the class from variable "under30" from factor to numeric
+
+ipip_openness_MG <- ipip_openness %>% 
+  mutate(under30 = as.numeric(under30))
+
+MG_open <- multipleGroup(ipip_openness_MG, open_model, group = "under30", SE = T)
+```
+

@@ -120,6 +120,8 @@ lapop <- bind_rows(list(data_Suriname,
                         data_Guyana,
                         data_Brazil))
 
+write_csv(lapop, here::here("1_Data","1_Panel Datasets","lapop.csv"))
+
 ## IMPORT 8/10: Swiss Election Study ##----
 sels <- import(here::here("1_Data","1_Panel Datasets", "828_Selects2015_PanelRCS_Data_v1.1.dta"))
 
