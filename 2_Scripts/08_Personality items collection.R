@@ -7,9 +7,9 @@ library(tidyverse)
 
 #function#
 ## CREATING FUNCTION TO STANDARDISE VARIABLES divided by 2 SD##
-two_sd <- function(x) {
-  return((x - mean(x, na.rm = TRUE))/(2*sd(x, na.rm = TRUE)))
-}
+##two_sd <- function(x) {
+##  return((x - mean(x, na.rm = TRUE))/(2*sd(x, na.rm = TRUE)))
+##}
 
 ## TIPI: American National Election Study 2010 - 2012 #----
 #Import#
@@ -24,24 +24,24 @@ anes1012 <- anes1012 %>%
   
   # tipi personality items 2 per dim, scale 1 disagree strongly - 7 agree strongly
   # OPENNESS #
-  tipi_O_open = two_sd(ifelse(is.na(c4_zf5), c4_zg5, c4_zf5)), #open to new experiences, complex
-  tipi_O_conv = two_sd(ifelse(is.na(c4_zf10), ((c4_zg10-8)*-1), ((c4_zf10-8)*-1))), #conventional, uncreativ
+  tipi_O_open = ifelse(is.na(c4_zf5), c4_zg5, c4_zf5), #open to new experiences, complex
+  tipi_O_conv = ifelse(is.na(c4_zf10), ((c4_zg10-8)*-1), ((c4_zf10-8)*-1)), #conventional, uncreativ
   
   # CONSCIENTIOUSNESS #
-  tipi_C_depe = two_sd(ifelse(is.na(c4_zf3), c4_zg3, c4_zf3)),#dependable, self-diciplined
-  tipi_C_diso = two_sd(ifelse(is.na(c4_zf8), ((c4_zg8-8)*-1), ((c4_zf8-8)*-1))),#disorganized, careless
+  tipi_C_depe = ifelse(is.na(c4_zf3), c4_zg3, c4_zf3),#dependable, self-diciplined
+  tipi_C_diso = ifelse(is.na(c4_zf8), ((c4_zg8-8)*-1), ((c4_zf8-8)*-1)),#disorganized, careless
   
   # EXTRAVERSION #
-  tipi_E_extr = two_sd(ifelse(is.na(c4_zf1), c4_zg1, c4_zf1)), #extraverted, enthusiastic
-  tipi_E_rese = two_sd(ifelse(is.na(c4_zf6), ((c4_zg6-8)*-1), ((c4_zf6-8)*-1))), #reserved, quiet
+  tipi_E_extr = ifelse(is.na(c4_zf1), c4_zg1, c4_zf1), #extraverted, enthusiastic
+  tipi_E_rese = ifelse(is.na(c4_zf6), ((c4_zg6-8)*-1), ((c4_zf6-8)*-1)), #reserved, quiet
   
   # AGREEABLENESS #
-  tipi_A_warm = two_sd(ifelse(is.na(c4_zf7), c4_zg7, c4_zf7)), #sympathetic, warm
-  tipi_A_crit = two_sd(ifelse(is.na(c4_zf2), ((c4_zg2-8)*-1), ((c4_zf2-8)*-1))), #critical, quarrelsome
+  tipi_A_warm = ifelse(is.na(c4_zf7), c4_zg7, c4_zf7), #sympathetic, warm
+  tipi_A_crit = ifelse(is.na(c4_zf2), ((c4_zg2-8)*-1), ((c4_zf2-8)*-1)), #critical, quarrelsome
   
   # NEUROTICISM #
-  tipi_N_anxi = two_sd(ifelse(is.na(c4_zf4), c4_zg4, c4_zf4)), #anxious, easily upset
-  tipi_N_calm = two_sd(ifelse(is.na(c4_zf9), ((c4_zg9-8)*-1), ((c4_zf9-8)*-1)))) #calm, emotionally stable
+  tipi_N_anxi = ifelse(is.na(c4_zf4), c4_zg4, c4_zf4), #anxious, easily upset
+  tipi_N_calm = ifelse(is.na(c4_zf9), ((c4_zg9-8)*-1), ((c4_zf9-8)*-1))) #calm, emotionally stable
 
 anes1012_var <- anes1012 %>% 
   select(dataset, age, tipi_O_open, tipi_O_conv, tipi_C_depe, tipi_C_diso, tipi_E_extr, tipi_E_rese, tipi_A_warm, tipi_A_crit, tipi_N_anxi, tipi_N_calm) %>%
@@ -62,24 +62,24 @@ anes12 <- anes12 %>%
   
   # tipi personality items 2 per dim, scale 1 disagree strongly - 7 agree strongly
   # OPENNESS #
-  tipi_O_open = two_sd(tipi_open),
-  tipi_O_conv = two_sd((8-tipi_conv)),
+  tipi_O_open = tipi_open,
+  tipi_O_conv = (8-tipi_conv),
   
   # CONSCIENTIOUSNESS #
-  tipi_C_depe = two_sd(tipi_dep),
-  tipi_C_diso = two_sd(8-tipi_disorg),
+  tipi_C_depe = tipi_dep,
+  tipi_C_diso = 8-tipi_disorg,
       
   # EXTRAVERSION #
-  tipi_E_extr = two_sd(tipi_extra),
-  tipi_E_rese = two_sd(8-tipi_resv),
+  tipi_E_extr = tipi_extra,
+  tipi_E_rese = 8-tipi_resv,
   
   # AGREEABLENESS #
-  tipi_A_warm = two_sd(tipi_warm),
-  tipi_A_crit = two_sd(8-tipi_crit),
+  tipi_A_warm = tipi_warm,
+  tipi_A_crit = 8-tipi_crit,
               
   # NEUROTICISM #
-  tipi_N_anxi = two_sd(tipi_anx),
-  tipi_N_calm = two_sd(8-tipi_calm)
+  tipi_N_anxi = tipi_anx,
+  tipi_N_calm = 8-tipi_calm
 )
 
 anes12_var <- anes12 %>% 
@@ -99,24 +99,24 @@ anes16 <- anes16 %>%
   
   # tipi personality items 2 per dim, scale 1 disagree strongly - 7 agree strongly
   # OPENNESS #
-  tipi_O_open = two_sd(V162337),
-  tipi_O_conv = two_sd((V162342-8)*-1),
+  tipi_O_open = V162337,
+  tipi_O_conv = (V162342-8)*-1,
   
   # CONSCIENTIOUSNESS 
-  tipi_C_depe = two_sd(V162335),
-  tipi_C_diso = two_sd((V162340-8)*-1),
+  tipi_C_depe = V162335,
+  tipi_C_diso = (V162340-8)*-1,
   
   # EXTRAVERSION #
-  tipi_E_extr = two_sd(V162333),
-  tipi_E_rese = two_sd((V162338-8)*-1),
+  tipi_E_extr = V162333,
+  tipi_E_rese = (V162338-8)*-1,
   
   # AGREEABLENESS #
-  tipi_A_warm = two_sd(V162339),
-  tipi_A_crit = two_sd((V162334-8)*-1),
+  tipi_A_warm = V162339,
+  tipi_A_crit = (V162334-8)*-1,
   
   # NEUROTICISM #
-  tipi_N_anxi = two_sd(V162336),
-  tipi_N_calm = two_sd((V162341-8)*-1),
+  tipi_N_anxi = V162336,
+  tipi_N_calm = (V162341-8)*-1,
 )
 
 anes16_var <- anes16 %>% 
@@ -133,24 +133,24 @@ lapop <- lapop %>% mutate(
   
   # tipi personality items 2 per dim, scale 1 disagree strongly - 7 agree strongly
   # OPENNESS #
-  tipi_O_open = two_sd(per5),
-  tipi_O_conv = two_sd((per10 - 8) * -1),
+  tipi_O_open = per5,
+  tipi_O_conv = (per10 - 8) * -1,
   
   # CONSCIENTIOUSNESS #
-  tipi_C_depe = two_sd(per3),
-  tipi_C_diso = two_sd((per8 - 8) * -1),
+  tipi_C_depe = per3,
+  tipi_C_diso = (per8 - 8) * -1,
   
   # EXTRAVERSION #
-  tipi_E_extr = two_sd(per1),
-  tipi_E_rese = two_sd((per6 - 8) * -1),
+  tipi_E_extr = per1,
+  tipi_E_rese = (per6 - 8) * -1,
   
   # AGREEABLENESS #
-  tipi_A_warm = two_sd(per7),
-  tipi_A_crit = two_sd((per2 - 8) * -1),
+  tipi_A_warm = per7,
+  tipi_A_crit = (per2 - 8) * -1,
   
   # NEUROTICISM #
-  tipi_N_anxi = two_sd(per4),
-  tipi_N_calm = two_sd((per9 - 8) * -1)
+  tipi_N_anxi = per4,
+  tipi_N_calm = (per9 - 8) * -1
 )
 
 lapop_var <- lapop %>% 
@@ -171,24 +171,24 @@ nzes <- nzes %>%
   # !!scale opposite then with the other TIPI surveys!!
   
   # OPENNESS #
-  tipi_O_open = two_sd(8-dperscomplex),
-  tipi_O_conv = two_sd(dpersconvent),
+  tipi_O_open = 8-dperscomplex,
+  tipi_O_conv = dpersconvent,
   
   # CONSCIENTIOUSNESS #
-  tipi_C_depe = two_sd(8-dpersdepend),
-  tipi_C_diso = two_sd(dperscareless),
+  tipi_C_depe = 8-dpersdepend,
+  tipi_C_diso = dperscareless,
   
   # EXTRAVERSION #
-  tipi_E_extr = two_sd(8-dpersextra), 
-  tipi_E_rese = two_sd(dpersreserved),
+  tipi_E_extr = 8-dpersextra, 
+  tipi_E_rese = dpersreserved,
   
   # AGREEABLENESS #
-  tipi_A_warm = two_sd(8-dperswarm),
-  tipi_A_crit = two_sd(dperscritical),
+  tipi_A_warm = 8-dperswarm,
+  tipi_A_crit = dperscritical,
   
   # NEUROTICISM #
-  tipi_N_anxi = two_sd(8-dpersanxious),
-  tipi_N_calm = two_sd(dperscalm))
+  tipi_N_anxi = 8-dpersanxious,
+  tipi_N_calm = dperscalm)
 
 nzes_var <- nzes %>% 
   select(dataset, age, tipi_O_open, tipi_O_conv, tipi_C_depe, tipi_C_diso, tipi_E_extr, tipi_E_rese, tipi_A_warm, tipi_A_crit, tipi_N_anxi, tipi_N_calm) %>%
@@ -208,24 +208,24 @@ ces <- ces %>%
     
     # tipi personality items 2 per dim, scale 1 disagree strongly - 7 agree strongly
     # OPENNESS #
-    tipi_O_open = two_sd(p_psych5),
-    tipi_O_conv = two_sd(8-p_psych10),
+    tipi_O_open = p_psych5,
+    tipi_O_conv = 8-p_psych10,
     
     # CONSCIENTIOUSNESS #
-    tipi_C_depe = two_sd(p_psych3),
-    tipi_C_diso = two_sd(8-p_psych8),
+    tipi_C_depe = p_psych3,
+    tipi_C_diso = 8-p_psych8,
     
     # EXTRAVERSION #
-    tipi_E_extr = two_sd(p_psych1),
-    tipi_E_rese = two_sd(8-p_psych6),
+    tipi_E_extr = p_psych1,
+    tipi_E_rese = 8-p_psych6,
     
     # AGREEABLENESS #
-    tipi_A_warm = two_sd(p_psych7),
-    tipi_A_crit = two_sd(8-p_psych2),
+    tipi_A_warm = p_psych7,
+    tipi_A_crit = 8-p_psych2,
     
     # NEUROTICISM #
-    tipi_N_anxi = two_sd(p_psych4),
-    tipi_N_calm = two_sd(8-p_psych9)
+    tipi_N_anxi = p_psych4,
+    tipi_N_calm = 8-p_psych9
   )
 
 ces_var <- ces %>% 
@@ -416,3 +416,8 @@ bfiS_items <- sels %>%
 
 write_csv(bfiS_items, here::here("1_Data", "bfiS_items.csv"))
 
+
+# sample descriptives #
+nrow(nzes)
+x <- filter(tipi_items, dataset == "nzes")
+nrow(x)
